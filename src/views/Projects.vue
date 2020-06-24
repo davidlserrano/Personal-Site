@@ -1,5 +1,21 @@
 <template>
   <div class="projects">
-    <h1>This is the project page</h1>
+      <Menu/>
   </div>
 </template>
+
+<script>
+    import Menu from '@/components/Menu';
+    
+    export default {
+      name: 'Projects',
+      components: {
+        Menu
+      }
+    }
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+
+</style>
