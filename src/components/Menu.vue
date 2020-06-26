@@ -21,11 +21,12 @@ export default {
 <style scoped>
     #options{
         color: white;
-        width: 105px;
+        width: inherit;
         height: 150px;
         margin-top: 10px;
         margin-left: 25px;
         border-right: 1px white solid;
         font-size: 16px;
     }
+    
 </style>

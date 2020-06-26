@@ -1,14 +1,16 @@
 <template>
   <div class="hobbies">
-    <h1>This is the hobbies page</h1>
+      <Display/>
   </div>
 </template>
 
 <script>
+     import Display from '@/components/Display';
+    
 export default {
   name: 'Hobbies',
-  props: {
-    
+  components: {
+    Display
   }
 }
 </script>
