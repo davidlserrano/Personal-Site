@@ -1,6 +1,6 @@
 <template>
   <div class="layout">
-    <div id="menu"><Menu/></div>
+    <div id="menu"><Menu v-bind:options="options" v-on:option-clicked="updateFeed" /></div>
     <div id="feed"><Feed/></div>
   </div>
 </template>
@@ -10,11 +10,18 @@
     import Feed from '@/components/Feed';
     
     export default {
-      name: 'Display',
-      components: {
+        name: 'Display',
+        props: ['options'],
+        components: {
           Menu, 
           Feed
-      }
+      },
+        method: {
+            updateFeed: function(){
+                alert("emit worked properly")
+            }
+            
+        }
     }
 </script>
 
@@ -22,11 +29,19 @@
 <style scoped>
     .layout{
         display: flex;
-
+        height: inherit;
+        width: inherit;
     }
     
     #menu{
-        width: 135px;
+        width: 115px;
+        margin-top: 10px;
+        margin-left: 17px;
+    }
+    
+    #feed{
+        width: 100%;
+        padding: 0px 0px 0px 0px;
     }
 
     
