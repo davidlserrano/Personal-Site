@@ -22,12 +22,12 @@ export default {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-align: left;
-      color:#353535;
+      color: #353535;
       height: 1000px;
     }
-    
+    /*og bg: #BDBBB0*/
     body{
-        background-color: #BDBBB0;
+        background-color: #F2F5F8;
         overflow: hidden;
     }
 

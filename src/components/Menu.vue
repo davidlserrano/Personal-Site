@@ -2,7 +2,7 @@
     <div id="list">
       <div v-for="option in options" v-bind:options="options" v-bind:key="option.id" >
             <button 
-                    v-on:click="optionClicked">
+                    @click="optionClicked">
                 {{option.name}}</button>
       </div>
     </div>
@@ -23,10 +23,10 @@
                 e.preventDefault();
                 const clicked = {
                     id: uuid.v4(),
-                    name: e.name
+                    name: e.currentTarget.innerText
                 };
                 this.$emit('option-clicked', clicked);
-                alert(clicked.name);
+                //alert(clicked.name);
             }
         }
     }
@@ -35,10 +35,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     #list{
-        color: white;
+        color: #353535;
         width: inherit;
         height: 150px;
-        border-right: 1px white solid;
+        border-right: 1px #353535 solid;
         margin-top: 13px;
     }
     
@@ -46,7 +46,7 @@
         background: none;
         border: none;
         font-size: 14px;
-        color: white;
+        color: #353535;
         font-family: Avenir, Helvetica, Arial, sans-serif;
     }
     

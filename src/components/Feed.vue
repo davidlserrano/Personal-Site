@@ -1,30 +1,38 @@
 <template>
   <div>
       <div class="display">
-          <h1>{{name}} was pressed</h1>
+            <div v-if="option === 'Photography'" id="photography"><Photography/></div>
+            <div v-if="option === 'Pokemon'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === 'Art'"><Art/></div>
     </div>
   </div>
 </template>
 
-<script>
+<script>            
+    import Photography from '@/components/Photography';
+    import Pokemon from '@/components/Pokemon';
+    import Art from '@/components/Art';
+
     export default {
         name: 'Display',
         components: {
-        
+            Photography,
+            Pokemon,
+            Art,
         },
-        props: ['name']
+        props: ['option']
     }
 </script>
+
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .display{
-        background: #353535;
         height: 90vh;
-        width: 95%;
-        border-radius: 7px;
-        margin:auto;
-        opacity: 0.7;
-        color: white;
+        width: 91.5vh;
+        margin: auto;
+        margin-top: 1.45%;
     }
+
+
 </style>

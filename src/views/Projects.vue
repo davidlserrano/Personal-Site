@@ -16,7 +16,9 @@
         return{
             options: [
                 {id: 1, name: "Pokemon"}, 
-                {id: 2, name: "Pluto"}
+                {id: 2, name: "Pluto"},
+                {id: 3, name: "Website"}
+                
             ]
         }
     }
