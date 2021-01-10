@@ -1,38 +1,103 @@
 <template>
   <div class="display">
-  
-    <InstagramEmbed
-        clientAccessToken='123|456'
-      url='https://instagr.am/p/Ytlfl/'
-      maxWidth={500}
-      hideCaption={false}
-      containerTagName='div'
+
+       <InstagramEmbed
+      :url="'https://www.instagram.com/p/BzrslvdF35I/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
     />
+
+         <InstagramEmbed
+      :url="'https://www.instagram.com/p/Bzrr_cXFGNg/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+
+     <InstagramEmbed
+      :url="'https://www.instagram.com/p/BzrrJ2hli2K/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+
+     <InstagramEmbed
+      :url="'https://www.instagram.com/p/B3d-1PrHSL3/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+
+     <InstagramEmbed
+      :url="'https://www.instagram.com/p/B3Tth0tn0rR/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+
+     <InstagramEmbed
+      :url="'https://www.instagram.com/p/B3iuV4qHb6n/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+
+      <InstagramEmbed
+      :url="'https://www.instagram.com/p/B3qsZ8wn33A/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+        <InstagramEmbed
+      :url="'https://www.instagram.com/p/CAqTxQ5HFUa/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+        
 
   </div>
 </template>
 <script>
-import InstagramEmbed from '/node_modules/react-instagram-embed';
+import InstagramEmbed from "vue-instagram-embed";
 
 export default {
-  name: 'Art',
-  componenets:{
+  components: {
     InstagramEmbed,
   },
-}
+};
 
 </script>
 
 <style scoped>
     .display{
-        background: #c7c7c7;
         height: 90vh;
-        width: 98%;
+        width: 90%;
         border-radius: 5px;
         margin: auto;
         color: white;
         margin-top: 1.45%;
+
+        overflow: scroll;
     }
 
+
+    .IGpost{
+      padding: 0px 30px 10px 30px;
+      display:inline-block;
+      margin: auto!important;
+
+    }
+
+  
 
 </style>
