@@ -1,6 +1,6 @@
 <template>
   <div class="display">
-      <img v-scrollanimation id="img1" src="@/assets/imgs/bird.jpg"><span class="copyright">© 2012 David Serrano All Rights Reserved</span>
+      <img id="img1" src="@/assets/imgs/bird.jpg"><span class="copyright">© 2012 David Serrano All Rights Reserved</span>
       <img v-scrollanimation id="img1" src="@/assets/imgs/lavender.jpg"><span class="copyright">© 2012 David Serrano All Rights Reserved</span>
       <img v-scrollanimation id="img1" src="@/assets/imgs/fish.jpg"><span class="copyright">© 2012 David Serrano All Rights Reserved</span>
       <img v-scrollanimation id="img1" src="@/assets/imgs/FLY.png"><span class="copyright">© 2012 David Serrano All Rights Reserved</span>
@@ -36,6 +36,7 @@
         width: inherit;
         height: inherit;
         flex-basis: fit-content;
+     
     }
 
     .display::-webkit-scrollbar{
