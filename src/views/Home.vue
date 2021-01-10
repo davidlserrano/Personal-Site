@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-     <img id="img1" src="@/assets/imgs/me.png">
+     <img id="img1" src="@/assets/imgs/test.png">
   </div>
 </template>
 
@@ -14,11 +14,12 @@ export default {
 
 <style scoped>
 	#img1{
-		opacity: 0.9;
-		height: 50vh;
-		background: pink;
-		margin-top: 1%;
-		margin-left: 1.5%;
-		border-radius: 8px;
+		opacity: 0.95;
+		margin-top: 1px;
+		margin-left: -70vh;
+		height: 100vmax;
+		overflow: hidden;;
 	}
+
+
 </style>

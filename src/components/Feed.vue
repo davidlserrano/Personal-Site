@@ -29,8 +29,7 @@
 <style scoped>
     .display{
         height: 90vh;
-        width: 91.5vh;
-        margin: auto;
+        margin-left: .5%; 
         margin-top: 1.45%;
     }
 

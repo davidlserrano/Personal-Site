@@ -4,7 +4,7 @@
         <span id="name"><router-link to="/">David Serrano</router-link></span>
 
         <span class="link"><router-link to="/">Home</router-link></span>
-        <span class="link"><router-link to="/about">About</router-link></span>
+        <span class="link"><router-link to="/about">Resume</router-link></span>
         <span class="link"><router-link to="/projects">Projects</router-link></span>
         <span class="link"><router-link to="/hobbies">Hobbies</router-link></span>
         <span class="link"><router-link to="/contact">Contact</router-link></span>

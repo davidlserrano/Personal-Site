@@ -1,7 +1,9 @@
 <template>
   <div class="layout">
+
     <div id="menu"><Menu v-bind:options="options" @option-clicked="clicked.option = $event.name" /></div>
     <div id="feed"><Feed :option = "clicked.option"/></div>
+
   </div>
 </template>
 
@@ -45,6 +47,7 @@
     #feed{
         width: 100%;
         padding: 0px 0px 0px 0px;
+      
     }
 
     

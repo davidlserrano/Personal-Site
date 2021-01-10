@@ -1,6 +1,10 @@
 <template>
   <div id="app">
       <Header/>
+      <footer>
+  <p>Copyright © 2019 David Serrano. All rights reserved.</p>
+  
+</footer>
   </div>
 </template>
 
@@ -29,6 +33,11 @@ export default {
     body{
         background-color: #F2F5F8;
         overflow: hidden;
+    }
+
+    footer{
+      font-family: Times New Roman;
+      font-size: 12px;
     }
 
 </style>
