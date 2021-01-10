@@ -42,7 +42,7 @@
         width: 115px;
         margin-top: 10px;
         margin-left: 17px;
-    }
+    } 
     
     #feed{
         width: 100%;
