@@ -36,10 +36,11 @@
 <style scoped>
     #list{
         color: #353535;
-        width: inherit;
+        width: 150px;
         height: 150px;
         border-right: 1px #353535 solid;
         margin-top: 13px;
+
     }
     
     button{

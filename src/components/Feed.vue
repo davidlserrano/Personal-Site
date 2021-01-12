@@ -1,6 +1,7 @@
 <template>
   <div>
       <div class="display">
+
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
             <div v-if="option === 'Pokemon'" id="Pokemon"><Pokemon/></div>
             <div v-if="option === 'Art'"><Art/></div>
@@ -21,6 +22,7 @@
             Art,
         },
         props: ['option']
+
     }
 </script>
 
@@ -28,9 +30,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .display{
-        height: 90vh;
-        margin-left: .5%; 
-        margin-top: 1.45%;
+        width: inherit;
+        margin-left: 1%; 
+        margin-top: 1.8%;
+        
     }
 
 

@@ -1,6 +1,5 @@
 <template>
   <div class="layout">
-
     <div id="menu"><Menu v-bind:options="options" @option-clicked="clicked.option = $event.name" /></div>
     <div id="feed"><Feed :option = "clicked.option"/></div>
 
@@ -34,21 +33,23 @@
 <style scoped>
     .layout{
         display: flex;
+        flex-direction: row;
         height: inherit;
-        width: inherit;
+        position: fixed;
+        width: 98.8%;
     }
     
     #menu{
-        width: 115px;
         margin-top: 10px;
-        margin-left: 17px;
+        margin-left: 1.5%; 
+        position: relative;
     } 
     
     #feed{
+        position: relative;
         width: 100%;
-        padding: 0px 0px 0px 0px;
-      
     }
+
 
     
 </style>

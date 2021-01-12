@@ -1,6 +1,9 @@
 <template>
   <div class="home">
-     <img id="img1" src="@/assets/imgs/test.png">
+     <img id="img1" src="@/assets/imgs/me.png">
+     <footer>
+        <p>Copyright © 2021 David Serrano. All rights reserved.</p>
+    </footer>
   </div>
 </template>
 
@@ -13,12 +16,15 @@ export default {
 </script>
 
 <style scoped>
+	.home{
+		position: fixed;
+		height: 93%;
+		width: 98.9%;
+	}
 	#img1{
-		opacity: 0.95;
-		margin-top: 1px;
-		margin-left: -70vh;
-		height: 100vmax;
-		overflow: hidden;;
+		position: relative;
+		border-radius: 500px;
+		border: 
 	}
 
 
