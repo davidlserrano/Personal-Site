@@ -15,9 +15,9 @@
     data(){
         return{
             options: [
-                {id: 1, name: "Pokemon"}, 
-                {id: 2, name: "Pluto"},
-                {id: 3, name: "Website"}
+                {id: 1, name: "Pokemon: East Bay"}, 
+                {id: 2, name: "Graphic Design"},
+                {id: 3, name: "Personal Website"}
                 
             ]
         }

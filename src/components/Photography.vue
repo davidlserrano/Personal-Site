@@ -22,6 +22,10 @@
         <p class="copyright">© 2012 David Serrano All Rights Reserved</p>
       </div>
 
+       <div class="slide">
+        <div id="buffer"></div>
+      </div>
+
     </horizontal-scroll>
   </div>
 </template>
@@ -53,31 +57,32 @@
     #photographyDisplay{
       width: 98.9%;
       height: 90vh;
-      background: pink;
       position: fixed;
     }
 
     .slide{
       position: relative;
-      display: table-cell;
-      background: orange;
+      display: inline-block;
       max-width: 95%;
-      padding: 0px 15px 0px 0px;
-      height: auto;
-    
+      padding: 0px 3px 0px 0px;  
     }
 
     .img{
-      max-width: 100%;
-      height: 200px!important;
-     
+      max-height: 700px;
     }
 
     .copyright{
-      font-family: Times New Roman;
       color: #353535;
-      font-size: 11px;
       display: block;
+      font-size: 11px;
+      font-family: Times New Roman;
+      padding: 0px 0px 0px 0px;
+    }
+
+    #buffer{
+      height: 100px;
+      width: 200px;
+      color:red;
     }
 
     .display::-webkit-scrollbar{

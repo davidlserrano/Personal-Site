@@ -16,7 +16,6 @@ export default {
         return{
             options: [
                 {id: 1, name: "Art"}, 
-                {id: 2, name: "Graphic Design"}, 
                 {id: 3, name: "Photography"}
             ]
         }

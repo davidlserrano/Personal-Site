@@ -3,7 +3,7 @@
       <div class="display">
 
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
-            <div v-if="option === 'Pokemon'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
             <div v-if="option === 'Art'"><Art/></div>
     </div>
   </div>

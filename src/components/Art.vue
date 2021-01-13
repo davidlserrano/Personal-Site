@@ -42,7 +42,7 @@
     />
 
      <InstagramEmbed
-      :url="'https://www.instagram.com/p/B3iuV4qHb6n/'"
+      :url="'https://www.instagram.com/p/B3gPGCOn4l9/'"
       :appID="'442875790455965'"
       :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
       :hide-caption="true"
@@ -56,8 +56,16 @@
       :hide-caption="true"
       class="IGpost"
     />
-        <InstagramEmbed
+    
+      <InstagramEmbed
       :url="'https://www.instagram.com/p/CAqTxQ5HFUa/'"
+      :appID="'442875790455965'"
+      :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
+      :hide-caption="true"
+      class="IGpost"
+    />
+      <InstagramEmbed
+      :url="'https://www.instagram.com/p/CB6FnZKnkj5/'"
       :appID="'442875790455965'"
       :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
       :hide-caption="true"
@@ -81,12 +89,6 @@ export default {
 <style scoped>
     .display{
         height: 90vh;
-        width: 90%;
-        border-radius: 5px;
-        margin: auto;
-        color: white;
-        margin-top: 1.45%;
-
         overflow: scroll;
     }
 
@@ -94,8 +96,7 @@ export default {
     .IGpost{
       padding: 0px 30px 10px 30px;
       display:inline-block;
-      margin: auto!important;
-
+      vertical-align: top;
     }
 
   

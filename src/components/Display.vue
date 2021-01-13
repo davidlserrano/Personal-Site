@@ -40,7 +40,7 @@
     }
     
     #menu{
-        margin-top: 10px;
+        margin-top: .85%;
         margin-left: 1.5%; 
         position: relative;
     } 

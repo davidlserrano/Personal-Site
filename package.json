@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "pdfjs-dist": "^2.5.207",
     "query-string": "^6.13.8",
     "react": "^17.0.1",
     "vue": "^2.6.11",
