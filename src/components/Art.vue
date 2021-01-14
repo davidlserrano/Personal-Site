@@ -78,6 +78,7 @@
 <script>
 import InstagramEmbed from "vue-instagram-embed-master";
 
+
 export default {
   components: {
     InstagramEmbed,
