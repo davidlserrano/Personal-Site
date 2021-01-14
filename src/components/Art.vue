@@ -76,7 +76,7 @@
   </div>
 </template>
 <script>
-import InstagramEmbed from "vue-instagram-embed";
+import InstagramEmbed from "vue-instagram-embed-master";
 
 export default {
   components: {
@@ -97,6 +97,10 @@ export default {
       padding: 0px 30px 10px 30px;
       display:inline-block;
       vertical-align: top;
+    }
+
+      .display::-webkit-scrollbar{
+        display: none;
     }
 
   

@@ -14,6 +14,7 @@
     "react": "^17.0.1",
     "vue": "^2.6.11",
     "vue-horizontal-scroll": "^0.2.4",
+    "vue-image-lightbox": "^7.2.0",
     "vue-instagram-embed": "^1.0.0",
     "vue-router": "^3.2.0"
   },

@@ -1,10 +1,10 @@
 <template>
   <div>
       <div class="display">
-
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
             <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
             <div v-if="option === 'Art'"><Art/></div>
+            <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@
     import Photography from '@/components/Photography';
     import Pokemon from '@/components/Pokemon';
     import Art from '@/components/Art';
+    import GraphicDesign from '@/components/GraphicDesign';
 
     export default {
         name: 'Display',
@@ -20,6 +21,7 @@
             Photography,
             Pokemon,
             Art,
+            GraphicDesign,
         },
         props: ['option']
 
