@@ -96,6 +96,11 @@
 			<img id="movementCode" src="@/assets/imgs/movementCode.png">
 		</div>
 
+<!-- SLIDE -->
+
+		<div class="slide" id="slide7">
+			<h1 id="text4">Pokemon Battles</h1>
+		</div>
 
 
 	</div>
@@ -266,6 +271,17 @@
 	#movementCode{
 		padding: 15px 25px 25px 0px;
 		width: 50%;
+	}
+
+	#slide7{
+		background: url("pokebattle.png") no-repeat center;
+		height: 765px;
+		background-size: 100%;
+	}
+
+	#text4{
+		padding: 45px 0px 0px 35px;
+		width: 200px;
 	}
 
 

@@ -76,7 +76,7 @@
   </div>
 </template>
 <script>
-import InstagramEmbed from "vue-instagram-embed-master";
+import InstagramEmbed from "@/plugins/instaEmbed";
 
 
 export default {
