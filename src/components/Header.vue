@@ -3,7 +3,6 @@
     <div id="nav">
         <span id="name"><router-link to="/">DAVID SERRANO</router-link></span>
         <span class="link"><router-link to="/">Home</router-link></span>
-        <span class="link"><router-link to="/about">Resume</router-link></span>
         <span class="link"><router-link to="/projects">Projects</router-link></span>
         <span class="link"><router-link to="/hobbies">Hobbies</router-link></span>
         <span class="link"><router-link to="/contact">Contacts</router-link></span>

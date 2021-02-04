@@ -1,7 +1,17 @@
 <template>
   <div class="layout">
-    <div id="menu"><Menu v-bind:options="options" @option-clicked="clicked.option = $event.name" /></div>
-    <div id="feed"><Feed :option = "clicked.option"/></div>
+
+    <div id="menu">
+      <Menu 
+        v-bind:options="options" 
+        @option-clicked="clicked.option = $event.name"/>
+    </div>
+
+    <div id="feed">
+      <Feed 
+        :option = "clicked.option"
+        :current="current"/>
+    </div>
 
   </div>
 </template>
@@ -12,7 +22,7 @@
     
     export default {
         name: 'Display',
-        props: ['options', 'option'],
+        props: ['options', 'option', 'current'],
         components: {
           Menu, 
           Feed

@@ -1,8 +1,10 @@
 <template>
   <div>
       <div class="display">
+            <div v-if="option === '' && current === 'Projects'"><Pokemon/></div>
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
             <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === '' && current === 'Hobbies'"><Art/></div>
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
     </div>
@@ -23,7 +25,7 @@
             Art,
             GraphicDesign,
         },
-        props: ['option']
+        props: ['option', 'current']
 
     }
 </script>
