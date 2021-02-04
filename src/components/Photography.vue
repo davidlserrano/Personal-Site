@@ -56,7 +56,7 @@
 <style scoped>
     #photographyDisplay{
       width: 98.9%;
-      height: 90vh;
+      height: 80vh;
       position: fixed;
     }
 
@@ -68,7 +68,7 @@
     }
 
     .img{
-      max-height: 700px;
+      max-height: 650px;
     }
 
     .copyright{

@@ -1,31 +1,81 @@
 <template>
-  <div class="home">
-     <img id="img1" src="@/assets/imgs/me.png">
-     <footer>
-        <p>Copyright © 2021 David Serrano. All rights reserved.</p>
-    </footer>
-  </div>
+	<div class="home">
+		<div id="display">
+			<div id="text">
+				<h1><em>Creativivity Meets Code</em></h1>
+				<p>Aspiring engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
+				<a href="@/assets/resume.pdf" id="button">View Resume</a>
+				<div id="socials"><Socials/></div>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-// @ is an alias to /src
-export default {
-  name: 'Home',
-}
+	import Socials from '@/components/Socials';
+    
+    export default {
+        name: 'Home',
+        components: {
+            Socials
+        }
+    }
 
 </script>
 
 <style scoped>
+
+	h1{
+		font-weight: lighter;
+		font-size: 5em;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	p{
+		padding: 0px 150px 10px 10px;
+	}
+
 	.home{
 		position: fixed;
-		height: 93%;
-		width: 98.9%;
+		height: auto;
+		width: 99.3%;
 	}
-	#img1{
+
+	#display{
+		position: fixed;
+		width: 94%;
+		height: 100vh;
+		margin-top: .5%;
+		display: flex;
+		flex-direction: column;
+		padding: 0px 25px 0px 35px;
+		background: url(gradient.png) no-repeat top left;
+		background-size: 100%;
+		justify-content: center;
+	}
+
+	#text{
 		position: relative;
-		border-radius: 500px;
-		border: 
+		width: 500px;
 	}
 
+	#button{
+		text-decoration: none;
+		border: none;
+		background: #353535;
+		color: white;
+		font-weight: bolder;
+		width: 110px;
+		height: auto;
+		border-radius: 5px;
+		margin-left: 10px;
+		margin-bottom: 100px;
+		padding: 2px 5px 2px 5px;
+	}
 
+	#socials{
+		margin-top: 15%;
+		padding: 0px 100px 0px 0px;
+	}
 </style>
