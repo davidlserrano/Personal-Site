@@ -42,7 +42,7 @@
     />
 
      <InstagramEmbed
-      :url="'https://www.instagram.com/p/B3gPGCOn4l9/'"
+      :url="'https://www.instagram.com/p/CKxCKZwHjPu/'"
       :appID="'442875790455965'"
       :client-token="'19d544e156a93e273284b8fa0a8c9d5b'"
       :hide-caption="true"
@@ -95,7 +95,7 @@ export default {
 
 
     .IGpost{
-      padding: 0px 30px 10px 30px;
+      padding: 0px 10px 10px 10px;
       display:inline-block;
       vertical-align: top;
     }
