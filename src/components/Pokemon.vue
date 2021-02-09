@@ -48,20 +48,24 @@
 <!-- SLIDE -->
 
     <div class="slide" id="slide3">
+      <div id="uml">
       <h2>UML Design</h2>
-
-      <img
-      src="@/assets/imgs/UML.png"
-      style="height:700px;">
+      <a href="https://i.imgur.com/wUKPbrM.png" target="_blank" id="button">Full Image</a>
+      </div>
+      <img id="umlIMG" src="@/assets/imgs/UML.png">
     </div>
 
 <!-- SLIDE -->
 
     <div class="slide" id="slide4">
-      <h2>Requirements Documentation</h2>
+      <div id="reqTxt"><h2>Requirements Documentation</h2></div>
+      <div id="reqIMGS">
+        <img src="@/assets/imgs/reqs1.png" id="reqs">
+        <img src="@/assets/imgs/reqs2.png" id="reqs">
+      </div>
     </div>
 
-<!-- SLIDE -->
+<!-- SLIDE 
 
     <div class="slide" id="slide5">
       <img id="ingameIMG" src="@/assets/imgs/ingame.png">
@@ -70,7 +74,7 @@
       </div>
     </div>
 
-<!-- SLIDE -->
+SLIDE 
 
     <div class="slide" id="slide6">
       <div id="text3">
@@ -82,12 +86,12 @@
       <img id="movementCode" src="@/assets/imgs/movementCode.png">
     </div>
 
-<!-- SLIDE -->
+
 
     <div class="slide" id="slide7">
       <h1 id="text4">Pokemon Battles</h1>
     </div>
-
+-->
 
   </div>
 </template>
@@ -117,7 +121,7 @@
 
   p{
     font-size: 1.6em;
-    color: #adadad;
+    color: white;
   }
 
   dt{
@@ -142,7 +146,7 @@
     min-width: 1024px;
     max-width: 89.9%;
     height: 86vh;
-    background: #212121;
+    background: #c6c6c6;
     position: fixed;
     border-radius: 5px;
   }
@@ -204,21 +208,65 @@
     padding: 0px 0px 0px 25px;
   }
 
+/*------------------------slide------------------------*/
+
   #slide3{
-    background: pink;
     width: 100%;
-    height: 110%;
+    height: 140%;
   }
+
+    #uml{
+    padding: 20px 0px 0px 25px;
+  }
+
+  #umlIMG{
+    height: 800px;
+    margin-left: .5%;
+  }
+
+  #button{
+    text-decoration: none;
+    border: none;
+    background: #fff;
+    color: #c6c6c6;
+    font-weight: bolder;
+    width: 110px;
+    height: auto;
+    border-radius: 5px;
+    margin-left: 5px;
+    margin-bottom: 100px;
+    padding: 2px 5px 2px 5px;
+  }
+
+
+/*------------------------slide------------------------*/
 
   #slide4{
-    background: orange;
     height: 100px;
+    margin-top: 20px;
   }
 
-  #slide5{
+  #reqTxt{
+    padding-left: 12px;
+  }
+
+  #reqIMGS{
+    display: flex;
+    flex-direction: horizontal;
+    padding-bottom: 30px;
+
+  }
+
+  #reqs{
+    height: 670px;
+    padding: 0px 0px 0px 15px;
+  }
+
+  /*------------------------slide------------------------*/
+
+  #slide5{ 
     display: flex;
     flex-direction: row;
-    vertical-align: bottom;
   }
 
   #text2{
@@ -230,6 +278,7 @@
     width: 50%;
     padding: 25px 0px 0px 0px;
   }
+  /*------------------------slide------------------------*/
 
   #slide6{
     display: flex;

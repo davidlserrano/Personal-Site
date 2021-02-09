@@ -4,8 +4,9 @@
 			<div id="text">
 				<h1><em>Creativivity Meets Code</em></h1>
 				<p>Aspiring engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
-				<a href="@/assets/resume.pdf" id="button">View Resume</a>
+				<a href="https://drive.google.com/file/d/1oOBlmA11ll0GGZB8YnlCruFw1KRbn7dU/view?usp=sharing" target="_blank" id="button">View Resume</a>
 				<div id="socials"><Socials/></div>
+				<div id="footer">Copyright © 2021 David Serrano. All rights reserved.</div>
 			</div>
 		</div>
 	</div>
@@ -46,6 +47,7 @@
 		position: fixed;
 		width: 94%;
 		height: 100vh;
+		max-height: 690px;
 		margin-top: .5%;
 		display: flex;
 		flex-direction: column;
@@ -56,7 +58,7 @@
 	}
 
 	#text{
-		position: relative;
+		position: absolute;
 		width: 500px;
 	}
 
@@ -77,5 +79,12 @@
 	#socials{
 		margin-top: 15%;
 		padding: 0px 100px 0px 0px;
+	}
+
+	#footer{
+		position: absolute;
+		margin-top: 20%;
+		margin-left: -7%;
+		font-size: 0.7em;
 	}
 </style>
