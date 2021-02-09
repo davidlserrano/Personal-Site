@@ -1,6 +1,6 @@
 <template>
   <div class="hobbies">
-      <Display v-bind:options="options" />
+      <Display v-bind:options="options" :current="current"/>
   </div>
 </template>
 
@@ -14,9 +14,9 @@ export default {
   },
     data(){
         return{
+            current: "Hobbies",
             options: [
                 {id: 1, name: "Art"}, 
-                {id: 2, name: "Graphic Design"}, 
                 {id: 3, name: "Photography"}
             ]
         }

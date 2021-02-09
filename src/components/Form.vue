@@ -58,6 +58,7 @@ export default {
         border-radius: 10px;
         padding: 0px 20px 10px 20px;
         margin-top: 5%;
+        position: relative;
     }
     
     input{

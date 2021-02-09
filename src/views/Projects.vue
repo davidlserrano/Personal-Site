@@ -1,6 +1,6 @@
 <template>
   <div class="view">
-      <Display v-bind:options="options"/>
+      <Display v-bind:options="options" :current="current"/>
   </div>
 </template>
 
@@ -14,10 +14,9 @@
       },
     data(){
         return{
+            current: "Projects",
             options: [
-                {id: 1, name: "Pokemon"}, 
-                {id: 2, name: "Pluto"},
-                {id: 3, name: "Website"}
+                {id: 1, name: "Pokemon: East Bay"}
                 
             ]
         }

@@ -9,8 +9,12 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "react-instagram-embed": "^2.0.0",
+    "pdfjs-dist": "^2.5.207",
+    "query-string": "^6.13.8",
+    "react": "^17.0.1",
     "vue": "^2.6.11",
+    "vue-horizontal-scroll": "^0.2.4",
+    "vue-instagram-embed": "^1.0.0",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

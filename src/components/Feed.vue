@@ -1,9 +1,12 @@
 <template>
   <div>
       <div class="display">
+            <div v-if="option === '' && current === 'Projects'"><Pokemon/></div>
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
-            <div v-if="option === 'Pokemon'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === '' && current === 'Hobbies'"><Art/></div>
             <div v-if="option === 'Art'"><Art/></div>
+            <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
     </div>
   </div>
 </template>
@@ -12,6 +15,7 @@
     import Photography from '@/components/Photography';
     import Pokemon from '@/components/Pokemon';
     import Art from '@/components/Art';
+    import GraphicDesign from '@/components/GraphicDesign';
 
     export default {
         name: 'Display',
@@ -19,8 +23,10 @@
             Photography,
             Pokemon,
             Art,
+            GraphicDesign,
         },
-        props: ['option']
+        props: ['option', 'current']
+
     }
 </script>
 
@@ -28,10 +34,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     .display{
-        height: 90vh;
-        width: 91.5vh;
-        margin: auto;
-        margin-top: 1.45%;
+        width: inherit;
+        margin-left: 1%; 
+        margin-top: 1.8%;
+        
     }
 
 

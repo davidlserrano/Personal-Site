@@ -1,13 +1,11 @@
 <template>
   <div>
     <div id="nav">
-        <span id="name"><router-link to="/">David Serrano</router-link></span>
-
+        <span id="name"><router-link to="/">DAVID SERRANO</router-link></span>
         <span class="link"><router-link to="/">Home</router-link></span>
-        <span class="link"><router-link to="/about">About</router-link></span>
         <span class="link"><router-link to="/projects">Projects</router-link></span>
         <span class="link"><router-link to="/hobbies">Hobbies</router-link></span>
-        <span class="link"><router-link to="/contact">Contact</router-link></span>
+        <span class="link"><router-link to="/contact">Contacts</router-link></span>
     </div>
     <router-view/>
   </div>
@@ -25,17 +23,17 @@ export default {
 
 <style>
     #name{
-        font-family: Didot;
         color: #353535;
-        font-weight: 100;
-        font-size: 40px;
-        padding: 0px 25px 0px 20px; 
+        font-size: 2.5em;
+        padding: 0px 25px 0px 20px;
+        letter-spacing: 0.25em; 
+        font-weight: lighter;
     }
 
     #name a {
         color: #353535;
         text-decoration: none;
-    } 
+    }
 
     #nav{
         border-bottom: 1px #353535 solid;
