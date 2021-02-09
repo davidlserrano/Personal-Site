@@ -1,6 +1,6 @@
 <template>
   <div id="socialsDisplay">
-		<a href="lol"><img id="mylogo" class="icon" src="@/assets/imgs/DS.png"></a>
+		<a href="http://www.davidlserrano.com/" target="_blank"><img id="mylogo" class="icon" src="@/assets/imgs/DS.png"></a>
 		<a href="https://github.com/davidlserrano" target="_blank"><img class="icon" src="@/assets/imgs/github.png"></a>
 		<a href="https://www.linkedin.com/in/davidleoserrano/" target="_blank"><img class="icon" src="@/assets/imgs/linkedin.png"></a>
 		<a href="mailto: davidleoserrano@gmail.com"><img class="icon" src="@/assets/imgs/email.png"></a>
