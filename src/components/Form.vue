@@ -6,14 +6,7 @@
             
         <label> Name: </label>
             <br>
-        <div id="nameInput">
-        <input type="text" name="name" placeholder="First">  
-        </div>
-            
-        <div id="nameInput">
-        <input type="text" name="last" placeholder="Last"/>
-        </div>
-<br>
+           <input type="text" name="name" placeholder="First Last">  
       
         <p>
             <label>Email: 
@@ -78,12 +71,7 @@ export default {
         max-height: 250px;
              opacity: .8;
     }
-    
-    #nameInput{
-        padding: 0px 16px 10px 0px;
-        float:left;
-        min-width: 46%;
-    }
+
     
     button{
         background-color: #d2d7df;

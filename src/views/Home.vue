@@ -2,7 +2,7 @@
 	<div class="home">
 		<div id="display">
 			<div id="text">
-				<h1><em>Creativivity Meets Code</em></h1>
+				<h1><em>Creativity Meets Code</em></h1>
 				<p>Aspiring engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
 				<a href="https://drive.google.com/file/d/1oOBlmA11ll0GGZB8YnlCruFw1KRbn7dU/view?usp=sharing" target="_blank" id="button">View Resume</a>
 				<div id="socials"><Socials/></div>
