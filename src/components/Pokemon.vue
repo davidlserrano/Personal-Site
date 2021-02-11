@@ -60,9 +60,24 @@
     <div class="slide" id="slide4">
       <div id="reqTxt"><h2>Requirements Documentation</h2></div>
       <div id="reqIMGS">
-        <img src="@/assets/imgs/reqs1.png" id="reqs">
-        <img src="@/assets/imgs/reqs2.png" id="reqs">
+        <img src="@/assets/imgs/reqs1.png" class="reqs">
+        <img src="@/assets/imgs/reqs2.png" class="reqs">
       </div>
+    </div>
+
+<!-- SLIDE -->
+
+    <div class="slide" id="slide5">
+          <h2 id="ingameText">In Game Images</h2>
+          <div id="ingameIMGcontainer">
+            <img src="@/assets/imgs/ingame.png" class="ingameIMG">
+            <img src="@/assets/imgs/menu.png" class="ingameIMG">
+            <img src="@/assets/imgs/bag.png" class="ingameIMG">
+            <img src="@/assets/imgs/itemUse.png" class="ingameIMG">
+            <img src="@/assets/imgs/merchant.png" class="ingameIMG">
+            <img src="@/assets/imgs/nurse.png" class="ingameIMG">
+            <img src="@/assets/imgs/pokeBattle.png" id="pokebattle" class="ingameIMG">
+          </div>
     </div>
 
 <!-- SLIDE 
@@ -170,6 +185,8 @@ SLIDE
     display: block;
     width: 100%;
     color: white;
+    float: none;
+    clear: both;
   }
 
   #loginIMG{
@@ -212,7 +229,9 @@ SLIDE
 
   #slide3{
     width: 100%;
-    height: 140%;
+    min-height: 900px;
+    height: 100vh;
+    max-height: 900px;
   }
 
     #uml{
@@ -242,7 +261,9 @@ SLIDE
 /*------------------------slide------------------------*/
 
   #slide4{
-    height: 100px;
+    min-height: 800px;
+    height: 100vh;
+    max-height: 800px;
     margin-top: 20px;
   }
 
@@ -254,19 +275,41 @@ SLIDE
     display: flex;
     flex-direction: horizontal;
     padding-bottom: 30px;
-
   }
 
-  #reqs{
+  .reqs{
     height: 670px;
     padding: 0px 0px 0px 15px;
   }
 
   /*------------------------slide------------------------*/
 
+  #ingameText{
+    padding: 0px 0px 0px 25px;
+  }
+  #ingameIMGcontainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: none;
+  }
+
+  .ingameIMG{
+    max-height: 500px;
+  }
+
+  #pokebattle{
+    border-radius: 10px;
+    margin-left: 3%;
+    margin-bottom: 25px;
+  }
+
+
+  /*------------------------
   #slide5{ 
     display: flex;
     flex-direction: row;
+    float: none;
   }
 
   #text2{
@@ -278,7 +321,6 @@ SLIDE
     width: 50%;
     padding: 25px 0px 0px 0px;
   }
-  /*------------------------slide------------------------*/
 
   #slide6{
     display: flex;
@@ -309,6 +351,6 @@ SLIDE
     width: 200px;
     vertical-align: middle;
   }
-
+------------------------*/
 
 </style>
