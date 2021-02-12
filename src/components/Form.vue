@@ -29,9 +29,6 @@
         </p>
 
         <p>
-            <div data-netlify-recaptcha="true"></div>
-        </p>
-        <p>
         <button type="submit">Send</button>
         </p>
 
