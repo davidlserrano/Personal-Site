@@ -2,7 +2,7 @@
   <div id="form">
     <h1 style="text-align:center;">Feel free to reach out!</h1>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" action="POST" data-netlify="true">
             
         <label> Name: </label>
             <br>
@@ -28,6 +28,9 @@
             <textarea name="message"></textarea></label>
         </p>
 
+        <p>
+            <div data-netlify-recaptcha="true"></div>
+        </p>
         <p>
         <button type="submit">Send</button>
         </p>
@@ -69,12 +72,13 @@ export default {
         max-width: 96.5%;
         min-width: 96.5%;
         max-height: 250px;
-             opacity: .8;
+        opacity: .8;
+        font-family: Avenir, Helvetica, Arial, sans-serif;
     }
 
     
     button{
-        background-color: #d2d7df;
+        background-color: #white;
         border-radius: 5px;
         border: 1px gray solid;
         height: 25px;
