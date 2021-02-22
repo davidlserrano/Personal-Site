@@ -29,7 +29,7 @@
         </p>
 
         <p>
-        <button type="submit">Send</button>
+        <button type="submit" name="submit">Send</button>
         </p>
 
         </form>
