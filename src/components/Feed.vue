@@ -7,6 +7,7 @@
             <div v-if="option === '' && current === 'Hobbies'"><Art/></div>
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
+            <div v-if="option === 'Codepath'"><Android/></div>
     </div>
   </div>
 </template>
@@ -16,6 +17,8 @@
     import Pokemon from '@/components/Pokemon';
     import Art from '@/components/Art';
     import GraphicDesign from '@/components/GraphicDesign';
+    import Android from '@/components/Android';
+
 
     export default {
         name: 'Display',
@@ -24,6 +27,7 @@
             Pokemon,
             Art,
             GraphicDesign,
+            Android
         },
         props: ['option', 'current']
 
