@@ -49,6 +49,7 @@
         font-size: 14px;
         color: #353535;
         font-family: Avenir, Helvetica, Arial, sans-serif;
+        cursor: pointer;
     }
     
     button:hover{

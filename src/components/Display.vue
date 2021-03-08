@@ -9,7 +9,7 @@
 
     <div id="feed">
       <Feed 
-        :option = "clicked.option"
+        :option="clicked.option"
         :current="current"/>
     </div>
 

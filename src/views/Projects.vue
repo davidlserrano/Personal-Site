@@ -16,8 +16,7 @@
         return{
             current: "Projects",
             options: [
-                {id: 1, name: "Pokemon: East Bay"}
-                
+                {id: 1, name: "Pokemon: East Bay"},
             ]
         }
     }

@@ -7,8 +7,11 @@
       <img id="loginIMG" src="@/assets/imgs/login.png">
       <div id="text1">
         <h1>Pokemon: East Bay</h1>
-        <p>A semester long group project intended to reproduce the software development life cycle.</p>
-        <p>From documentation to software testing, my role involved both programming and project management capabilities to help ensure the success of the project.</p>
+        <div id="description">
+          <p>A semester long group project intended to reproduce the software development life cycle.</p>
+          <p>From documentation to software testing, my role involved both programming and project management capabilities to help ensure the success of the project.</p>
+          </div>
+        <a href="https://github.com/davidlserrano/Pokemon-East-Bay" target="_blank" id="button">Github Repo</a>
       </div>
     </div>
 
@@ -161,7 +164,7 @@ SLIDE
     min-width: 1024px;
     max-width: 89.9%;
     height: 86vh;
-    background: #c6c6c6;
+    background: #282923;
     position: fixed;
     border-radius: 5px;
   }
@@ -181,12 +184,15 @@ SLIDE
     transform: translateX(0px);
   }
 
+/*------------------------slide------------------------*/
+
   .slide{
     display: block;
     width: 100%;
     color: white;
     float: none;
     clear: both;
+    margin-bottom: 10%;
   }
 
   #loginIMG{
@@ -201,18 +207,24 @@ SLIDE
     display: flex;
     flex-direction: row;
     vertical-align: top;
+    margin-top: 3%;
   }
 
   #slide2{
     display: flex;
     flex-direction: row;
     vertical-align: top;
-    padding: 25px 0px 0px 25px;
+
+    justify-content: center;
   }
 
 
   #text1{
     padding: 0px 10px 0px 0px;
+  }
+
+  #description{
+    font-size: .87em;
   }
 
   #list1{
@@ -234,20 +246,22 @@ SLIDE
     max-height: 900px;
   }
 
-    #uml{
+  #uml{
     padding: 20px 0px 0px 25px;
   }
 
   #umlIMG{
     height: 800px;
-    margin-left: .5%;
+    margin-left: 1%;
+    display: flex;
+    justify-content: center;
   }
 
   #button{
     text-decoration: none;
     border: none;
     background: #fff;
-    color: #c6c6c6;
+    color: #282923;
     font-weight: bolder;
     width: 110px;
     height: auto;
@@ -274,7 +288,8 @@ SLIDE
   #reqIMGS{
     display: flex;
     flex-direction: horizontal;
-    padding-bottom: 30px;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
   }
 
   .reqs{
@@ -292,6 +307,7 @@ SLIDE
     flex-direction: row;
     flex-wrap: wrap;
     float: none;
+    justify-content: center;
   }
 
   .ingameIMG{
@@ -300,8 +316,8 @@ SLIDE
 
   #pokebattle{
     border-radius: 10px;
-    margin-left: 3%;
     margin-bottom: 25px;
+    width: 920px;
   }
 
 
