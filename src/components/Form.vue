@@ -2,7 +2,7 @@
   <div id="form">
     <h1 style="text-align:center;">Feel free to reach out!</h1>
 
-        <form name="contact" method="POST" data-netlify="true">
+        <form name="contact" method="POST" data-netlify="true" netlify>
             
         <label> Name: </label>
             <br>
