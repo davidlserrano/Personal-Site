@@ -6,9 +6,9 @@
     <div class="slide" id="slide1"> 
       <img id="loginIMG" src="@/assets/imgs/login.png">
       <div id="text1">
-        <h1>Pokemon: East Bay</h1>
+        <h2>Pokemon: East Bay</h2>
         <div id="description">
-          <p>A semester long group project intended to reproduce the software development life cycle.</p>
+          <p>A semester long group project intended to experience the software development life cycle.</p>
           <p>From documentation to software testing, my role involved both programming and project management capabilities to help ensure the success of the project.</p>
           </div>
         <a href="https://github.com/davidlserrano/Pokemon-East-Bay" target="_blank" id="button">Github Repo</a>
@@ -19,7 +19,7 @@
 
     <div class="slide" id="slide2"> 
       <div id="list1">
-        <h2>Roles & Responsibilities</h2>
+        <h3>Roles & Responsibilities</h3>
         <dl>
           <dt>○ <b>Client & Game GUI</b></dt>
           <dd>→ Connected the front-end and back-end systems</dd>
@@ -35,7 +35,7 @@
 <!-- SLIDE -->
 
       <div id="list2">
-        <h2>Dependencies Used</h2>
+        <h3>Dependencies Used</h3>
         <dl>
           <dt>○ <b>Maven</b> for package management</dt>
           <dt>○ <b>JavaFx</b> for the GUI framework</dt>
@@ -52,16 +52,18 @@
 
     <div class="slide" id="slide3">
       <div id="uml">
-      <h2>UML Design</h2>
+      <h4>UML Design</h4>
       <a href="https://i.imgur.com/wUKPbrM.png" target="_blank" id="button">Full Image</a>
       </div>
-      <img id="umlIMG" src="@/assets/imgs/UML.png">
+      <div id="umlContainer">
+        <img id="umlIMG" src="@/assets/imgs/UML.png">
+      </div>
     </div>
 
 <!-- SLIDE -->
 
     <div class="slide" id="slide4">
-      <div id="reqTxt"><h2>Requirements Documentation</h2></div>
+      <div id="reqTxt"><h4>Requirements Documentation</h4></div>
       <div id="reqIMGS">
         <img src="@/assets/imgs/reqs1.png" class="reqs">
         <img src="@/assets/imgs/reqs2.png" class="reqs">
@@ -71,7 +73,7 @@
 <!-- SLIDE -->
 
     <div class="slide" id="slide5">
-          <h2 id="ingameText">In Game Images</h2>
+          <h4 id="ingameText">In-Game Images</h4>
           <div id="ingameIMGcontainer">
             <img src="@/assets/imgs/ingame.png" class="ingameIMG">
             <img src="@/assets/imgs/menu.png" class="ingameIMG">
@@ -96,7 +98,7 @@ SLIDE
 
     <div class="slide" id="slide6">
       <div id="text3">
-        <h2>Handle Method</h2>
+        <h4>Handle Method</h4>
         <p>By default the JavaFx handle method runs a million times per second, causing sporadic behavior in the player's movement. </p>
         <p>We added two variables, <span class="code">elapsedNanoSeconds</span> and <span class="code">elapsedSeconds</span>, that allowed us to have a method which updates the player movement at a more steady pace.
         </p>
@@ -137,19 +139,31 @@ SLIDE
     margin-bottom: 0px;
   }
 
+
   p{
     font-size: 1.6em;
     color: white;
   }
 
   dt{
-    font-size: 1.6em;
+    font-size: 1em;
     padding-top: 10px;
   }
 
   dd{
     font-size: 1.2em;
     padding-right: 10px;
+  }
+
+  h3{
+    font-size: 1.4em;
+  }
+
+
+  h4{
+    font-size: 1.8em;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
 
   .code{
@@ -192,7 +206,7 @@ SLIDE
     color: white;
     float: none;
     clear: both;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
   }
 
   #loginIMG{
@@ -250,9 +264,14 @@ SLIDE
     padding: 20px 0px 0px 25px;
   }
 
+  #umlIMG
+  {
+    margin:auto;
+    width: 95%;
+  }
   #umlIMG{
     height: 800px;
-    margin-left: 1%;
+    /* margin-left: 1%; */
     display: flex;
     justify-content: center;
   }
