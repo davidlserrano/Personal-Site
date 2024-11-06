@@ -2,7 +2,7 @@
 	<div class="home">
 		<div id="display">
 			<div id="text">
-				<h1><em>Creativity Meets Code</em></h1>
+				<h1 class="test"><em>Creativity Meets Code</em></h1>
 				<p>Engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
 				<a href="https://drive.google.com/file/d/1Vu5KBG728VqV_6byaek3OKU5v0Fe_WSS/view?usp=sharing" target="_blank" id="button">View Resume</a>
 			</div>
@@ -48,6 +48,9 @@
 		margin-left: -10px;
 	}
 
+	.test {
+    font-family: 'Montserrat', sans-serif;
+}
 	#display{
 		width: 100%;
 		height: 90vh;
@@ -112,7 +115,6 @@
 	}
 
 	#contact{
-		background: #dbdfe5;
 		height: 200px;
 		width: 100%;
 		position: absolute;
