@@ -2,8 +2,53 @@
 	<div class="home">
 		<div id="display">
 			<div id="text">
-				<h1 class="test"><em>Creativity Meets Code</em></h1>
-				<p>Engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
+				<div id="circleCover">
+					<pre>                                                                            
+ ├─────────────────────────────────────────────────────────────────────────────────┐
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ │                                                                                 │
+ └─────────────────────────────────────────────────────────────────────────────────┴
+</pre>
+				</div>
+				<!-- <h1 class="test"><em>Creativity Meets Code</em></h1> -->
+				<!-- <p>Engineering professional with an interest in the software life cycle, full stack development, and project management.</p> -->
 				<a href="https://drive.google.com/file/d/1Vu5KBG728VqV_6byaek3OKU5v0Fe_WSS/view?usp=sharing" target="_blank" id="button">View Resume</a>
 			</div>
 		</div>
@@ -74,10 +119,16 @@
 	}
 
 	#text{
-		position: absolute;
-		width: 500px;
+		margin: auto;
 	}
-
+#circleCover
+{
+	border-radius: 100%;
+	width: 100%;
+	background: lightgray;
+	overflow:hidden;
+	
+}
 	#button{
 		text-decoration: none;
 		border: none;
@@ -126,6 +177,12 @@
 		display: flex;
 		justify-content: center;
 		font-size: 0.7em;
+	}
+
+	#text-art{
+		width:100%;
+		text-align: center;
+		margin:auto;
 	}
 
 </style>
