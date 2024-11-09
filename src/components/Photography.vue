@@ -72,7 +72,7 @@
     }
 
     .copyright{
-      color: #353535;
+      color: rgb(64, 61, 77);
       display: block;
       font-size: 11px;
       font-family: Times New Roman;
