@@ -179,6 +179,7 @@ SLIDE
     max-width: 89.9%;
     height: 86vh;
     background: #282923;
+        /* background: linear-gradient(rgba(153, 168, 194,.1), rgba(64, 61, 77, 0.761)); */
     position: fixed;
     border-radius: 5px;
   }
