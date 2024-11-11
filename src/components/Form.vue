@@ -45,7 +45,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     #form{
-        border: 1px #353535 solid;
+        border: 1px rgb(64, 61, 77) solid;
         margin: auto;
         width: 400px;
         border-radius: 10px;

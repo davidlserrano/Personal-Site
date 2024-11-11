@@ -46,12 +46,10 @@
         flex-direction: row;
         height: inherit;
         position: fixed;
-        width: 98.8%;
+        /* width: 98.8%; */
     }
     
     #menu{
-        margin-top: .85%;
-        margin-left: 1.5%; 
         position: relative;
     } 
     

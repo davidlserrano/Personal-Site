@@ -35,10 +35,10 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     #list{
-        color: #353535;
+        color: rgb(64, 61, 77);
         width: 150px;
         height: 150px;
-        border-right: 1px #353535 solid;
+        border-right: 1px rgb(64, 61, 77) solid;
         margin-top: 13px;
 
     }
@@ -47,7 +47,7 @@
         background: none;
         border: none;
         font-size: 14px;
-        color: #353535;
+        color: rgb(64, 61, 77);
         font-family: Avenir, Helvetica, Arial, sans-serif;
         cursor: pointer;
     }

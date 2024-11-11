@@ -4,6 +4,7 @@
             <div v-if="option === '' && current === 'Projects'"><Pokemon/></div>
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
             <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
+            <div v-if="option === 'Salesforce'" id="Salesforce"><Salesforce/></div>
             <div v-if="option === '' && current === 'Hobbies'"><Photography/></div>
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
@@ -18,6 +19,7 @@
     import Art from '@/components/Art';
     import GraphicDesign from '@/components/GraphicDesign';
     import Android from '@/components/Android';
+    import Salesforce from '@/components/Salesforce';
 
 
     export default {
@@ -27,7 +29,8 @@
             Pokemon,
             Art,
             GraphicDesign,
-            Android
+            Android,
+            Salesforce
         },
         props: ['option', 'current']
 

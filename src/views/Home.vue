@@ -1,131 +1,268 @@
 <template>
-	<div class="home">
-		<div id="display">
-			<div id="text">
-				<h1 class="test"><em>Creativity Meets Code</em></h1>
-				<p>Engineering professional with an interest in the software life cycle, full stack development, and project management.</p>
-				<a href="https://drive.google.com/file/d/1Vu5KBG728VqV_6byaek3OKU5v0Fe_WSS/view?usp=sharing" target="_blank" id="button">View Resume</a>
+<div class="home">
+	<div id="display">
+		<div id="text">
+			<div id="canvas2"></div>
+			<div id="canvas">
+				<div id="inner-line">
+					<!-- eslint-disable -->
+				<pre>*⠀　　⠀  　　　　　⠀✦⠀　                                                                                                                                                                                                                                                                                                                          
+                                   　　　　　　*　　　　　　　　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                                      
+                                   　　　　.　　　　.　　　⠀                                                                                                                                                                                                                                                                                                                                  
+                                   　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                                                    
+                                   　　　　　　　            ⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                                                                                                                                                       
+                                   　　　˚　　　　　　　　ﾟ　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀                                                                                                                                                                                                                                                                                                            
+                                   　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　　　　　　　　.                                                                                                                                                                                                                                                                                                          
+                                   　　　*　　⠀.           .　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*                                                                                                                                                                                                                                                                                       
+                                   　　　　　.　　　　　　　　　　⠀✦⠀　　　　　⠀　　　　⠀　　,　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                                                                                                                                                         
+                                   　˚　　　　　　　　　　　　　　*⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　                                                                                                                                                                                                                                                                                                 
+                      ⠀⠀⠀.　　　　　　　　　.⠀　　　　　　　　　　　.　　　　　　　　.　　　⠀　⠀  　　,　　　　　　.✦ 　　　　　,　　　　　　　.                                                                                                                                                                                                                                                                                       
+                      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　　　　✦⠀　   　　　　　..　　✦⠀　  　　　　.　　.　　✦⠀　   　　　,　　　　　　　　　*                                                                                                                                                                                                                                                                                         
+                      　　　　　　*　　　　　　⠀⠀⠀⠀⠀⠀.　　　　　　　　, 　.,　　　　　　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                     
+                      .　　　　　　　　　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀*ੈ✩.　　　;　 　　⠀　*　　　　　　　　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                   
+                      　　　　　⠀　　　　⠀　　　　　　　　*　　　　　　　-　--+-　-　.✦　　　.　　　⠀　　　　　.                                                                                                                                                                                                                                                                                                         
+                      ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀..　　　　　　　　　　　　　⠀⠀⠀⠀!⠀⠀⠀⠀⠀⠀　　,　　　　　　　　　*             ⠀⠀⠀.　*ੈ✩‧₊˚✩‧₊˚₊˚.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                                                                                                                       
+                       　　˚　　　⠀　⠀  　　　　　　⠀　　　　⠀　　, 　　　.　⠀✦⠀　 　　⠀  　　　　　⠀✦⠀　            ⠀⠀⠀⠀⠀⠀⠀*ੈ✩‧₊˚⠀⠀⠀⠀                                                                                                                                                                                                                                                                            
+                      　　　　　　　　　　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　　　　ﾟ　　　　　.　　　　.        　　　　..　　✦⠀　  　　　　　.                                                                                                                                                                                                                                                                          
+            　.      　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　⠀　⠀  　　,　　　　　　.　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　　, 　.,　　　　　.　　　　　　　　　　⠀⠀　　　　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　　　　　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　　　　　　　　.                                                                                                                                                                                       
+                    　⠀⠀⠀.　*　　　　　　　　　　　　　　　　　　.　　.   　　　　　*⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀.　　　;　 　　⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　 ⠀⠀⠀⠀⠀                                                                                                                                                                                               
+          　　..　　✦⠀　  ⠀⠀⠀⠀⠀.　　　　.　　　　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　　　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀-　--+-　-　.✦*　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　　　　　　　　　　　.⠀⠀⠀⠀⠀　　　　　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀　　　　.                                                                                                                                                                                          
+          　, 　.,　　　　　⠀‍⠀‍⠀　　　　　　　. 　　　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　 　　　　　　　　　.⠀　　✦　　　　　⠀⠀⠀⠀!⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀　　　　　　.⠀　　✦　　　　　　　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　　　                                                                                                                                                                                               
+          .　　　;　 　　⠀　.　　　　　　　　　　　　　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀　⠀　　　　⠀　　,　　　　　.　　　　 　　　.　⠀✦⠀　 　　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀　　⠀　　,　　　　　.　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀　　                                                                                                                                                                                               
+          -　--+-　-　.✦　　　　　　　　　　　　　ﾟ　　　　　　⠀　⠀　　　　　　*　　　　　*ੈ✩‧₊˚.⠀⠀⠀⠀⠀,　　    　　　　　　　　.　　　　　　　　*⠀　　　　　　　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　.　@@⠀　   　　　,　　　　　　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀-------------------------------------------------------------------------------------------+                                                                                                     
+          ⠀⠀⠀⠀!⠀⠀⠀⠀⠀⠀ 　.⠀　　⠀‍⠀‍⠀‍⠀‍　　　　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　　　　⠀⠀⠀✦　⠀⠀⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀*⠀　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　⠀⠀,⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　　　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                  
+           　　　.　⠀✦⠀　  　　　*　　⠀.*ੈ✩‧₊˚　　　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　⠀⠀⠀　　　　　　　　　　　　.　　　　　　.　　　　.　　　˚　　　⠀　⠀  　　,　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　     　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　⠀⠀⠀⠀⠀ :                |                                                                                                                                                                         
+     　　　　　　.　　　ﾟ .　　　　　　　　　　　　　　　　　　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　　　　　　　　　.　.　*⠀　　⠀  　　　　　　　　　　　　　　　　　　　　　　　　　　.   x  　　˚　　　⠀　⠀  　　,　　　　　　.✦⠀　             　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀ :                |                                                                                                                                                                         
+⠀⠀⠀.　⠀⠀⠀⠀⠀⠀　　　　　　.　　　ﾟ　.　　　　　　　　　　　　　　　　✦⠀　   　　　　　　　　.　　　　　　　　　　　　　..　　✦⠀　   　　　,　　　　　　　　　*　　　.　　　　　　*⠀　　⠀  　　　　　⠀　　　　　　　　　　　　　.　　　　　　　　　　　　　　.@        　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　 :                |                                                                                                                                                                         
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀     .⠀ 　　　　　　　　　　.　.　　　　　　..xx    ⠀⠀　　　　　⠀.　　　⠀　　,　⠀⠀*ੈ✩‧₊˚✩‧₊˚₊˚.　　　　　　　⠀⠀⠀⠀⠀*　⠀⠀⠀.　　　　　　　　　　.　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                    
+　　　　　　*　　　　　　　　　　　.   　　　　　✦⠀　   　　　,.　    　　　　┊　　　.⠀⠀⠀┊⠀⠀⠀┊;⠀⠀⠀┊⠀.　　　　⠀⠀*ੈ✩‧₊˚⠀⠀⠀⠀　　　　.⠀　　⠀‍⠀‍⠀　　　@.　　　　.　　　⠀‍⠀,x 　　　　　　*　　　　　　　　　　　　　　　　　　.　　　.　@　ﾟ@.　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.    |           :                                                                                                                                                             
+.　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　:　⠀⠀⠀✦⠀⠀⠀⠀┊　　　　　　　┊-˚--+-　-★⋆｡˚,　⋆　　　　.　　　　　　.　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                                  
+　　　　　⠀　　　　⠀　　,        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀!⠀　　　　┊⠀⠀⠀┊⠀.⠀⠀.┊　┊　　　⋆!┊　　　┊　.　　┊⠀　   　　　┊　　　　　　　　　*　.　　　　　　　⠀‍　　✦:        x:　　　　　　　　　　　.　　　ﾟ　　　　　.　　　　　　　　.x                                                      |           :                                                                                                                                                             
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　*　　　　　　　　|　　.x ┊　　.┊　*　　　┊　★⋆　　　.┊　　⠀┊ 　　˚★⋆｡˚⠀　⋆⠀‍⠀‍⠀‍⠀‍⠀　˚　　　　　　　　　　　　　　　　　　　　ﾟ　　　　　.　　　　　　　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,✦⠀　   　　　@　　　@　　　　　*                                    |           :                                                                                                                                                             
+ 　　˚　　　⠀　⠀  　　,　　　　　　..　　　　　　　　　　　　　.|_◦✦⠀　┊  　　+,　　　┊　　　　　　*┊　　　⋆　　　　　　　　　　　　　.*　　　　　.⠀.　　　　　　　　.⠀‍⠀⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍　　　˚　　　　　　　　ﾟ　　　　　.　　　⠀　　,        x:                                 :             :  |           :                                                                                                                                                             
+　　　　　　　　　　　　　.        　　　　　⠀　　　　⠀*,✩‧|˚`.x ┊　┊　.⠀　˚　　┊*ੈ✩‧₊˚　★⋆.　　　　　　　　　.　.　　　　　　　　　　　　　　　✦⠀　  　　　.　　⠀.   　　　　　　　　　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　 　　⠀　　　⠀.　                      :                    :  |           :                                                                                                                                                             
+　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　⠀⠀⠀⠀⠀⠀---⠀--+-<#>-+-₊---　⠀--⠀⠀-　　　　　　　　　　　　.　　⠀.　˚　　　　　　　　　　　　　　⠀⠀⠀⠀⠀⠀*ੈ✩‧₊˚　　　.　　　　　　　　　　⠀✦　　　　*　　⠀.　　　　　　　　　　　*.　　　　　　　　　　.　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                  
+　　　　　　*　　　　　　　　　　　　　　　　　　.　　　⠀　⠀⠀⠀`._|_,'⠀⠀★⋆　˚　　　⠀┊　.　　˚　　　　　⠀  　　　　　⠀✦⠀　　　　　　　　　　.　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　˚　  　　　　　　　　　　　*  　　　　　.　　　　　　　　　　⠀✦　　　　　　　.             x                      :                    :  |           :                                                                                                                                                             
+　　　　.　　　　.　　　⠀        　　　　　　　　　　　　　. T     　　　　　　　　　　　˚★　˚　　　　　　　　ﾟ　　　　　.　　　　.   　　　,　　　　　　　*　　　.⠀　　　　　　　　　　　.　　　　　　˚　　　　　　　　　　　　　　*,　　    　*ੈ✩‧₊˚　.　 :      x     :   @                                 |           :                                                                                                                                                             
+　　　　　　　　　　　.      x x 　　　　　⠀　　　　⠀⠀⠀✦.|.　　　　　　　　　　⠀⠀　　　　　⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　　　　.　　　　　　　　　　　　 　✦⠀　   　　　,　　  .⠀　　　　　　　　　　　.　　　　　　　　.✦⠀⠀⠀⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀*⠀⠀⠀⠀.　　　　　　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀　⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                  
+　　　　　　　          x    　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦!⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀　　　✦⠀　   　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　　　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　✦⠀　   　　　,　　    　　　　　　　　..　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀@✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                        
+　　　˚　　　　　　　　ﾟ　　　　　.   　　　　　　　⠀　⠀　　　　　:*　　　　　　　　.　:.⠀⠀⠀⠀⠀　　　           　　　　　　*　　　　　　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　 ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦.⠀.⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                     
+　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀　　　　　　.　　　 .　　　　　　　*.⠀　　✦　　　　　　　　　　　　　ﾟ　　　　　.　　　　　　　　　　　　　. 　　　˚　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　✦⠀　   　　　,　　　　　　　　　*　　　　,　　　　　　　.               :             :  |           :                                                                                                                                                             
+　　　*　　⠀.       x   ⠀⠀⠀　　　　　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　⠀　　,　　　　　　　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　　*　　　　　　　　　　　.　　　　　ﾟ　　　　　.⠀⠀⠀⠀⠀✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀　⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                           
+　　　　　.　　　　　　　　　　⠀✦ ⠀⠀⠀　　　˚　　　　　　　　ﾟ　　　　　.  　　　˚　　　　　　　　　　✦⠀　   　　　    ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　　　　　*⠀　　　　　　　⠀　　　　⠀　　,　　　*ੈ✩‧₊˚✩‧₊˚₊˚.　　　..　　✦⠀　   　　　,　　　　　　　　　*,             x         :                       |           :                                                                                                                                                             
+　˚　　　　　　　　　　　　　　*  　　　　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀, 　　˚　　　⠀　⠀  　　,　　　　　　　*　　　⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀.　　　　⠀⠀*ੈ✩‧₊˚⠀⠀⠀⠀⠀　　, 　.,　　　　　　.          :        ✧₊⁺ :                    :             :  |           :                                                                                                                                                             
+.⠀ 　　　　　　　　　　.　　　　　　　　.　　　　✦⠀　   　　　　✦⠀　   　　　*　　⠀.　　　　　*　　　　*        　　　　　　　　　　　　　.　　　　　　.　　　　.　　　　.　　⠀　⠀  .　,　　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　;　 　　⠀　　　⠀.　⠀✦       ⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.:                                                                                                                                                    
+　　　　　✦⠀　   　　　,　　    　　　　　　　　.　　,　⠀　　,     　　　　　.　　　　　　　　　　⠀✦         　　　　　　*⠀　　⠀  　　　　　　　　　　　　　　　　⠀⠀　　　　　　　:.⠀.　　　　　　˚　　　⠀　⠀  -　--+-　-　.✦⠀　　　　*        ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀x              :                |           :        :                                                                                                                                                    
+⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦⠀⠀⠀⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀*　⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀!⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀!⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.⠀　⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.   :                                                -                                                                                                   
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   　　˚　　　⠀　⠀  　　,　　　　　　.　　.⠀.　　　　　　　　　　.　　　　　　　　.    　　　　.　　　　.　　　　　.　　　˚　　　　　　　　　　　　*　　　　　|　　　　　　　　.　　　*⠀　　⠀  　　　.　⠀✦⠀　 　　　,　　    　　　　.　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*           |           :        :                                                                                                                                                    
+　　　　　　*　　　　　　　　　　　.　　　　　　　　　　　　　.　　　　.     　　　　　✦⠀　   　　　,　　    　　　　　　　　　　　　　　　　　.　　,　　.⠀　⠀‍⠀‍⠀‍　　　⠀⠀　　　　.　　|_⠀,　　　　　　　+　*　　　　　　　　　　　　　　　　　　.　　　⠀⠀⠀✦ ⠀ ⠀　　　　　⠀　　　　⠀　　,⠀⠀⠀⠀⠀*x⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                         
+.　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*✦⠀　　⠀⠀⠀⠀⠀⠀⠀.　　　　*ੈ✩‧₊˚⠀⠀⠀✦ ⠀ ⠀　　　　　　　　　⠀⠀⠀⠀⠀⠀.　　　　　　　✦⠀　  　　　　.　　　　,　.|　`.　　　　　　　.　　　　.　　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                             
+　　　　　⠀　　　　⠀　　,     　　　　　　*　　*ੈ✩‧₊˚✩‧₊˚₊˚.　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀          　　　˚　　　　　　　　ﾟ　　　　　.　　　.　　　　　　---　--+-<#>-+-✧---　　--　　-　　.　　　ﾟ　　　　　.　　　　　　　　.       　　˚　　　⠀　⠀  　　,　　　　　　.x  :                       |                                                                                                                                                                         
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　⠀⠀*ੈ✩‧₊˚⠀⠀⠀⠀   　　　　　　*　　　　　　　　　　　.        　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　　　　　　　`._|_,'　　.　　　　　　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　✦⠀　   　　　　　　　　　　　　　　.        xx                         |                    :                                                                                                                                                    
+ 　　˚　　　⠀　⠀  　　,　　　　　　.　　　　　　　　.　　　　.       .　　　　　　　　　　　　　. 　　✦⠀　   　　　　　　　　✦⠀　   　　　　　　　　⠀✦⠀　   　.⠀@⠀‍⠀‍⠀‍⠀‍T‍⠀‍⠀‍⠀　　　˚　　　　　　　　ﾟ　　　　　.　　　⠀　　,      ✧₊⁺  　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　 xx                        |                                                                                                                                                                         
+　　　　　　　　　　　　　.     　　　　　　　　　　　　   |        　　　　　⠀　　　　⠀　　,              　　　　　　*　　　　　　　　　　　　　　　　　　　　　　　✦⠀　   　|　　ﾟ　　　　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　　　　 　　⠀　　　　　　　　　*　　　　　　　　　　　　　　　　　　.                    :  |                    :                                                                                                                                                    
+　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　˚　　　　　　　　ﾟ　　　　　.　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　　　　　.　　　　.　　　⠀　　　　ﾟ　　　　　.   @.⠀　　⠀‍⠀‍!‍⠀‍⠀‍⠀　　　　　✦⠀　   　　　　˚　　　⠀　⠀  　　,　　　　　　. : 　　　　.　　　　.　　　⠀           x                       |                                                                                                                                                                         
+　　　　　　*　　　　　　　　　　　　　　　　　　.⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍　　˚　　　⠀　⠀  　　,　　　　　　.      　　　　　　　　　　　.⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀⠀‍　　*　　⠀. :       | . :      　　　　　　　　　　　　　.           　　　　　　　　　　　.             x                       |                    :                                                                                                                                                    
+　　　　.　　　　.　　　      　　　*　　⠀.　　✦⠀　   　　　     　　　　　　　　　　　　　.              　　　　　　　　　　　✦⠀　   　　　  :    　　　　　　.　　　.　　　　　　⠀*          　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　 : 　　　　　　　                  :✧₊⁺                 :  |                                                                                                                                                                         
+　　　　　　　　　　　.       　　　　　.　　　　　　　　　　⠀✦      　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　　　　ﾟ .　　　˚　　　　　　　　ﾟ　　　　　.　　　　　　　　‍⠀˚　　　　　　　　　　　　　　*.          　　　　　　*　　　　　　　　　　　　　　　　　　　　　˚　　　　　　　　ﾟ　　　　　.                              |                    :                                                                                                                                                    
+　　　　　　　            　˚　　　　　　　　　　　　　　*       　　　　　　*　　　　　　　　　　　　　　　　　　.  　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,.　⠀ 　　　　　　　　　　.　　　　　　　　.     　　　　.　　　　.　　　            　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,                   :  |                                                                                                                                                                         
+　　　˚　　　　　　　　ﾟ　　　　　..⠀ 　　　　　　　　　　.　　　　　　　　. 　　　　.　　　　.　　　　　　　　　　　　.     　　　*　　⠀.              :    　　　　　　✦⠀　   　　　,　　    　　　　　　　　.　　　　　　　　　.:            　　　*　　⠀.                 :                    :  |                    :                                                                                                                                                    
+　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,　   　　　,　　    　　　　　　　　　　　　　　.　　　　　　. 　　✦⠀　   　　　　　.　　　　　　　　　　⠀✦           ⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ ⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　　　　　　.　　　　　　　　　　⠀✦⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                     
+　　　　　✦⠀　   　　　     ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ 　　　　　　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　˚　　　　　　　　　　　　　　*⠀⠀⠀⠀⠀✦⠀⠀⠀ 　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　˚　　　　　　　　　　　　　　*⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                                                     
+                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀-------　　　˚　　　　　　　　ﾟ　　　　　.　　　 　　⠀　　.⠀.　　　　　　　　　　.　　　　　　　　.     　　　　　　*　　　　　　　　　　　.         　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀.⠀ 　　　　　　　　　　.　　　　　　　　.                       :                      :                                                                                                                                                     
+                   　　　　　　*　　　　　　　　　　　.     　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,  　　　　　✦⠀　   　　　,　　    　　　　　　✦..　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　* 　　　           　　　　　✦⠀　   　　　,　　    　　　　　　　　.                :                      :                                                                                                                                                     
+                   .　　　　　　　　　　　　　. 　　⠀　　　　⠀⠀⠀✦.⠀.　　　　　　　　　　⠀⠀　　　　　     ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ ⠀　　　✦　　　　　　　　　　⠀⠀⠀⠀⠀* ⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦⠀⠀⠀⠀　　　　　　　　　　　　　　⠀⠀⠀⠀⠀*⠀⠀⠀⠀.　　　　　　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.
+                   　　　　　⠀　　　　⠀　　,   ⠀⠀⠀⠀⠀⠀⠀⠀⠀　✦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　⠀⠀⠀⠀⠀✦⠀　  ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀          　　⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　            :            ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀        :                                           :                                                                                                                                                     
+                   ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　　　⠀　⠀　　　　　　*　　　　　　　　　　　.⠀⠀⠀⠀⠀　　　　　　　　　　　*　　　　　　　　　　　.        　 　　˚　　　⠀　⠀  　　,　　　　　　.                  :            　　　　　　*　　　　　　　　　　　.      :       :                                   :                                                                                                                                                     
+                    　　˚　　　⠀　⠀  　　,　　　　　　　　.　　　 　　　　　　　　　.⠀　　✦　　　　　     .　　　　　　　　　　　　　. 　　✦⠀　   　　　　　　　　　　　　　*　　　.        :                 :            .　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*                              ::                                                                                                                                                     
+                   　　　　　　　　　　　　　.   　　*⠀　　　　　　　⠀　　　　⠀　　,　　　　　.　　　　     　　　　　⠀　　　　⠀　　,             　⠀　　　　　*⠀　　⠀  　　　　　⠀✦⠀　                               　　　　　⠀　　　　⠀　　,                   :                                                                                                                                                                                         
+                   　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　      　　　　　　　                 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　.　　　　　*　　　　　　　　　　　　　　　　　　.                           ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　     :                                                                                                                                                                                         
+                   　　　　　　*　　　　　　　　　　　　　　　　　　.  　　　˚　　　　　　　　ﾟ　　　　　.      　　˚　　　⠀　⠀  　　,　　　　　　.     ⠀⠀　　　.　　　　.　　　                                         　　˚　　　⠀　⠀  　　,　　　　　　.           :                                                                                                                                                                                         
+               ✧₊⁺ 　　　　.　　　　.　　　               　.⠀　　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀　　　　　　　　　　　　　.             ⠀　　　　　　　　　　　.          :                              　　　　　　　　　　　　　. :                 :                                                                                                                                                                                         
+                   　　　　　　　　　　　.                　　　*　　⠀.                　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　     　　　　　　　　                                              　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　          ::                                                                                                                                                                                         
+                   　　　　　　　                     　　　　　.　　　　　　　　　　⠀✦      　　　　　　*　　　　　　　　　　　　　　　　　　. ⠀⠀　　˚　　　　　　　　ﾟ　　　　　. ✧₊⁺                              　　　　　　*　　　　　　　　　　　　　　　　　　.                                                                                                                                                                                                 
+                   　　　˚　　　　　　　　ﾟ　　　　　.         　˚　　　　　　　　　　　　　　*       　　　　.　　　　.　　　              　..⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,                           　　　　.　　　　.　　　  :                                                                                                                                                                                                           
+                   　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,  .⠀ 　　　　　　　　　　.　　　　　　　　. 　　　　　　　　　　　.:              ‍⠀　　　　✦⠀　   　　　        :                              　　　　　　　　　　　.   :                                                                                                                                                                                                           
+                   　　　　　✦⠀　   　　　              　　　　　✦⠀　   　　　,　　    　　　　　　　　　　     :              　　                     :                              　　　　　　　        :                                                                                                                                                                                                           
+                                               ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　⠀⠀⠀✦ ⠀ 　　　˚　　　　　　　　ﾟ　　　　　.⠀* ⠀⠀⠀.　　　　　　　　　　. ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀✦⠀⠀⠀ ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀　　　˚　　　　　　　　ﾟ　　　　　.⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ ⠀ ⠀⠀⠀⠀⠀⠀.　　　　　　　　　　　　　.　　　ﾟ .　　　　　　　　　　　　　. 　　　　　　　　　　　　　　　✦ 　　　　　,　　　　　　　.                                                                                                         
+                                               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀       　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,                                                       　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,                                                                                                                                                                                                 
+                                               　　　　　　*　　　　　　　　　　　.     　　　　　✦⠀　   　　　                                                                   　　　　　✦⠀　   　　　                                                                                                                                                                                                             
+                                               .　　　　　　　　　　　　　. 　　✦⠀　   　　　,　　　　　　　　　*                                                                                                                                                                                                                                                                                              
+                                               　　　　　⠀　　　　⠀　　,                                                                                                                                                                                                                                                                                                                      
+                                               ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀.　　　　　 　　⠀　　　⠀.　                                                                                                                                                                                                                                                                                                        
+                                                　　˚　　　⠀　⠀  　　,　　　　　　.                                                                                                                                                                                                                                                                                                              
+                                               　　　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                                      
+                                               　　　　　　*⠀　　⠀  　　　　　⠀✦⠀　                                                                                                                                                                                                                                                                                                              
+                                               　　　　　　*　　　　　　　　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                          
+                                               　　　　.　　　　.　　　                                                                                                                                                                                                                                                                                                                       
+                                               　　　　　　　　　　　.                                                                                                                                                                                                                                                                                                                        
+                                               　　　　　　　                                                                                                                                                                                                                                                                                                                             
+                                               　　　˚　　　　　　　　ﾟ　　　　　.                                                                                                                                                                                                                                                                                                                 
+                                               　.⠀　⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀‍⠀,                                                                                                                                                                                                                                                                                                          
+                                               　　　　　✦⠀</pre>		<!-- eslint-enable -->
+			</div>																																																		
 			</div>
-		</div>
-		<div id="contact">
-			<div id="socials"><Socials/></div>
-			<div id="footer">Copyright © 2021 David Serrano. All rights reserved.</div>
+	
 		</div>
 	</div>
+	<div id="contact">
+		<div id="socials"><Socials/></div>
+		<div id="footer">Copyright © 2024 David Serrano. All rights reserved.</div>
+	</div>
+</div>
 </template>
 
 <script>
-	import Socials from '@/components/Socials';
-    
-    export default {
-        name: 'Home',
-        components: {
-            Socials
-        }
-    }
+// import html from "eslint-plugin-html"
+import Socials from '@/components/Socials';
+import {  onMounted } from 'vue'
+onMounted(() => {
+// text content should be the same as current `count.value`
+console.log('test')
+})
+export default {
+	name: 'Home',
+	components: {
+		Socials
+	},
+	files: ["**/*.html"],
+	// plugins: { html },
+}
 
 </script>
 
 <style scoped>
 
-	h1{
-		font-weight: lighter;
-		font-size: 5em;
-		margin-bottom: 0px;
-		margin-top: 0px;
-	}
-
-	p{
-		padding: 0px 150px 10px 10px;
-	}
-
-	.home{
-		position: fixed;
-		height: 100vh;
-		width: 100.5%;
-		display: block;
-		overflow-y: scroll;
-		margin-left: -10px;
-	}
-
-	.test {
-    font-family: 'Montserrat', sans-serif;
+h1{
+	font-weight: lighter;
+	font-size: 5em;
+	margin-bottom: 0px;
+	margin-top: 0px;
 }
-	#display{
-		width: 100%;
-		height: 90vh;
-		/*max-height: 690px;
-		min-height: 690px;*/
-		display: flex;
-		flex-direction: column;
-		padding: 0px 25px 0px 35px;
-		background: url(gradient.png) no-repeat top center;
-		background-size: cover;
-		justify-content: center;
-	}
 
-	::-webkit-scrollbar {
-		display: none;
-	}
+p{
+	padding: 0px 150px 10px 10px;
+}
 
-	html {
-		-ms-overflow-style: none; 
-		scrollbar-width: none;  
-	}
+.home{
+	position: fixed;
+	height: 100vh;
+	width: 100.5%;
+	display: block;
+	overflow-y: scroll;
+	margin-left: -10px;
+}
 
-	#text{
-		position: absolute;
-		width: 500px;
-	}
+.test {
+font-family: 'Montserrat', sans-serif;
+}
+#display{
+	display: flex;
+	flex-direction: column;
+	/* background: pink; */
+	background-size: cover;
+	justify-content: center;
+}
 
-	#button{
-		text-decoration: none;
-		border: none;
-		background: #353535;
-		color: white;
-		font-weight: bolder;
-		width: 110px;
-		height: auto;
-		border-radius: 5px;
-		margin-left: 10px;
-		margin-bottom: 100px;
-		padding: 2px 5px 2px 5px;
-	}
+::-webkit-scrollbar {
+	display: none;
+}
 
-	#socials{
-		display: flex;
-		justify-content: center;
-		margin-top: 20px;
-	}
+html {
+	-ms-overflow-style: none; 
+	scrollbar-width: none;  
+}
 
-	#page{
-		height: 100vh;
-		display: block;
-		position: relative;
-		margin: 0px;
-		vertical-align: middle;
-	}
+#text{
+	margin: 3% auto;
+	color: white;
+}
 
-	#skills{
-		display: flex;
-		justify-content: center;
-		height: inherit;
-		padding: 0px 0px 0px 0px;
-		width: 98.9%;
-	}
+#canvas
+{
+	/* border-radius: 0 100% 0 100%; */
+	z-index: -1;
+	border-radius: 50% 50% 0% 0%;
+	width: 99vw;
+	height: 100vw;
+	background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
+	/* background-repeat: none; */
+	overflow:hidden;
+}
 
-	#contact{
-		height: 200px;
-		width: 100%;
-		position: absolute;
-		vertical-align: middle;
-	}
+#canvas2
+{
+	position: fixed;
+	z-index: 0;
+	/* border-radius: 0 100% 0 100%; */
+	width: 100vw;
+	height: 150vw;
+	background: linear-gradient( rgba(255, 255, 255, 0), rgba(242, 245, 248, .5));
+	/* background-repeat: none; */
+	/* overflow:hidden; */
+}
 
-	#footer{
-		margin-top: 20px;
-		display: flex;
-		justify-content: center;
-		font-size: 0.7em;
-	}
+
+
+/* #inner-line
+{
+	position:absolute;
+	border-radius: 50% 50% 20% 20%;
+	width: 90%;
+	height: 90%;
+	border: 2px solid #F2F5F8;
+	overflow:hidden;
+	margin:auto;
+} */
+
+#button{
+	text-decoration: none;
+	border: none;
+	background: rgb(64, 61, 77);
+	color: white;
+	font-weight: 900;
+	width: 110px;
+	height: auto;
+	border-radius: 5px;
+	font-size: .7em;
+	padding:5px 10px 5px 10px;
+}
+
+#socials{
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+
+#page{
+	height: 100vh;
+	display: block;
+	position: relative;
+	margin: 0px;
+	vertical-align: middle;
+}
+
+#skills{
+	display: flex;
+	justify-content: center;
+	height: inherit;
+	padding: 0px 0px 0px 0px;
+	width: 98.9%;
+}
+
+#contact{
+	height: 200px;
+	width: 100%;
+	position: absolute;
+	vertical-align: middle;
+}
+
+#footer{
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	font-size: 0.7em;
+}
+
 
 </style>
