@@ -1,146 +1,31 @@
 <template>
-  <div class="pokemonDisplay">
-
-<!-- SLIDE -->
-
-    <div class="slide" id="slide1"> 
-      <img id="loginIMG" src="@/assets/imgs/login.png">
-      <div id="text1">
-        <h2>Pokemon: East Bay</h2>
-        <h3>May 2020</h3>
-        <!-- <div id="description"> -->
-          <p>Semester long group project following the Agile framework</p>
-          <p>My role required both development and project management skills to ensure to the teams overall success</p>
-          <!-- </div> -->
-        <a href="https://github.com/davidlserrano/Pokemon-East-Bay" target="_blank" id="button">Github Repo</a>
+  <div class="display">
+    <div> 
+      <h4>Certifications</h4>
       </div>
-    </div>
-
-<!-- SLIDE -->
-
-    <div class="slide" id="slide2"> 
-      <div id="list1">
-        <h3>Roles & Responsibilities</h3>
-        <dl>
-          <dt>○ <b>Client & Game GUI</b></dt>
-          <dd>Connected both front and back end systems</dd>
-          <dt>○ <b>Player</b></dt>
-          <dd>Implemented database management, user movement, and NPC interactions  </dd>
-          <dt>○ <b>Player Menu</b></dt>
-          <dd>Provided an in-game menu giving players the ability to navigate their game data</dd>
-          <dt>○ <b>NPCs</b></dt>
-          <dd>Co-developed the overall game's interface and functionality</dd>
-        </dl>
+      <div id="">
+        <img class="badge" src="@/assets/badges/admin.png">
+        <img class="badge" src="@/assets/badges/dev1.png">
+        <img class="badge" src="@/assets/badges/dev1.png">
+        <img class="badge" src="@/assets/badges/javascript.png">
       </div>
-
-<!-- SLIDE -->
-
-      <div id="list2">
-        <h3>Dependencies</h3>
-        <dl>
-          <dt>○ <b>Maven</b> for package management</dt>
-          <dt>○ <b>JavaFx</b> for the GUI framework</dt>
-          <dt>○ Google’s <b>Firebase Realtime Database</b></dt>
-          <dd>→ To store user’s account information</dd>
-          <dd>→ Allow online Player versus Player</dd>
-          <dt>○ NPCs</dt>
-          <dd>→ <b>JUnit</b> for our test suite</dd>
-        </dl>
+      <div style="height: 1px; width: 100vh; background: gray; margin: 5% 0;"></div>
+      <div class="byteLogo">
+        <svg viewBox="0 0 220 100" xmlns="http://www.w3.org/2000/svg"><title>Byte Logo</title><path class="Logo_red__FfpX8" d="M208.8,24.6c-0.9,0-1.8-0.2-2.5-0.5c-0.8-0.3-1.5-0.8-2.1-1.4c-0.6-0.6-1.1-1.3-1.4-2.2 c-0.3-0.8-0.5-1.8-0.5-2.8c0-1,0.2-1.9,0.5-2.8c0.3-0.8,0.8-1.6,1.4-2.2c0.6-0.6,1.3-1.1,2.1-1.4c0.8-0.3,1.6-0.5,2.5-0.5 c0.9,0,1.8,0.2,2.6,0.5c0.8,0.3,1.5,0.8,2.1,1.4c0.6,0.6,1.1,1.3,1.4,2.2c0.3,0.8,0.5,1.8,0.5,2.8c0,1-0.2,1.9-0.5,2.8 c-0.3,0.8-0.8,1.6-1.4,2.2c-0.6,0.6-1.3,1.1-2.1,1.4C210.6,24.4,209.7,24.6,208.8,24.6z M208.8,23.3c0.7,0,1.4-0.1,2-0.4 c0.6-0.3,1.2-0.6,1.7-1.1c0.5-0.5,0.8-1.1,1.1-1.8c0.3-0.7,0.4-1.4,0.4-2.3c0-0.8-0.1-1.6-0.4-2.2c-0.3-0.7-0.6-1.3-1.1-1.8 s-1-0.9-1.7-1.2c-0.6-0.3-1.3-0.4-2-0.4c-0.7,0-1.4,0.1-2.1,0.4c-0.6,0.3-1.2,0.7-1.6,1.2c-0.5,0.5-0.8,1.1-1.1,1.8 c-0.3,0.7-0.4,1.4-0.4,2.2c0,0.8,0.1,1.6,0.4,2.3c0.3,0.7,0.6,1.3,1.1,1.8c0.5,0.5,1,0.9,1.6,1.1C207.4,23.1,208.1,23.3,208.8,23.3 z M206.3,21.1v-7.1h2.6c0.7,0,1.4,0.2,1.9,0.5c0.5,0.3,0.8,0.9,0.8,1.8c0,0.4-0.1,0.8-0.3,1.2c-0.2,0.4-0.5,0.6-0.9,0.7l1.6,2.9 h-1.6l-1.2-2.4h-1.4v2.4H206.3z M207.7,17.6h0.9c1,0,1.5-0.4,1.5-1.2c0-0.3-0.1-0.6-0.3-0.8c-0.2-0.2-0.6-0.3-1.1-0.3h-1V17.6z"></path><path class="Logo_red__FfpX8" d="M187.3,55c-1.2,4.1-3.2,5.3-6.4,5.3c-3.9,0-6.1-2.4-6.1-6.9h27.5c1.4-2.8,2.2-7,2.2-10.5 c0-10-7.2-18.6-21.1-18.6c-17,0-29,10.8-29,29.7c0,13.6,9.6,21.9,23.7,21.9c13.8,0,21.2-4.9,25.2-13.9L187.3,55L187.3,55z M181.3,39.4c2.4,0,3.5,1.7,3.5,3.7c0,1.3-0.2,2-0.5,2.7h-8.5C176.7,41.2,178.7,39.4,181.3,39.4z"></path><path class="Logo_red__FfpX8" d="M142.7,41.3h10.5l2.8-15.7h-10.5l2.1-12.2l-21.4,1.8l-1.8,10.4h-5.6L116,41.3h5.5l-2,11.5 c-0.4,2.3-0.6,4.5-0.6,6.5c0,11.7,7.7,16.7,17.4,16.7c5.8,0,10.4-1.1,13.5-3.5l3.1-17.1c-2.2,1.3-4.7,2.6-8.1,2.6 c-2.6,0-4.2-0.9-4.2-3.6c0-0.6,0.2-1.8,0.3-2.4L142.7,41.3z"></path><path class="Logo_red__FfpX8" d="M95.7,25.5l-5.1,18.8c-1.6,5.7-2.4,13.5-2.4,13.5h-0.4c0,0-0.6-8.1-2-13.7l-4.6-18.6H58.3l17.1,51.1 c-1.1,2.6-2.9,3.9-5.7,3.9c-2.3,0-4.6-0.9-6.2-2.2l-4.2,15.5c2.7,1.5,6.7,2.9,13.2,2.9c13,0,22.4-7.2,28.2-24.9l16-46.3H95.7z"></path><path class="Logo_red__FfpX8" d="M55.5,30.6c-3.5-4.4-8.3-6.6-14.6-6.6c-3.6,0-6.7,0.9-9.3,2.8c-2.6,1.9-4.4,4.4-5.4,7.6V3.3H4.6v55 c4.3,0.7,7.8,4.1,8.5,8.5c1.9-2.1,4.6-3.4,7.7-3.4c5.2,0,9.5,3.8,10.2,8.8c1.9-2.1,4.6-3.4,7.6-3.4c4,0,7.5,2.3,9.2,5.7 c2.9-1.1,5.4-3,7.4-5.5c3.7-4.6,5.6-11.4,5.6-20.2C60.7,41.1,59,35,55.5,30.6z M37,57.7c-1,1.7-2.7,2.6-5.1,2.6 c-1.8,0-3.2-0.7-4.2-2.1c-1-1.4-1.5-3.4-1.5-6V49c0-2.6,0.6-4.7,1.7-6.1c1.1-1.5,2.6-2.2,4.5-2.2c4.1,0,6.1,3,6.1,9.1 C38.5,53.3,38,56,37,57.7z"></path></svg>
       </div>
-    </div>
-
-<!-- SLIDE -->
-
-    <div class="slide" id="slide5">
-          <h4 id="ingameText">In-Game Images</h4>
-          <carousel>
-            <slide>
-              <img src="@/assets/imgs/ingame.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/menu.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/bag.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/itemUse.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/merchant.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/nurse.png" class="ingameIMG">
-            </slide>
-            <slide>
-              <img src="@/assets/imgs/pokeBattle.png" id="pokebattle" class="ingameIMG">
-            </slide>
-          </carousel>
-    </div>
-
-    <!-- SLIDE -->
-     
-      <div class="slide" id="slide3"> 
-          <div id="uml">
-          <h4>UML Design</h4>
-          <a href="https://i.imgur.com/wUKPbrM.png" target="_blank" id="button">Full Image</a>
-          </div>
-          <div id="umlContainer">
-            <img id="umlIMG" src="@/assets/imgs/UML.png">
-          </div>
-        </div>
-
-    <!-- SLIDE -->
-
-    <div class="slide" id="slide4">
-      <div id="reqTxt"><h4>Requirements Documentation</h4></div>
-      <div id="reqIMGS">
-        <img src="@/assets/imgs/reqs1.png" class="reqs">
-        <img src="@/assets/imgs/reqs2.png" class="reqs">
-      </div>
-    </div>
-
-<!-- SLIDE 
-
-    <div class="slide" id="slide5">
-      <img id="ingameIMG" src="@/assets/imgs/ingame.png">
-      <div id="text2">
-        <h1>Player Movement</h1>
-      </div>
-    </div>
-
-SLIDE 
-
-    <div class="slide" id="slide6">
-      <div id="text3">
-        <h4>Handle Method</h4>
-        <p>By default the JavaFx handle method runs a million times per second, causing sporadic behavior in the player's movement. </p>
-        <p>We added two variables, <span class="code">elapsedNanoSeconds</span> and <span class="code">elapsedSeconds</span>, that allowed us to have a method which updates the player movement at a more steady pace.
-        </p>
-      </div>
-      <img id="movementCode" src="@/assets/imgs/movementCode.png">
-    </div>
-
-
-
-    <div class="slide" id="slide7">
-      <h1 id="text4">Pokemon Battles</h1>
-    </div>
--->
-
   </div>
 </template>
 
 <script>
-import Vue from 'vue';
-import VueCarousel from 'vue-carousel';
-Vue.use(VueCarousel);
-import { Carousel, Slide } from 'vue-carousel';
+// import Vue from 'vue';
+// import VueCarousel from 'vue-carousel';
+// Vue.use(VueCarousel);
+// import { Carousel, Slide } from 'vue-carousel';
   export default {
-    name: 'Pokemon',
+    name: 'Salesforce',
     components: {
-      Carousel,
-      Slide
+      // Carousel,
+      // Slide
     }
   }
 </script>
@@ -154,7 +39,15 @@ import { Carousel, Slide } from 'vue-carousel';
     /* margin-top: 0px;
     margin-bottom: 0px; */
   }
-  
+
+  .byteLogo
+  {
+    transform: scale(.1);
+    height: 0;
+    /* width: 0;
+    left: 0; */
+  }
+
   h2{
     font-size: 2em;
     font-weight: bold;
@@ -185,6 +78,15 @@ import { Carousel, Slide } from 'vue-carousel';
   }
 
 
+  .badge{
+    width: 20%; 
+    height: 15%;
+    padding: 1%;
+    opacity: .9;
+    -webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+  }
+
   h4{
     font-size: 1.8em;
     margin-top: 0px;
@@ -192,14 +94,13 @@ import { Carousel, Slide } from 'vue-carousel';
   }
 
   .code{
-    font-family: Courier New;
     font-weight: bold;
     color: white;
   }
 
-  .pokemonDisplay{
+  .display{
     overflow: scroll;
-    font-family: 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
     /* background: linear-gradient(to left, rgba(153, 168, 194,.1), rgba(64, 61, 77, 0.4)); */
     position: fixed;
     height: 100vh;
@@ -207,7 +108,7 @@ import { Carousel, Slide } from 'vue-carousel';
     /* opacity: .5; */
   }
 
-  .pokemonDisplay::-webkit-scrollbar{
+  .display::-webkit-scrollbar{
     display: none;
   }
 
@@ -358,7 +259,7 @@ import { Carousel, Slide } from 'vue-carousel';
   }
 
   .reqs{
-    height: 80vh;
+    height: 670px;
     padding: 0px 0px 0px 15px;
   }
 

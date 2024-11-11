@@ -2,6 +2,7 @@
 <div class="home">
 	<div id="display">
 		<div id="text">
+			<div id="canvas2"></div>
 			<div id="canvas">
 				<div id="inner-line">
 					<!-- eslint-disable -->
@@ -180,13 +181,27 @@ html {
 #canvas
 {
 	/* border-radius: 0 100% 0 100%; */
-	border-radius: 100% 100% 5% 5%;
+	z-index: -1;
+	border-radius: 50% 50% 0% 0%;
 	width: 99vw;
-	height: 80vw;
+	height: 100vw;
 	background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
 	/* background-repeat: none; */
 	overflow:hidden;
 }
+
+#canvas2
+{
+	position: fixed;
+	z-index: 0;
+	/* border-radius: 0 100% 0 100%; */
+	width: 100vw;
+	height: 150vw;
+	background: linear-gradient( rgba(255, 255, 255, 0), rgba(242, 245, 248, .5));
+	/* background-repeat: none; */
+	/* overflow:hidden; */
+}
+
 
 
 /* #inner-line

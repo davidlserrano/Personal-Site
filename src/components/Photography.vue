@@ -55,15 +55,15 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     #photographyDisplay{
-      width: 98.9%;
-      height: 80vh;
+      width: 100%;
+      /* height: 100vh; */
       position: fixed;
     }
 
     .slide{
       position: relative;
       display: inline-block;
-      max-width: 95%;
+      /* max-width: 95%; */
       padding: 0px 3px 0px 0px;  
     }
 
