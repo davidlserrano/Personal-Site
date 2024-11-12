@@ -6,7 +6,7 @@
       <div id="">
         <img class="badge" src="@/assets/badges/admin.png">
         <img class="badge" src="@/assets/badges/dev1.png">
-        <img class="badge" src="@/assets/badges/dev1.png">
+        <!-- <img class="badge" src="@/assets/badges/dev1.png"> -->
         <img class="badge" src="@/assets/badges/javascript.png">
       </div>
       <div style="height: 1px; width: 100vh; background: gray; margin: 5% 0;"></div>
