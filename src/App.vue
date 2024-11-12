@@ -22,7 +22,7 @@ export default {
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
       text-align: left;
-      color: #353535;
+      color: rgb(64, 61, 77);
     }
     /*og bg: #BDBBB0*/
     body{
