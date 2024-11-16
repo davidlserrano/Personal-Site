@@ -3,7 +3,7 @@
     <div id="nav">
         <span id="name"><router-link to="/">DS</router-link></span>
         <!-- <span class="link"><router-link to="/">Home</router-link></span> -->
-        <span class="link"><router-link to="/projects">Projects</router-link></span>
+        <span class="link"><router-link to="/projects">Work</router-link></span>
         <span class="link"><router-link to="/hobbies">Hobbies</router-link></span>
         <span class="link"><router-link to="/contact">Contact</router-link></span>
         <span id="right-menu">

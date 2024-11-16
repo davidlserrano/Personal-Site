@@ -9,19 +9,20 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "firebase": "^11.0.1",
     "pdfjs-dist": "^4.7.76",
     "query-string": "^6.13.8",
     "react": "^17.0.1",
     "vue": "^2.6.11",
-    "vue-carousel": "^0.18.0",
+    "vue-carousel": "^0.11.0",
     "vue-horizontal-scroll": "^0.2.4",
     "vue-instagram-embed": "^1.0.0",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {
     "@babel/preset-react": "^7.25.9",
-    "@vue/cli-plugin-babel": "^3.12.1",
-    "@vue/cli-plugin-eslint": "^3.12.1",
+    "@vue/cli-plugin-babel": "^5.0.8",
+    "@vue/cli-plugin-eslint": "^5.0.8",
     "@vue/cli-plugin-router": "^5.0.8",
     "@vue/cli-service": "~4.4.0",
     "babel-eslint": "^10.1.0",

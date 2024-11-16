@@ -28,20 +28,47 @@ import { onMounted } from 'vue'
 
 onMounted(() => {
   console.log(`the component is now mounted.`);
-//   const reader = new FileReader();
-fetch("stars.html")
-  .then((res) => res.text())
-  .then((text) => {
-	// console.log('slay:: ', JSON.stringify(text));
-	// console.log('slay:: ', x);
-	console.log('slay:: ', text);
-    // do something with "text"
-   })
-  .catch((e) => console.error(e));
+	//   const reader = new FileReader();
+	// fetch("stars.html")
+	//   .then((res) => res.text())
+	//   .then((text) => {
+	//    })
+	//   .catch((e) => console.error(e));
 })
 </script>
 
 <script>
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, onValue } from "firebase/database";
+// import { getDatabase, ref, onValue, set } from "firebase/database";
+
+// TODO: Replace the following with your app's Firebase project configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyDpbP0eYPaka9VbN1uSYKPgy0HIxgGUEIw",
+  authDomain: "boots-diva.firebaseapp.com",
+  databaseURL: "https://boots-diva-default-rtdb.firebaseio.com",
+  projectId: "boots-diva",
+  storageBucket: "boots-diva.firebasestorage.app",
+  messagingSenderId: "1029841498328",
+  appId: "1:1029841498328:web:6c7ea67f926284a23767ad"
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+// set(ref(db, 'users/userId'), {
+//     username: 'david',
+//     email: 'email'
+//   });
+  
+const starCountRef = ref(db, 'users/userId');
+onValue(starCountRef, (snapshot) => {
+  const data = snapshot.val();
+  console.log('snapshotdata:: ', data);
+//   updateStarCount(postElement, data);
+});
+
+// console.log('database:: ',JSON.stringify(database));
 // import html from "eslint-plugin-html"
 import Socials from '@/components/Socials';
 export default {

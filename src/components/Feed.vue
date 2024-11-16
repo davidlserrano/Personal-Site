@@ -1,7 +1,7 @@
 <template>
   <div>
       <div class="display">
-            <div v-if="option === '' && current === 'Projects'"><Pokemon/></div>
+            <div v-if="option === '' && current === 'Work'"><Salesforce/></div>
             <div v-if="option === 'Photography'" id="photography"><Photography/></div>
             <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
             <div v-if="option === 'Salesforce'" id="Salesforce"><Salesforce/></div>
@@ -9,6 +9,7 @@
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
             <div v-if="option === 'Codepath'"><Android/></div>
+            <!-- <div v-if="option === 'Patient Chart'"><PatientChart/></div> -->
     </div>
   </div>
 </template>
@@ -20,6 +21,7 @@
     import GraphicDesign from '@/components/GraphicDesign';
     import Android from '@/components/Android';
     import Salesforce from '@/components/Salesforce';
+    // import PatientChart from '@/components/PatientChart';
 
 
     export default {
@@ -30,7 +32,9 @@
             Art,
             GraphicDesign,
             Android,
-            Salesforce
+            Salesforce,
+            // PatientChart
+            
         },
         props: ['option', 'current']
 

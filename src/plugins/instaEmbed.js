@@ -3,36 +3,36 @@
 // https://github.com/kishorgandham/vue-instagram-embed
 // and expanded to separate client token and app ID
 export default {
-  name: 'vue-instagram-embed',
+  name: "vue-instagram-embed",
   props: {
     url: {
       type: String,
     },
     maxWidth: {
       type: Number,
-      default: 320
+      default: 320,
     },
     hideCaption: {
       type: Boolean,
-      default: false
+      default: false,
     },
     omitScript: {
       type: Boolean,
-      default: true
+      default: true,
     },
     className: {
-      type: String
+      type: String,
     },
     appID: {
-      type: String
+      type: String,
     },
     clientToken: {
-      type: String
-    }
+      type: String,
+    },
   },
   data() {
     return {
-      html: ''
+      html: "",
     };
   },
   mounted() {
@@ -42,32 +42,33 @@ export default {
       this.injectScript();
       this.checkAPI().then(() => {
         this.fetchEmbed();
-      })
+      });
     }
   },
   methods: {
     fetchEmbed() {
       this.validateUrl();
-      const maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320
+      const maxWidth = this.maxWidth >= 320 ? this.maxWidth : 320;
       const url = `https://graph.facebook.com/v9.0/instagram_oembed?url=${this.url}&maxwidth=${maxWidth}&hidecaption=${this.hideCaption}&omitscript=${this.omitScript}&access_token=${this.appID}|${this.clientToken}`;
       fetch(url)
-        .then(res => {
+        .then((res) => {
           if (res.ok) {
             return res.json();
           }
         })
-        .then(data => {
+        .then((data) => {
           this.html = data.html;
           this.$nextTick(() => {
             window.instgrm.Embeds.process();
           });
         })
-        .catch(e => {
+        .catch((e) => {
           throw new Error(e);
-        })
+        });
     },
     validateUrl() {
-      const urlRe = /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
+      const urlRe =
+        /(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})/gi;
       if (!urlRe.test(this.url)) {
         throw new Error(`${this.url} - Invalid url`);
       }
@@ -76,11 +77,11 @@ export default {
      * inject instagram embed script
      */
     injectScript() {
-      const protocolToUse = 'https:';
-      const s = document.createElement('script');
+      const protocolToUse = "https:";
+      const s = document.createElement("script");
       s.async = s.defer = true;
       s.src = `${protocolToUse}//platform.instagram.com/en_US/embeds.js`;
-      s.id = 'vue-instagram-embed-script';
+      s.id = "vue-instagram-embed-script";
       const body = document.body;
       if (body) {
         body.appendChild(s);
@@ -90,7 +91,7 @@ export default {
      * Check for window.instgrm
      */
     checkAPI() {
-      return new Promise(resolve => {
+      return new Promise((resolve) => {
         (function checkAPI(self) {
           self.timer = window.setTimeout(() => {
             if (window.instgrm) {
@@ -102,11 +103,9 @@ export default {
           }, 20);
         })(this);
       });
-    }
+    },
   },
   render() {
-    return (
-      <div class={this.className} domPropsInnerHTML={this.html}></div>
-    )
-  }
-}
+    return <div class={this.className} domPropsInnerHTML={this.html}></div>;
+  },
+};

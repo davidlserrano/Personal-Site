@@ -1,18 +1,40 @@
 <template>
     <div id="list">
-      <div v-for="option in options" v-bind:options="options" v-bind:key="option.id" >
+      <div v-for="option in options" v-bind:options="options" v-bind:key="option.id">
             <button 
+                @click="optionClicked">
+                <b>{{option.name}}</b>
+            </button>
+                
+            <div v-for="o in option.suboptions" 
+                v-bind:suboptions="option.suboptions"
+                v-bind:key="o.id">
+                <button 
                     @click="optionClicked">
-                {{option.name}}</button>
+                    {{o.name}}
+                </button>
+            </div>
       </div>
     </div>
 </template>
+
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  console.log(`the menu is now mounted.`)
+})
+</script>
 
 <script>
     import uuid from 'uuid';
     export default {
       name: 'Menu',
       props: ['options'],
+      setup(props) {
+      console.log(JSON.stringify(props));
+    //   console.log(props.)
+    },
         data(){
             return{
 
