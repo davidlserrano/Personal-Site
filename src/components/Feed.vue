@@ -9,7 +9,7 @@
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
             <div v-if="option === 'Codepath'"><Android/></div>
-            <!-- <div v-if="option === 'Patient Chart'"><PatientChart/></div> -->
+            <div v-if="option === 'Patient Chart'"> <PatientChart/> </div>
     </div>
   </div>
 </template>
@@ -21,7 +21,7 @@
     import GraphicDesign from '@/components/GraphicDesign';
     import Android from '@/components/Android';
     import Salesforce from '@/components/Salesforce';
-    // import PatientChart from '@/components/PatientChart';
+    import PatientChart from '@/components/PatientChart';
 
 
     export default {
@@ -33,7 +33,7 @@
             GraphicDesign,
             Android,
             Salesforce,
-            // PatientChart
+            PatientChart
             
         },
         props: ['option', 'current']

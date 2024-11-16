@@ -99,35 +99,6 @@
         <img src="@/assets/imgs/reqs2.png" class="reqs">
       </div>
     </div>
-
-<!-- SLIDE 
-
-    <div class="slide" id="slide5">
-      <img id="ingameIMG" src="@/assets/imgs/ingame.png">
-      <div id="text2">
-        <h1>Player Movement</h1>
-      </div>
-    </div>
-
-SLIDE 
-
-    <div class="slide" id="slide6">
-      <div id="text3">
-        <h4>Handle Method</h4>
-        <p>By default the JavaFx handle method runs a million times per second, causing sporadic behavior in the player's movement. </p>
-        <p>We added two variables, <span class="code">elapsedNanoSeconds</span> and <span class="code">elapsedSeconds</span>, that allowed us to have a method which updates the player movement at a more steady pace.
-        </p>
-      </div>
-      <img id="movementCode" src="@/assets/imgs/movementCode.png">
-    </div>
-
-
-
-    <div class="slide" id="slide7">
-      <h1 id="text4">Pokemon Battles</h1>
-    </div>
--->
-
   </div>
 </template>
 
@@ -137,7 +108,7 @@ SLIDE
   Vue.use(VueCarousel);
   import { Carousel, Slide } from 'vue-carousel';
   export default {
-    name: 'PatientChart',
+    name: 'Patient Chart',
     components: {
       Carousel,
       Slide
@@ -265,10 +236,6 @@ SLIDE
     background: #e1e1e182;
   }
 
-  #description{
-    /* font-size: .87em; */
-  }
-
   #list1{
     /* border-right: solid 1px  rgb(64, 61, 77, .5); */
     width: 45%;
@@ -325,9 +292,6 @@ SLIDE
     padding: 1px 20px 1px 20px;
   }
 
-
-/*------------------------slide------------------------*/
-
   #slide4{
     min-height: 800px;
     height: 100vh;
@@ -362,8 +326,6 @@ SLIDE
     padding: 0px 0px 0px 15px;
   }
 
-  /*------------------------slide------------------------*/
-
   #ingameText{
     padding: 0px 0px 0px 25px;
   }
@@ -383,57 +345,6 @@ SLIDE
     border-radius: 10px;
     height: 80%;
     margin: 0 1%;
-    /* margin-bottom: 25px; */
-    /* width: 920px; */
   }
-
-
-  /*------------------------
-  #slide5{ 
-    display: flex;
-    flex-direction: row;
-    float: none;
-  }
-
-  #text2{
-    padding: 410px 0px 0px 0px;
-    vertical-align: bottom;
-  }
-
-  #ingameIMG{
-    width: 50%;
-    padding: 25px 0px 0px 0px;
-  }
-
-  #slide6{
-    display: flex;
-    flex-direction: top;
-    vertical-align: bottom;
-    padding: 25px 0px 0px 0px;
-  }
-
-
-  #text3{
-    padding: 0px 25px 0px 38px;
-  }
-
-  #movementCode{
-    padding: 15px 25px 25px 0px;
-    width: 50%;
-  }
-
-  #slide7{
-    background: url("pokebattle.png") no-repeat center;
-    height: 100%;
-    background-size: 100%;
-    display: flex;
-  }
-
-  #text4{
-    padding: 45px 0px 0px 35px;
-    width: 200px;
-    vertical-align: middle;
-  }
-------------------------*/
 
 </style>
