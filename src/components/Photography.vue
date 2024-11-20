@@ -1,24 +1,23 @@
 <template>
   <div id="photographyDisplay">
     <horizontal-scroll>
-
       <div class="slide">
-        <img class="img" src="@/assets/imgs/bird.jpg">
+        <img class="img" src="@/assets/imgs/photography/bird.jpg">
         <p class="copyright">© 2012 David Serrano All Rights Reserved</p>
       </div>
 
       <div class="slide">
-        <img v-scrollanimation class="img" src="@/assets/imgs/lavender.jpg">
+        <img v-scrollanimation class="img" src="@/assets/imgs/photography/lavender.jpg">
         <p class="copyright">© 2012 David Serrano All Rights Reserved</p>
       </div>
       
       <div class="slide">
-        <img v-scrollanimation class="img" src="@/assets/imgs/fish.jpg">
+        <img v-scrollanimation class="img" src="@/assets/imgs/photography/fish.jpg">
         <p class="copyright">© 2012 David Serrano All Rights Reserved</p>
       </div>
 
        <div class="slide">
-        <img v-scrollanimation class="img" src="@/assets/imgs/FLY.png">
+        <img v-scrollanimation class="img" src="@/assets/imgs/photography/FLY.png">
         <p class="copyright">© 2012 David Serrano All Rights Reserved</p>
       </div>
 

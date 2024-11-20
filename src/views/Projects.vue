@@ -1,6 +1,6 @@
 <template>
   <div class="view">
-      <Display v-bind:options="options"  v-bind:suboptions="suboptions" :current="current"/>
+      <Display v-bind:options="options"  :current="current"/>
   </div>
 </template>
 
@@ -13,11 +13,11 @@
           Display
       },
     data(){
-        return{
+        return {
             current: "Work",
             options: [
                 {id: 0 , name: "Salesforce", suboptions: [{id: 0, name :"Patient Chart"},{id: 1, name :"Checkout Modal"}]},
-                {id: 1, name: "Misc Projects", suboptions: [{id: 0, name :"Pokemon: East Bay"}]}
+                {id: 1, name: "Misc Projects", suboptions: [{id: 0, name :"Pokemon: East Bay"}, {id: 1, name :"Portfolio"}]}
             ]
         }
     }

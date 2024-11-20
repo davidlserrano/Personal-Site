@@ -10,6 +10,8 @@
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
             <div v-if="option === 'Codepath'"><Android/></div>
             <div v-if="option === 'Patient Chart'"> <PatientChart/> </div>
+            <div v-if="option === 'Checkout Modal'"><CheckoutModal/> </div>
+            <div v-if="option === 'Portfolio'"><Portfolio/> </div>
     </div>
   </div>
 </template>
@@ -22,7 +24,8 @@
     import Android from '@/components/Android';
     import Salesforce from '@/components/Salesforce';
     import PatientChart from '@/components/PatientChart';
-
+    import CheckoutModal from '@/components/CheckoutModal';
+    import Portfolio from '@/components/Portfolio';
 
     export default {
         name: 'Display',
@@ -33,7 +36,9 @@
             GraphicDesign,
             Android,
             Salesforce,
-            PatientChart
+            PatientChart,
+            CheckoutModal,
+            Portfolio
             
         },
         props: ['option', 'current']
@@ -47,9 +52,6 @@
     .display{
         width: inherit;
         margin-left: 1%; 
-        margin-top: 1.8%;
-        
+        margin-top: 1.8%;   
     }
-
-
 </style>

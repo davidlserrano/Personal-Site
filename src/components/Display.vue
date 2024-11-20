@@ -11,7 +11,7 @@
     <div id="feed">
       <Feed 
         :option="clicked.option"
-      :current="current"/>
+        :current="current"/>
     </div>
 
   </div>
@@ -24,10 +24,7 @@
     export default {
         name: 'Display',
         props: ['options', 'option', 'current'],
-        setup(props) {
-          console.log('gerl');
-          console.log(JSON.stringify(props))
-        },
+        // setup(props) {;},
         components: {
           Menu, 
           Feed

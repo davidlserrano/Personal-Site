@@ -4,7 +4,7 @@
 <!-- SLIDE -->
 
     <div class="slide" id="slide1"> 
-      <img id="loginIMG" src="@/assets/imgs/login.png">
+      <img id="loginIMG" src="@/assets/imgs/pkmn/login.png">
       <div id="text1">
         <h2>Pokemon: East Bay</h2>
         <h3>May 2020</h3>
@@ -15,7 +15,7 @@
         <a href="https://github.com/davidlserrano/Pokemon-East-Bay" target="_blank" id="button">Github Repo</a>
       </div>
     </div>
-
+  <br/>
 <!-- SLIDE -->
 
     <div class="slide" id="slide2"> 
@@ -48,36 +48,36 @@
         </dl>
       </div>
     </div>
-
+    <br/>
 <!-- SLIDE -->
 
     <div class="slide" id="slide5">
           <h4 id="ingameText">In-Game Images</h4>
           <carousel>
             <slide>
-              <img src="@/assets/imgs/ingame.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/ingame.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/menu.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/menu.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/bag.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/bag.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/itemUse.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/itemUse.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/merchant.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/merchant.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/nurse.png" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/nurse.png" class="ingameIMG">
             </slide>
             <slide>
-              <img src="@/assets/imgs/pokeBattle.png" id="pokebattle" class="ingameIMG">
+              <img src="@/assets/imgs/pkmn/pokeBattle.png" id="pokebattle" class="ingameIMG">
             </slide>
           </carousel>
     </div>
-
+    <br/>
     <!-- SLIDE -->
      
       <div class="slide" id="slide3"> 
@@ -86,24 +86,24 @@
           <a href="https://i.imgur.com/wUKPbrM.png" target="_blank" id="button">Full Image</a>
           </div>
           <div id="umlContainer">
-            <img id="umlIMG" src="@/assets/imgs/UML.png">
+            <img id="umlIMG" src="@/assets/imgs/pkmn/UML.png">
           </div>
         </div>
 
     <!-- SLIDE -->
-
+    <br/>
     <div class="slide" id="slide4">
       <div id="reqTxt"><h4>Requirements Documentation</h4></div>
       <div id="reqIMGS">
-        <img src="@/assets/imgs/reqs1.png" class="reqs">
-        <img src="@/assets/imgs/reqs2.png" class="reqs">
+        <img src="@/assets/imgs/pkmn/reqs1.png" class="reqs">
+        <img src="@/assets/imgs/pkmn/reqs2.png" class="reqs">
       </div>
     </div>
 
 <!-- SLIDE 
 
     <div class="slide" id="slide5">
-      <img id="ingameIMG" src="@/assets/imgs/ingame.png">
+      <img id="ingameIMG" src="@/assets/imgs/pkmn/ingame.png">
       <div id="text2">
         <h1>Player Movement</h1>
       </div>
@@ -118,7 +118,7 @@ SLIDE
         <p>We added two variables, <span class="code">elapsedNanoSeconds</span> and <span class="code">elapsedSeconds</span>, that allowed us to have a method which updates the player movement at a more steady pace.
         </p>
       </div>
-      <img id="movementCode" src="@/assets/imgs/movementCode.png">
+      <img id="movementCode" src="@/assets/imgs/pkmn/movementCode.png">
     </div>
 
 
@@ -192,23 +192,22 @@ import { Carousel, Slide } from 'vue-carousel';
   }
 
   .code{
-    font-family: Courier New;
+    /* font-family: Courier New; */
     font-weight: bold;
     color: white;
   }
 
   .pokemonDisplay{
     overflow: scroll;
-    font-family: 'Courier New', Courier, monospace;
-    /* background: linear-gradient(to left, rgba(153, 168, 194,.1), rgba(64, 61, 77, 0.4)); */
-    position: fixed;
     height: 100vh;
-    width: 100vw;
-    /* opacity: .5; */
   }
 
   .pokemonDisplay::-webkit-scrollbar{
     display: none;
+  }
+
+  .space-buffer_small{
+    height: 1%;
   }
 
   .before-enter{
@@ -222,47 +221,62 @@ import { Carousel, Slide } from 'vue-carousel';
     transform: translateX(0px);
   }
 
-/*------------------------slide------------------------*/
-
   .slide{
-    padding: 15px;
-    display: block;
-    max-width: 100%;
-    /* color: white; */
+    padding: 1%;
+    max-width: 85vw;
     color: rgb(64, 61, 77);
-    float: none;
-    clear: both;
+    margin: auto;
+    background: #e1e1e182;
   }
 
   #loginIMG{
-    max-height: 500px;
+    max-height: 400px;
     border-radius: 5px;
-    /* border: 0px solid rgb(64, 61, 77, .4); */
   }
 
+  /* slide 1 - ab project */
   #slide1{
     display: flex;
     flex-direction: row;
     vertical-align: top;
   }
 
+    /* slide 3 - roles & resps */
   #slide2{
     display: flex;
     flex-direction: row;
     vertical-align: top;
     justify-content: left;
-    background: #e1e1e182;
+    border-radius: 5px;
+  }
+
+  /* slide 3 - UML */
+  #slide3{
+    margin-top: 1%;
     border-radius: 5px;
   }
 
 
+    /* slide 4 - req chart */
+  #slide4{
+    min-height: 800px;
+    height: 100vh;
+    max-height: 800px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
+      /* slide 5 - in-game images */
+  #slide5{
+    min-height: 800px;
+    height: 100vh;
+    max-height: 800px;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+
   #text1{
-    /* padding: 20px 10px 50px 0px; */
     padding: 10px;
-    width: 50%;
-    border-radius: 0 5px 5px 0; 
-    /* text-wrap: wrap; */
-    background: #e1e1e182;
   }
 
   #description{
@@ -279,17 +293,6 @@ import { Carousel, Slide } from 'vue-carousel';
     padding: 0px 0px 0px 25px;
   }
 
-/*------------------------slide------------------------*/
-
-  #slide3{
-    /* width: 100%; */
-    /* min-height: 900px; */
-    /* height: 100vh; */
-    /* max-height: 900px; */
-    margin-top: 1%;
-    background: #e1e1e182;
-    border-radius: 5px;
-  }
 
   #uml{
     padding: 20px 0px 0px 25px;
@@ -328,24 +331,6 @@ import { Carousel, Slide } from 'vue-carousel';
 
 /*------------------------slide------------------------*/
 
-  #slide4{
-    min-height: 800px;
-    height: 100vh;
-    max-height: 800px;
-    margin-top: 20px;
-    background: #e1e1e182;
-    border-radius: 5px;
-  }
-
-  #slide5{
-    min-height: 800px;
-    height: 100vh;
-    max-height: 800px;
-    margin-top: 20px;
-    background: #e1e1e182;
-    border-radius: 5px;
-  }
-
   #reqTxt{
     padding-left: 12px;
   }
@@ -361,8 +346,6 @@ import { Carousel, Slide } from 'vue-carousel';
     height: 80vh;
     padding: 0px 0px 0px 15px;
   }
-
-  /*------------------------slide------------------------*/
 
   #ingameText{
     padding: 0px 0px 0px 25px;
@@ -383,57 +366,6 @@ import { Carousel, Slide } from 'vue-carousel';
     border-radius: 10px;
     height: 80%;
     margin: 0 1%;
-    /* margin-bottom: 25px; */
-    /* width: 920px; */
   }
-
-
-  /*------------------------
-  #slide5{ 
-    display: flex;
-    flex-direction: row;
-    float: none;
-  }
-
-  #text2{
-    padding: 410px 0px 0px 0px;
-    vertical-align: bottom;
-  }
-
-  #ingameIMG{
-    width: 50%;
-    padding: 25px 0px 0px 0px;
-  }
-
-  #slide6{
-    display: flex;
-    flex-direction: top;
-    vertical-align: bottom;
-    padding: 25px 0px 0px 0px;
-  }
-
-
-  #text3{
-    padding: 0px 25px 0px 38px;
-  }
-
-  #movementCode{
-    padding: 15px 25px 25px 0px;
-    width: 50%;
-  }
-
-  #slide7{
-    background: url("pokebattle.png") no-repeat center;
-    height: 100%;
-    background-size: 100%;
-    display: flex;
-  }
-
-  #text4{
-    padding: 45px 0px 0px 35px;
-    width: 200px;
-    vertical-align: middle;
-  }
-------------------------*/
 
 </style>
