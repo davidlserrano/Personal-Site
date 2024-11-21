@@ -28,11 +28,22 @@
 
 	function fetchData() {
 		console.log('fetching data');
-		axios.get({
-			url: 'https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack',
+		axios.interceptors.request.use(request => {
+			console.log('Starting Request', JSON.stringify(request, null, 2))
+			return request
+		})
 
-			responseType: 'application/json',
-			headers: {'Authorization': 'Bearer 00Dak00000GQEz4!AQEAQIsSOEH1MJbCPJ9qRep8.dz0CZHbGlaH68cvgJHY5V8YCCE7ANA6qOFLM6z_W2jmLhTjMnub_yasgWVLbIAzXNuV3xIp'
+		axios.interceptors.response.use(response => {
+			console.log('Response:', JSON.stringify(response))
+			return response
+		})
+		axios.get({
+			url: 'https://conejo-dev-ed.my.salesforce.com/services/apexrest/grabBack',
+			// responseType: 'application/json',
+			method: 'get',
+			// withCredentials: true,
+			headers: {'Authorization': 'Bearer 00Dak00000GQEz4!AQEAQIsSOEH1MJbCPJ9qRep8.dz0CZHbGlaH68cvgJHY5V8YCCE7ANA6qOFLM6z_W2jmLhTjMnub_yasgWVLbIAzXNuV3xIp',
+				'Content-Type':'application/json'
 			}
 		})
 		.then(response => {
@@ -41,7 +52,7 @@
 		})
 		.catch(error => {
 			console.log('error babes');
-			console.log(JSON.stringify(error));
+			console.log(JSON.stringify(error, null, 2));
 		});
 	}
 
