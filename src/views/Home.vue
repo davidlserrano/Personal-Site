@@ -2,7 +2,7 @@
 	<div class="home">
 		<div id="display">
 			<div id="text">
-				<div id="canvas2"></div>
+				<!-- <div id="canvas2"></div> -->
 				<div id="canvas">
 					<div id="inner-line">
 						{{bg}}
@@ -35,21 +35,16 @@
 			}
 		},
 		mounted() {
-			console.log('Component mounted!');
 			this.fetchData();
 		},
 		methods: 
 		{
 			fetchData() 
 			{
-				// const { env } = require('node:process');
-				console.log('gerl 1:: ', process.env.gerl);
-				// console.log('gerl:: ', env)
-				console.log('fetching data');
 				var JSONResponse = '';
 				var JsonBody = '';
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", "https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack", true);
+				xhr.open("GET", process.env.home, true);
 				xhr.setRequestHeader("Authorization","Bearer " + process.env.gerl );
 				xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
 				xhr.setRequestHeader("Accept", "application/json");

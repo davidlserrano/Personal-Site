@@ -10,7 +10,7 @@
         <h3>May 2020</h3>
         <!-- <div id="description"> -->
           <p>Semester long group project following the Agile framework</p>
-          <p>My role required both development and project management skills to ensure to the teams overall success</p>
+          <p>My role required both development and project management skills to ensure to the team's overall success</p>
           <!-- </div> -->
         <a href="https://github.com/davidlserrano/Pokemon-East-Bay" target="_blank" id="button">Github Repo</a>
       </div>
@@ -18,34 +18,31 @@
   <br/>
 <!-- SLIDE -->
 
-    <div class="slide" id="slide2"> 
-      <div id="list1">
-        <h3>Roles & Responsibilities</h3>
-        <dl>
-          <dt>○ <b>Client & Game GUI</b></dt>
-          <dd>Connected both front and back end systems</dd>
-          <dt>○ <b>Player</b></dt>
-          <dd>Implemented database management, user movement, and NPC interactions  </dd>
-          <dt>○ <b>Player Menu</b></dt>
-          <dd>Provided an in-game menu giving players the ability to navigate their game data</dd>
-          <dt>○ <b>NPCs</b></dt>
-          <dd>Co-developed the overall game's interface and functionality</dd>
-        </dl>
-      </div>
-
-<!-- SLIDE -->
-
-      <div id="list2">
-        <h3>Dependencies</h3>
-        <dl>
-          <dt>○ <b>Maven</b> for package management</dt>
-          <dt>○ <b>JavaFx</b> for the GUI framework</dt>
-          <dt>○ Google’s <b>Firebase Realtime Database</b></dt>
-          <dd>→ To store user’s account information</dd>
-          <dd>→ Allow online Player versus Player</dd>
-          <dt>○ NPCs</dt>
-          <dd>→ <b>JUnit</b> for our test suite</dd>
-        </dl>
+    <div class="slide" > 
+      <div id="slide2">
+        <div id="list1">
+          <h3>Roles & Responsibilities</h3>
+          <dl>
+            <dt>○ <b>Client & Game GUI</b></dt>
+            <dd>Co-developed the overall game's interface and functionality</dd>
+            <dt>○ <b>Player</b></dt>
+            <dd>Implemented database management, user movement, and NPC interactions  </dd>
+            <dt>○ <b>Player Menu</b></dt>
+            <dd>Provided an in-game menu giving players the ability to interact with their game data</dd>
+          </dl>
+        </div>
+        <div id="list2">
+          <h3>Dependencies</h3>
+          <dl>
+            <dt>○ <b>Maven</b> for package management</dt>
+            <dt>○ <b>JavaFx</b> for the GUI framework</dt>
+            <dt>○ Google’s <b>Firebase Realtime Database</b></dt>
+            <dd>→ To store user’s account information</dd>
+            <dd>→ Allow online Player versus Player</dd>
+            <dt>○ NPCs</dt>
+            <dd>→ <b>JUnit</b> for our test suite</dd>
+          </dl>
+        </div>
       </div>
     </div>
     <br/>
@@ -86,7 +83,11 @@
           <a href="https://i.imgur.com/wUKPbrM.png" target="_blank" id="button">Full Image</a>
           </div>
           <div id="umlContainer">
-            <img id="umlIMG" src="@/assets/imgs/pkmn/UML.png">
+            <!-- <image-zoom 
+  regular="/assets/imgs/pkmn/UML.png" >				
+</image-zoom> -->
+
+            <img id="umlIMG" src="@/assets/imgs/pkmn/UML.png" preview>
           </div>
         </div>
 
@@ -134,13 +135,17 @@ SLIDE
 <script>
 import Vue from 'vue';
 import VueCarousel from 'vue-carousel';
-Vue.use(VueCarousel);
 import { Carousel, Slide } from 'vue-carousel';
+
+Vue.use(VueCarousel);
+
+// import imageZoom from 'vue-image-zoomer'
   export default {
     name: 'Pokemon',
     components: {
       Carousel,
-      Slide
+      Slide,
+      // imageZoom
     }
   }
 </script>
@@ -248,6 +253,9 @@ import { Carousel, Slide } from 'vue-carousel';
     vertical-align: top;
     justify-content: left;
     border-radius: 5px;
+    width: 90%; 
+    margin: auto;
+
   }
 
   /* slide 3 - UML */

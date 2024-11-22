@@ -4,10 +4,17 @@
       <div id="gradient"></div>
       <div class="gay"></div>
     </div>
-    <p class="title" style="font-weight: bolder;">Checkout Modal</p>
-    <div style="display: flex; flex-direction: row; width:75%; min-height: 200px;">
-      <div style="flex: 1; margin: 3%;">
-        <p >Features</p>
+
+    <div style="display: flex; flex-direction: row; width: 80%; height: 100%">
+      <div style="flex: 3; padding: 10px;">
+        <div>
+          <p class="title" style="font-weight: bolder;">Checkout Modal</p>
+          <p>The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
+          <p>Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
+          <p>Since its release in Jan 2024, we saw about a 25% increase in revenue coming out of Salesforce compared to the previous year</p>
+        </div>
+        <br/>
+        <p><b>Features</b></p>
         <dl>
           <dt>○ Shopify Link Generation</dt>
           <dt>○ Single or Multi Payment Type</dt>
@@ -15,9 +22,9 @@
           <dt>○ Temporary Credit Card Caching</dt>
         </dl>
       </div>
-      <div style="flex: 1; text-align: center;">
-        <p>Integrations</p>
+      <div style="flex: 1;">
         <div id="integrationList">
+          <p><b>Integrations</b></p>
           <div id="container">
             <div id="moon">
               <p>Azure</p>
@@ -38,7 +45,7 @@
           </div>
           <div id="container">
             <div id="moon">
-              <p>Checkout.com</p>
+              <p>Checkout</p>
             </div>
             <img id="sky" src="@/assets/imgs/icons/Checkout.jpeg" height="30vh" width="30vw">
           </div>
@@ -69,6 +76,7 @@
     overflow: scroll;
     position: absolute;
     height: 100vh;
+    width: 100vw;
   }
 
   .checkoutFeed::-webkit-scrollbar
@@ -93,7 +101,7 @@
     width: 75px;
     height: 75px;
     overflow: hidden;
-    margin: 2% auto;
+    margin: 10% auto;
   }
 
   #sky {
@@ -130,6 +138,7 @@
     text-align: center;
     font-weight: bolder;
     line-height: 3;
+    font-size: .8em;
   
   }
 
@@ -167,6 +176,7 @@
     color: rgb(64, 61, 77);
     font-size: 2em; 
     font-weight: 500;
+    line-height: 0;;
   }
 
 .integration{
@@ -176,8 +186,8 @@
   #integrationList
 {
   position: relative;
-  margin: auto;
-  width: 40%;
+  float: right;
+  text-align: right;
 }
 
 .integration
@@ -186,5 +196,7 @@
   overflow: hidden;
   position: absolute;
 }
-
+dt{
+  line-height: 150%;
+}
 </style>

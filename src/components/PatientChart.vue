@@ -1,13 +1,11 @@
 <template>
   <div class="chartFeed">
-    <div class="slide" id="slide1"> 
-      <div>
-        <h2>Patient Chart</h2>
+    <div style="padding: 10px; width: 80%;"> 
+        <p id="text">Patient Chart</p>
         <p>The Patient Chart is a Lightning Web Component that provided teams across different departments a custom way to communicate with each other</p>
-      </div>
     </div>
-
-    <div id="slide2"> 
+    
+    <div style="display: flex; flex-direction: row; width: 75%; margin:5%;">
       <div id="list1">
         <h3>Features</h3>
         <dl>
@@ -71,48 +69,6 @@
     transform: translateX(0px);
   }
 
-/*------------------------slide------------------------*/
-
-  .slide{
-    padding: 15px;
-    display: block;
-    max-width: 100%;
-    /* color: white; */
-    color: rgb(64, 61, 77);
-    float: none;
-    clear: both;
-  }
-
-  #loginIMG{
-    max-height: 500px;
-    border-radius: 5px;
-    /* border: 0px solid rgb(64, 61, 77, .4); */
-  }
-
-  #slide1{
-    display: flex;
-    flex-direction: row;
-    vertical-align: top;
-  }
-
-  #slide2{
-    display: flex;
-    flex-direction: row;
-    vertical-align: top;
-    justify-content: left;
-    border-radius: 5px;
-  }
-
-/*
-  #text1{
-    /* padding: 20px 10px 50px 0px; 
-    padding: 10px;
-    width: 50%;
-    border-radius: 0 5px 5px 0; 
-    /* text-wrap: wrap; 
-    background: #e1e1e182;
-  }
-*/
 
   #list1{
     /* border-right: solid 1px  rgb(64, 61, 77, .5); */
@@ -124,4 +80,10 @@
     padding: 0px 0px 0px 25px;
   }
 
+  #text
+  {
+    font-size: 2em; 
+    font-weight: 500;
+    line-height: 0;;
+  }
 </style>

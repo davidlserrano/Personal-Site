@@ -10,7 +10,6 @@ module.exports = {
   },
   configureWebpack: {
     plugins: [
-      //   new Dotenv({ systemvars: true }),
       new DotenvWebpackPlugin({
         systemvars: true,
         path: "./.env",
