@@ -1,150 +1,93 @@
 <template>
 	<div class="home">
-	<div id="display">
-		<div id="text">
-			<div id="canvas2"></div>
-			<div id="canvas">
-				<div id="inner-line">
-					<!-- <stars></stars> -->
-					<!-- <iframe  src="@/assets/stars.txt"></iframe> -->
-					<!-- <embed type="text/html" src="@/assets/stars.txt" width="800" height="400"> -->
-			</div>																																																		
+		<div id="display">
+			<div id="text">
+				<div id="canvas2"></div>
+				<div id="canvas">
+					<div id="inner-line">
+						{{bg}}
+					</div>																																																		
+				</div>
+		
 			</div>
-	
+		</div>
+		<div id="contact">
+			<div id="socials"><Socials/></div>
+			<div id="footer">Copyright © 2024 David Serrano. All rights reserved.</div>
 		</div>
 	</div>
-	<div id="contact">
-		<div id="socials"><Socials/></div>
-		<div id="footer">Copyright © 2024 David Serrano. All rights reserved.</div>
-	</div>
-	</div>
-	</template>
-	
-	
-<script setup>
-	import { onMounted } from 'vue'
-	import { initializeApp } from 'firebase/app';
-	import { getDatabase, ref, onValue } from "firebase/database";
-	// import axios from 'axios';
-		// import { query } from 'salesforce'
-	// import { jsforce } from 'jsforce';
-	const firebaseConfig = {
-		apiKey: "AIzaSyDpbP0eYPaka9VbN1uSYKPgy0HIxgGUEIw",
-		authDomain: "boots-diva.firebaseapp.com",
-		databaseURL: "https://boots-diva-default-rtdb.firebaseio.com",
-		projectId: "boots-diva",
-		storageBucket: "boots-diva.firebasestorage.app",
-		messagingSenderId: "1029841498328",
-		appId: "1:1029841498328:web:6c7ea67f926284a23767ad"
-	};
+</template>
+		
+<script>
+	import Socials from '@/components/Socials';
 
-	const app = initializeApp(firebaseConfig);
-	const db = getDatabase(app);
-
-	// set(ref(db, 'users/userId'), {
-	// 	username: 'david',
-	// 	email: 'email'
-	// });
-
-	const starCountRef = ref(db, 'users/userId');
-	onValue(starCountRef, (snapshot) => {
-		const data = snapshot.val();
-		console.log('firebase snapshot:: ', data);
-	//   updateStarCount(postElement, data);
-	});
-
-	async function fetchData() {
-		console.log('fetching data');
-		// axios.interceptors.request.use(request => {
-		// 	// console.log('Starting Request', JSON.stringify(request, null, 2))
-		// 	return request
-		// })
-
-		// axios.interceptors.response.use(response => {
-		// 	// console.log('Response:', JSON.stringify(response))
-		// 	return response
-		// })
-
-
-
-
-		var JSONResponse = '';
-		var JsonBody = '';
-		var xhr = new XMLHttpRequest();
-		xhr.open("GET", "https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack", true);
-		xhr.setRequestHeader("Authorization","Bearer 00Dak00000GQEz4!AQEAQDx9Fw20HlrmiKKnWc_H4H4wfH0dZOBrhz9Gw1ilxpEp347Zh01Q29V4ljfAp_YD63KF.jAjjlAfNA08zC9QKuYU679I" );
-		xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-		xhr.setRequestHeader("Accept", "application/json");
-		xhr.onload = function () 
-		{
-			JSONResponse = xhr.responseText;
-			console.log('--JSONResponse ------->'+xhr.responseText);
-		};
-		xhr.send(JsonBody);
-		setTimeout( function()
-			{
-				if(xhr.status == 404){     
-					//                
-				}
-				else if(xhr.status == 401){
-					//
-				}
-				else if(xhr.status == 500){
-					//
-				}
-				else if(xhr.status == 200)
-				{
-					let obj1 = JSON.parse(JSONResponse );
-					for(var x=0;x< obj1.length;x++)
-					{
-						var singleEle = obj1[x];
-						console.log('--singleEle ------->'+singleEle );
-					}
-				}
-			},
-		2000);
-
-		// await axios.get({
-		// 	url: 'https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack',
-		// 	// responseType: 'application/json',
-		// 	// method: 'GET',
-		// 	// withCredentials: true,
-		// 	headers: {
-		// 		'Authorization': 'Bearer 00Dak00000GQEz4!AQEAQDx9Fw20HlrmiKKnWc_H4H4wfH0dZOBrhz9Gw1ilxpEp347Zh01Q29V4ljfAp_YD63KF.jAjjlAfNA08zC9QKuYU679I',
-		// 		'Content-Type':'application/json'
-		// 	}
-		// })
-		// .then(response => {
-		// 	console.log('owo');
-		// 	console.log(JSON.stringify(response.data));
-		// })
-		// .catch(error => {
-		// 	console.log('error babes');
-		// 	// console.log(JSON.stringify(error, null, 2));
-		// 	// console.log(error.response.data);  
-		// 	// console.log(error.response.status);  
-		// 	// console.log(error.response.request); 
-		// 	// console.log(error.message); 
-		// });
-	}
-	
-	onMounted(() => {
-		console.log('BOOP');
-		fetchData();
-		})
-	</script>
-	
-	<script>
-		import Socials from '@/components/Socials';
-		export default {
+	export default 
+	{
 		name: 'Home',
-		components: {
+		components: 
+		{
 			Socials
+		},
+		data()
+		{
+			return {
+				bg: 'gerl'
+			}
+		},
+		mounted() {
+			console.log('Component mounted!');
+			this.fetchData();
+		},
+		methods: 
+		{
+			fetchData() 
+			{
+				// const { env } = require('node:process');
+				console.log('gerl 1:: ', process.env.gerl);
+				// console.log('gerl:: ', env)
+				console.log('fetching data');
+				var JSONResponse = '';
+				var JsonBody = '';
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack", true);
+				xhr.setRequestHeader("Authorization","Bearer " + process.env.gerl );
+				xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
+				xhr.setRequestHeader("Accept", "application/json");
+				xhr.onload = () =>
+				{
+					JSONResponse = xhr.responseText;
+					// console.log('res:: ', JSON.parse(xhr.responseText).message);
+					console.log('this.bg:: ', this.bg);
+					this.bg = JSON.parse(xhr.responseText).message;
+				};
+				xhr.send(JsonBody);
+				setTimeout( function()
+				{
+					if(xhr.status == 404){     
+						//                
+					}
+					else if(xhr.status == 401){
+						//
+					}
+					else if(xhr.status == 500){
+						//
+					}
+					else if(xhr.status == 200)
+					{
+						let obj1 = JSON.parse(JSONResponse );
+						for(var x=0;x< obj1.length;x++)
+						{
+							var singleEle = obj1[x];
+							console.log('--singleEle ------->'+singleEle );
+						}
+					}
+				}, 2000);
+			}
 		}
-		} 
-	</script>
-	
-	<style scoped>
+	}	 
+</script>
+
+<style scoped>
 	
 	h1{
 	font-weight: lighter;
@@ -215,19 +158,6 @@
 	/* overflow:hidden; */
 	}
 	
-	
-	
-	/* #inner-line
-	{
-	position:absolute;
-	border-radius: 50% 50% 20% 20%;
-	width: 90%;
-	height: 90%;
-	border: 2px solid #F2F5F8;
-	overflow:hidden;
-	margin:auto;
-	} */
-	
 	#button{
 	text-decoration: none;
 	border: none;
@@ -276,6 +206,6 @@
 	justify-content: center;
 	font-size: 0.7em;
 	}
-	
-	
-	</style>
+
+
+</style>
