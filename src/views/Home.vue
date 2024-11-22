@@ -20,7 +20,7 @@
 		
 <script>
 	import Socials from '@/components/Socials';
-
+	
 	export default 
 	{
 		name: 'Home',
@@ -56,8 +56,6 @@
 				xhr.onload = () =>
 				{
 					JSONResponse = xhr.responseText;
-					// console.log('res:: ', JSON.parse(xhr.responseText).message);
-					console.log('this.bg:: ', this.bg);
 					this.bg = JSON.parse(xhr.responseText).message;
 				};
 				xhr.send(JsonBody);
