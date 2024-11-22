@@ -5,6 +5,7 @@
       <Menu 
         v-bind:options="options" 
         @option-clicked="clicked.option = $event.name"/>
+        
     </div>
 
     <div id="feed">
@@ -18,11 +19,12 @@
 
 <script>
     import Menu from '@/components/Menu';
-    import Feed from '@/components/Feed';
+    import Feed from '@/components/Feed'; 
     
     export default {
         name: 'Display',
         props: ['options', 'option', 'current'],
+        // setup(props) {;},
         components: {
           Menu, 
           Feed
@@ -57,7 +59,5 @@
         position: relative;
         width: 100%;
     }
-
-
     
 </style>

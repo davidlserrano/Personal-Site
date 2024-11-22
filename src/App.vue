@@ -17,6 +17,8 @@ export default {
 </script>
 
 <style>
+/* ABSOLUTELY DO NOT TOUCH THE TEXT ALIGN */
+/* PLS */
     #app {
       font-family: 'Montserrat',Avenir, Helvetica, Arial, sans-serif;
       -webkit-font-smoothing: antialiased;
@@ -24,7 +26,6 @@ export default {
       text-align: left;
       color: rgb(64, 61, 77);
     }
-    /*og bg: #BDBBB0*/
     body{
         background-color: #F2F5F8;
         overflow: hidden;

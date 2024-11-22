@@ -8,13 +8,22 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^1.7.7",
     "core-js": "^3.6.5",
+    "csv-parse": "^5.5.6",
+    "csv-stringify": "^6.5.1",
+    "dotenv": "^16.4.5",
+    "dotenv-webpack": "^8.1.0",
+    "firebase": "^11.0.1",
+    "jsforce": "^3.6.2",
     "pdfjs-dist": "^4.7.76",
     "query-string": "^6.13.8",
     "react": "^17.0.1",
+    "salesforce": "^0.1.2",
     "vue": "^2.6.11",
-    "vue-carousel": "^0.18.0",
+    "vue-carousel": "^0.11.0",
     "vue-horizontal-scroll": "^0.2.4",
+    "vue-image-zoomer": "^1.7.3",
     "vue-instagram-embed": "^1.0.0",
     "vue-router": "^3.2.0"
   },

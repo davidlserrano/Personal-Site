@@ -1,32 +1,48 @@
 <template>
     <div id="list">
-      <div v-for="option in options" v-bind:options="options" v-bind:key="option.id" >
+    <!-- bolded options - ['Salesforce', 'Misc Projects'] -->
+      <div  v-for="option in options" 
+            v-bind:options="options"
+            v-bind:key="option.id">
+            <div style="height: 25px; background: none; width: 100px;"></div>
             <button 
+                @click="optionClicked">
+                <b>{{option.name}}</b>
+            </button>
+                
+            <!-- sub-options - 'Salesforce': [obj] -->
+            <div v-for="o in option.suboptions" 
+                 v-bind:key="o.id">
+                <button 
                     @click="optionClicked">
-                {{option.name}}</button>
+                    {{o.name}}
+                </button>
+            </div>
       </div>
     </div>
 </template>
 
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {})
+</script>
+
 <script>
-    import uuid from 'uuid';
     export default {
       name: 'Menu',
       props: ['options'],
-        data(){
-            return{
-
-            }
-        },
+        //   setup(props) {},
+        // data(){
+        //     return{}
+        // },
         methods: {
             optionClicked: function(e){
                 e.preventDefault();
                 const clicked = {
-                    id: uuid.v4(),
                     name: e.currentTarget.innerText
                 };
                 this.$emit('option-clicked', clicked);
-                //alert(clicked.name);
             }
         }
     }
@@ -39,8 +55,6 @@
         width: 150px;
         height: 150px;
         border-right: 1px rgb(64, 61, 77) solid;
-        margin-top: 13px;
-
     }
     
     button{
