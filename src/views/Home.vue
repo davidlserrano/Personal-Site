@@ -73,7 +73,6 @@
 				var JSONResponse = '';
 				var JsonBody = '';
 				var xhr = new XMLHttpRequest();
-				// xhr.open('GET', 'https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack', true);
 				xhr.open('GET', process.env.baseUrl + process.env.grabBack , true);
 				xhr.setRequestHeader('Authorization','Bearer ' + x );
 				xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
@@ -163,7 +162,7 @@
 	z-index: -1;
 	/* border-radius: 50% 50% 0% 0%; */
 	/* width: 99vw; */
-	height: 70vw;
+	height: 100vh;
 	background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
 	/* background-repeat: none; */
 	overflow:hidden;
