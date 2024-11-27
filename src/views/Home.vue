@@ -11,22 +11,22 @@
 		
 			</div>
 		</div>
-		<div id='contact'>
+		<!-- <div id='contact'>
 			<div id='socials'><Socials/></div>
 			<div id='footer'>Copyright © 2024 David Serrano. All rights reserved.</div>
-		</div>
+		</div> -->
 	</div>
 </template>
 		
 <script>
-	import Socials from '@/components/Socials';
+	// import Socials from '@/components/Socials';
 	
 	export default 
 	{
 		name: 'Home',
 		components: 
 		{
-			Socials
+			// Socials
 		},
 		data()
 		{
@@ -43,6 +43,7 @@
 			fetchData() 
 			{
 				console.log('fetching');
+				console.log('process:: ', JSON.stringify(process.env.blah));
 				if(!this.xyz)
 				{
 					var encodedUNP = btoa(process.env.client_id + ':' + process.env.client_secret);
