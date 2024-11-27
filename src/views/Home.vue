@@ -1,19 +1,19 @@
 <template>
-	<div class="home">
-		<div id="display">
-			<div id="text">
-				<!-- <div id="canvas2"></div> -->
-				<div id="canvas">
-					<div id="inner-line">
+	<div class='home'>
+		<div id='display'>
+			<div id='text'>
+				<!-- <div id='canvas2'></div> -->
+				<div id='canvas'>
+					<div id='inner-line'>
 						{{bg}}
 					</div>																																																		
 				</div>
 		
 			</div>
 		</div>
-		<div id="contact">
-			<div id="socials"><Socials/></div>
-			<div id="footer">Copyright © 2024 David Serrano. All rights reserved.</div>
+		<div id='contact'>
+			<div id='socials'><Socials/></div>
+			<div id='footer'>Copyright © 2024 David Serrano. All rights reserved.</div>
 		</div>
 	</div>
 </template>
@@ -31,7 +31,8 @@
 		data()
 		{
 			return {
-				bg: 'gerl'
+				bg: '',
+				xyz: '',
 			}
 		},
 		mounted() {
@@ -41,15 +42,44 @@
 		{
 			fetchData() 
 			{
+				console.log('fetching');
+				if(!this.xyz)
+				{
+					var encodedUNP = btoa(process.env.client_id + ':' + process.env.client_secret);
+					var client = new XMLHttpRequest();
+					client.open('POST', process.env.baseURL + process.env.blah, true);
+					client.setRequestHeader('Authorization', 'Basic ' + encodedUNP);
+					client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+					let test = 'grant_type=client_credentials&client_id=' + process.env.client_id + '&client_secret=' + process.env.client_secret + '&response_type=token'
+
+					client.send(test);
+
+					client.onreadystatechange = ()=>
+					{
+						if(client.readyState == 3) {
+							let response = JSON.parse(client.response);
+							if (response.access_token) {
+								this.xyz = response.access_token;
+								this.getTextArt(response.access_token);
+							}
+						}
+					}
+				}
+			},
+			getTextArt(x)
+			{
+				console.log('getting');
 				var JSONResponse = '';
 				var JsonBody = '';
 				var xhr = new XMLHttpRequest();
-				xhr.open("GET", process.env.home, true);
-				xhr.setRequestHeader("Authorization","Bearer " + process.env.gerl );
-				xhr.setRequestHeader("Content-type", "application/json;charset=UTF-8");
-				xhr.setRequestHeader("Accept", "application/json");
+				// xhr.open('GET', 'https://conejo-dev-ed.develop.my.salesforce.com/services/apexrest/grabBack', true);
+				xhr.open('GET', process.env.baseUrl + process.env.grabBack , true);
+				xhr.setRequestHeader('Authorization','Bearer ' + x );
+				xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+				xhr.setRequestHeader('Accept', 'application/json');
 				xhr.onload = () =>
 				{
+					console.log('got');
 					JSONResponse = xhr.responseText;
 					this.bg = JSON.parse(xhr.responseText).message;
 				};
@@ -70,11 +100,10 @@
 						let obj1 = JSON.parse(JSONResponse );
 						for(var x=0;x< obj1.length;x++)
 						{
-							var singleEle = obj1[x];
-							console.log('--singleEle ------->'+singleEle );
+							// var singleEle = obj1[x];
 						}
 					}
-				}, 2000);
+				}, 2000);	
 			}
 		}
 	}	 
@@ -100,18 +129,18 @@
 	display: block;
 	overflow-y: scroll;
 	margin-left: -10px;
+	/* margin-top: -30px; */
 	}
 	
 	.test {
 	font-family: 'Montserrat', sans-serif;
 	}
-	#display{
+	/* #display{
 	display: flex;
 	flex-direction: column;
-	/* background: pink; */
 	background-size: cover;
 	justify-content: center;
-	}
+	} */
 	
 	::-webkit-scrollbar {
 	display: none;
@@ -123,7 +152,7 @@
 	}
 	
 	#text{
-	margin: 3% auto;
+	margin: auto;
 	color: white;
 	}
 	
@@ -131,9 +160,9 @@
 	{
 	/* border-radius: 0 100% 0 100%; */
 	z-index: -1;
-	border-radius: 50% 50% 0% 0%;
-	width: 99vw;
-	height: 100vw;
+	/* border-radius: 50% 50% 0% 0%; */
+	/* width: 99vw; */
+	height: 70vw;
 	background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
 	/* background-repeat: none; */
 	overflow:hidden;
