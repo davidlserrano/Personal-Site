@@ -53,6 +53,15 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+    @media (max-width: 500px) 
+    {
+      .img
+      {
+        height: 35vh;
+      }
+    }
+
     #photographyDisplay{
       width: 100%;
       /* height: 100vh; */
@@ -66,8 +75,9 @@
       padding: 0px 3px 0px 0px;  
     }
 
-    .img{
-      max-height: 650px;
+    .img
+    {
+      max-height: 90vh;
     }
 
     .copyright{

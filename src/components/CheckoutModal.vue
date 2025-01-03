@@ -1,21 +1,21 @@
 <template>
   <div class="checkoutFeed">
-    <div style="position: relative; overflow: hidden; height: 500px; width:100vw; border-bottom: 1px solid gray">
+    <div class="banner">
       <div id="gradient"></div>
       <div class="gay"></div>
     </div>
 
-    <div style="display: flex; flex-direction: row; width: 80%; height: 100%">
+    <div id="about">
       <div style="flex: 3; padding: 10px;">
         <div>
           <p class="title" style="font-weight: bolder;">Checkout Modal</p>
-          <p>The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
-          <p>Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
-          <p>Since its release in Jan 2024, we saw about a 25% increase in revenue coming out of Salesforce compared to the previous year</p>
+          <p class="mobile-p">The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
+          <p class="mobile-p">Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
+          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since it's released in Jan 2024 compared to the previous year</p>
         </div>
         <br/>
-        <p><b>Features</b></p>
-        <dl>
+        <p class="mobile-h3"><b>Features</b></p>
+        <dl class="mobile-p">
           <dt>○ Shopify Link Generation</dt>
           <dt>○ Single or Multi Payment Type</dt>
           <dt>○ Auto Split Card Calculation</dt>
@@ -51,22 +51,45 @@
           </div>
         </div>
       </div>
+    
+    
+    
+    
     </div>
-    <!-- <p>Integrations: Azure, Shopify, Stripe, Checkout.com</p> -->
+
+    <div style="padding: 5% 0">
+      <carousel>
+            <slide>
+              <div style="padding: 0 0 15px 0;">
+                <b>Split Payment Processing</b>
+              </div>
+              <img src="@/assets/imgs/projects/split_cards.gif" class="carousel-img" style="border-radius: 5px;">
+            </slide>
+            <slide>
+              <b>Product Selection</b>
+              <img src="@/assets/imgs/projects/product_selection.png" class="carousel-img">
+            </slide>
+            <slide>
+              <b>Order Summary</b>
+              <img src="@/assets/imgs/projects/order_summary.png" class="carousel-img">
+            </slide>
+            
+          </carousel>
+    </div>
   </div>
 </template>
 <script>
-// import Vue from 'vue';
-// import VueCarousel from 'vue-carousel';
-// Vue.use(VueCarousel);
-// import { Carousel, Slide } from 'vue-carousel';
-//   export default {
-//     name: 'Checkout Modal',
-//     components: {
-//       Carousel,
-//       Slide
-//     }
-//   }
+import Vue from 'vue';
+import VueCarousel from 'vue-carousel';
+Vue.use(VueCarousel);
+import { Carousel, Slide } from 'vue-carousel';
+  export default {
+    name: 'Checkout Modal',
+    components: {
+      Carousel,
+      Slide
+    }
+  }
 </script>
 
 <style scoped>
@@ -150,6 +173,11 @@
     background: linear-gradient(to right, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.1));
   }
 
+
+  .carousel-img{
+    max-height: 600px;
+  }
+
   .gay
   {
     margin-left: -15%;
@@ -183,7 +211,7 @@
   max-height: 50px;
 }
 
-  #integrationList
+#integrationList
 {
   position: relative;
   float: right;
@@ -198,5 +226,65 @@
 }
 dt{
   line-height: 150%;
+}
+
+#about
+{
+  display: flex; 
+  flex-direction: row; 
+  width: 80%; 
+  /* height: 100%; */
+}
+
+.banner
+{
+  position: relative; 
+  overflow: hidden; 
+  height: 500px; 
+  width:100vw; 
+  border-bottom: 1px solid gray;
+}
+
+@media (max-width: 500px) 
+{
+  #about
+  {
+    width: 90%; 
+  }
+  
+  .mobile-p
+  {
+    font-size: 1.2em;
+  }
+  
+  .mobile-h3
+  {
+    font-size: 1.5em;
+  }
+  
+  .banner
+  {
+    height: 300px;
+  }
+
+  .carousel-img{
+    max-height: 450px;
+  }
+
+  .gay
+  {
+    margin-left: -2%;
+    width: 100%;
+
+    background-color: pink;
+    background-position: -3vw -3vh;
+    background-size: 140%;
+    background-repeat: no-repeat;
+  }
+
+  #gradient
+  {
+    opacity: 0;
+  }
 }
 </style>

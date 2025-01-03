@@ -43,6 +43,7 @@ onMounted(() => {})
                     name: e.currentTarget.innerText
                 };
                 this.$emit('option-clicked', clicked);
+                this.$emit('op-clicked', clicked);
             }
         }
     }
@@ -51,19 +52,20 @@ onMounted(() => {})
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
     #list{
-        color: rgb(64, 61, 77);
-        width: 150px;
-        height: 150px;
-        border-right: 1px rgb(64, 61, 77) solid;
+        /* color: rgb(64, 61, 77); */
+        min-width: 150px;
+        min-height: 150px;
+        /* border-right: 1px rgb(64, 61, 77) solid; */
     }
     
     button{
         background: none;
         border: none;
-        font-size: 14px;
-        color: rgb(64, 61, 77);
+        font-size: .9em;
+        /* color: rgb(64, 61, 77); */
         font-family: Avenir, Helvetica, Arial, sans-serif;
         cursor: pointer;
+        text-align: left;
     }
     
     button:hover{
@@ -71,8 +73,16 @@ onMounted(() => {})
     }
     
     button:active{
-        color: #8A897C;
+        /* color: #8A897C; */
         font-weight: bold;
     }
     
+    @media (max-width: 500px) 
+    {
+      button
+      {
+        font-size: 1.5em;
+        width: 50vw;
+      }
+    }
 </style>
