@@ -138,47 +138,47 @@
 
         },
         getPosts(x)
-      {
-        var JSONResponse = '';
-        // var JsonBody = '';
-        var xhr = new XMLHttpRequest();
-        xhr.open('GET', process.env.baseUrl + process.env.grabBack , true);
-
-        xhr.setRequestHeader('Authorization','Bearer ' + x );
-        xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
-        xhr.setRequestHeader('Accept', 'application/json');
-
-        xhr.onload = () =>
         {
-          JSONResponse = xhr.responseText;
-          if(xhr.responseText)
-          {
-            this.posts = JSON.parse(xhr.responseText).posts;
-          }
-        };
+          var JSONResponse = '';
+          // var JsonBody = '';
+          var xhr = new XMLHttpRequest();
+          xhr.open('GET', process.env.baseUrl + process.env.getPosts , true);
 
-        xhr.send();
-        setTimeout( function()
-        {
-          if(xhr.status == 404){     
-            //                
-          }
-          else if(xhr.status == 401){
-            //
-          }
-          else if(xhr.status == 500){
-            //
-          }
-          else if(xhr.status == 200)
+          xhr.setRequestHeader('Authorization','Bearer ' + x );
+          xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
+          xhr.setRequestHeader('Accept', 'application/json');
+
+          xhr.onload = () =>
           {
-            let obj1 = JSON.parse(JSONResponse );
-            for(var x=0;x< obj1.length;x++)
+            JSONResponse = xhr.responseText;
+            if(xhr.responseText)
             {
-              // var singleEle = obj1[x];
+              this.posts = JSON.parse(xhr.responseText).posts;
             }
-          }
-        }, 2000);	
-      },
+          };
+
+          xhr.send();
+          setTimeout( function()
+          {
+            if(xhr.status == 404){     
+              //                
+            }
+            else if(xhr.status == 401){
+              //
+            }
+            else if(xhr.status == 500){
+              //
+            }
+            else if(xhr.status == 200)
+            {
+              let obj1 = JSON.parse(JSONResponse );
+              for(var x=0;x< obj1.length;x++)
+              {
+                // var singleEle = obj1[x];
+              }
+            }
+          }, 2000);	
+        },
         generateToken(x)
         {
           if(!this.xyz)
