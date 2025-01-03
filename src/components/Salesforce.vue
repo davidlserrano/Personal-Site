@@ -1,11 +1,15 @@
 <template>
   <div class="display">
       <h3>Certifications</h3>
-      <div style="text-align: center; width: 100%; padding: 1%;">
-        <img class="badge" src="@/assets/imgs/certs/admin.png">
-        <img class="badge" src="@/assets/imgs/certs/dev1.png">
-        <img class="badge" src="@/assets/imgs/certs/dev2.png">
-        <img class="badge" src="@/assets/imgs/certs/javascript.png">
+      <div id="badges">
+        <div class="rowCol">
+          <img class="badge" src="@/assets/imgs/certs/dev1.png">
+          <img class="badge" src="@/assets/imgs/certs/admin.png">
+        </div>
+        <div class="rowCol">
+          <img class="badge" src="@/assets/imgs/certs/dev2.png">
+          <img class="badge" src="@/assets/imgs/certs/javascript.png">
+        </div>
       </div>
       <div style="height: 1px; background: black; width: 85%; margin: 3% auto;"></div>
 
@@ -45,10 +49,26 @@
 </script>
 
 <style scoped>
+
+  #badges
+  {
+   display: flex;
+   /* background-color: pink; */
+   /* width: 00vw;
+   margin:auto; */
+  }
+
+  .rowCol
+  {
+    display: flex;
+    flex-direction: row;
+    margin: auto;;
+  }
+
   .badge{
-    width: 15%; 
-    height: 15%;
-    padding: 1%;
+    width: 200px; 
+    height: 200px;
+    /* padding: 1%; */
     opacity: .9;
     -webkit-filter: grayscale(80%); 
     filter: grayscale(80%);
@@ -62,7 +82,6 @@
     width: 80%;
     margin: auto;
   }
-
   
   .code{
     font-weight: bold;
@@ -81,31 +100,17 @@
     display: none;
   }
 
-  .before-enter{
-    opacity: 0.2;
-    transform: translateX(70px);
-    transition: all 2s ease-out;
-  }
+  @media (max-width: 500px) 
+  {
+    .rowCol
+    {
+      flex-direction: column;
+    }
 
-  .enter{
-    opacity: 1;
-    transform: translateX(0px);
-  }
-
-  .slide{
-    padding: 15px;
-    display: block;
-    max-width: 100%;
-    /* color: white; */
-    color: rgb(64, 61, 77);
-    float: none;
-    clear: both;
-  }
-
-  #loginIMG{
-    max-height: 500px;
-    border-radius: 5px;
-    /* border: 0px solid rgb(64, 61, 77, .4); */
+    h3
+    {
+      font-size: 2em;
+    }
   }
   
 </style>

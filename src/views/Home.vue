@@ -2,12 +2,22 @@
 	<div class='home'>
 		<div id='display'>
 			<div id='text'>
-				<!-- <div id='canvas2'></div> -->
-				<div id='canvas'>
-					<div id='inner-line'>
-						{{bg}}
-					</div>																																																		
+				<div style="height: 100 vh; width: 100vw;  display: flex; flex-direction: row;">
+					<div style=" min-width: 850px; height: 1100px;">
+						<div class='canvas inner-line'>
+							{{bg1}}																																								
+						</div>
+					</div>
+					<div style=" min-width: 850px; height: 1100px;">
+						<div class='canvas inner-line'>
+							{{bg}}																																									
+						</div>
+					</div>
+					<div style="min-width: 850px; height: 1100px;"></div>
 				</div>
+				<!-- <div class='canvas inner-line'>
+						{{bg}}																																									
+				</div> -->
 		
 			</div>
 		</div>
@@ -32,7 +42,11 @@
 		{
 			return {
 				bg: '',
+				bg1: '',
 				xyz: '',
+				stars: '',
+				count: '',
+				count2: '',
 			}
 		},
 		mounted() {
@@ -42,13 +56,11 @@
 		{
 			fetchData() 
 			{
-				console.log('fetching');
-				console.log('process:: ', JSON.stringify(process.env.blah));
 				if(!this.xyz)
 				{
 					var encodedUNP = btoa(process.env.client_id + ':' + process.env.client_secret);
 					var client = new XMLHttpRequest();
-					client.open('POST', process.env.baseURL + process.env.blah, true);
+					client.open('POST', process.env.baseUrl + process.env.blah, true);
 					client.setRequestHeader('Authorization', 'Basic ' + encodedUNP);
 					client.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 					let test = 'grant_type=client_credentials&client_id=' + process.env.client_id + '&client_secret=' + process.env.client_secret + '&response_type=token'
@@ -69,20 +81,30 @@
 			},
 			getTextArt(x)
 			{
-				console.log('getting');
 				var JSONResponse = '';
 				var JsonBody = '';
 				var xhr = new XMLHttpRequest();
 				xhr.open('GET', process.env.baseUrl + process.env.grabBack , true);
+
 				xhr.setRequestHeader('Authorization','Bearer ' + x );
 				xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
 				xhr.setRequestHeader('Accept', 'application/json');
+
 				xhr.onload = () =>
 				{
-					console.log('got');
 					JSONResponse = xhr.responseText;
-					this.bg = JSON.parse(xhr.responseText).message;
+					if(xhr.responseText)
+					{
+						this.bg = JSON.parse(xhr.responseText).message;
+						this.bg1 = JSON.parse(xhr.responseText).message;
+						this.bg = JSON.parse(xhr.responseText).stars[2];
+						this.bg1 = JSON.parse(xhr.responseText).stars[0];
+						this.stars =JSON.parse(xhr.responseText).stars;
+						this.animate(JSON.parse(xhr.responseText).stars);
+						this.animateReverse(JSON.parse(xhr.responseText).stars);
+					}
 				};
+
 				xhr.send(JsonBody);
 				setTimeout( function()
 				{
@@ -104,7 +126,31 @@
 						}
 					}
 				}, 2000);	
-			}
+			},
+			animate()
+			{
+				
+				console.log('finna animate this hoe');
+				this.count = 0;
+				this.count2 = this.stars.length-1;
+				let intervalId = setInterval(() => {
+					if(this.count >= this.stars.length)
+					{
+						this.count = 0;
+					}
+					this.bg = this.stars[this.count];
+					this.count++;
+
+					if(this.count2 < 0 )
+					{
+						this.count2 = this.stars.length - 1;
+					}
+					this.bg1 = this.stars[this.count2];
+					this.count2--;
+				}, 500);
+				console.log('intervalId:: ', intervalId);
+			},
+
 		}
 	}	 
 </script>
@@ -125,11 +171,28 @@
 	.home{
 	position: fixed;
 	height: 100vh;
-	width: 100.5%;
+	width: 100.5vw;
 	display: block;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
 	margin-left: -10px;
 	/* margin-top: -30px; */
+	}
+
+	.inner-line {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 3s;
+	}
+
+	@keyframes fadeInOpacity {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
 	}
 	
 	.test {
@@ -152,11 +215,10 @@
 	}
 	
 	#text{
-	margin: auto;
-	color: white;
+		color: white;
 	}
 	
-	#canvas
+	.canvas
 	{
 	/* border-radius: 0 100% 0 100%; */
 	z-index: -1;

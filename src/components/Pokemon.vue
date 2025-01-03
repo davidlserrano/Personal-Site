@@ -96,8 +96,15 @@
     <div class="slide" id="slide4">
       <div id="reqTxt"><h4>Requirements Documentation</h4></div>
       <div id="reqIMGS">
-        <img src="@/assets/imgs/pkmn/reqs1.png" class="reqs">
-        <img src="@/assets/imgs/pkmn/reqs2.png" class="reqs">
+        <carousel>
+          <slide>
+            <img src="@/assets/imgs/pkmn/reqs1.png" class="reqs">
+          </slide>
+          <slide>
+            <img src="@/assets/imgs/pkmn/reqs2.png" class="reqs">
+          </slide>
+        </carousel>
+
       </div>
     </div>
 
@@ -255,7 +262,6 @@ Vue.use(VueCarousel);
     border-radius: 5px;
     width: 90%; 
     margin: auto;
-
   }
 
   /* slide 3 - UML */
@@ -292,7 +298,6 @@ Vue.use(VueCarousel);
   }
 
   #list1{
-    /* border-right: solid 1px  rgb(64, 61, 77, .5); */
     width: 45%;
     padding-right: 10px;
   }
@@ -358,6 +363,7 @@ Vue.use(VueCarousel);
   #ingameText{
     padding: 0px 0px 0px 25px;
   }
+
   #ingameIMGcontainer{
     display: flex;
     flex-direction: row;
@@ -374,6 +380,67 @@ Vue.use(VueCarousel);
     border-radius: 10px;
     height: 80%;
     margin: 0 1%;
+  }
+
+  @media (max-width: 500px) 
+  {
+    #slide1
+    {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    
+    #loginIMG{
+      max-height: 350px;
+      margin: auto
+    }
+    #text1{
+      font-size: .9em;
+    }
+    #list1{
+      width: 40%;
+    }
+    #slide2{
+      font-size: .9em;
+    }
+
+    dt{
+      font-size: 1.2em;
+      padding-top: 10px;
+    }
+
+    dd{
+      font-size: 1.2em;
+      padding-right: 10px;
+    }
+    h3{
+      font-size: 1.4em;
+    }
+
+    .reqs {
+      height: 70vh;
+    }
+
+    .ingameIMG
+    {
+      height: 400px;
+    }
+    #slide5{
+      min-height: 300px;
+      /* height: 40vh; */
+      /* background-color: pink; */
+      max-height: 60vh;
+    }
+
+    /* .reqs{
+      height: 60vh;
+    } */
+
+    #reqIMGS
+    {
+      /* height: 60vh; */
+      overflow: hidden;
+    }
   }
 
 </style>
