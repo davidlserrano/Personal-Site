@@ -231,7 +231,7 @@
             var JSONResponse = '';
             var JsonBody = JSON.stringify(post);
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', process.env.baseUrl + process.env.newNote , true);
+            xhr.open('POST', process.env.baseUrl + process.env.newNote , true);
 
             xhr.setRequestHeader('Authorization','Bearer ' + x );
             xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
