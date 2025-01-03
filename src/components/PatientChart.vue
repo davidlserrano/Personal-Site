@@ -199,7 +199,7 @@
                 if (response.access_token) {
                   this.xyz = response.access_token;
                   if(x == 'newpost')
-                    this.sendPost(response.access_token);
+                    this.createPost(response.access_token);
                   else if(x == 'getposts')
                     this.getPosts(response.access_token);
                 }
@@ -209,7 +209,7 @@
           else
           {
             if(x == 'newpost')
-              this.sendPost(this.xyz);
+              this.createPost(this.xyz);
             else if(x == 'getposts')
               this.getPosts(this.xyz);
           }
@@ -218,7 +218,7 @@
         {
           this.generateToken('newpost');
         },
-        sendPost(x)
+        createPost(x)
         {
           this.postName = this.postName ? this.postName : 'anon';
           if(this.postMessage)
@@ -231,7 +231,7 @@
             var JSONResponse = '';
             var JsonBody = JSON.stringify(post);
             var xhr = new XMLHttpRequest();
-            xhr.open('GET', process.env.baseUrl + process.env.grabBack , true);
+            xhr.open('GET', process.env.baseUrl + process.env.newNote , true);
 
             xhr.setRequestHeader('Authorization','Bearer ' + x );
             xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
