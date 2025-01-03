@@ -11,7 +11,7 @@
           <p class="title" style="font-weight: bolder;">Checkout Modal</p>
           <p class="mobile-p">The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
           <p class="mobile-p">Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
-          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since it's released in Jan 2024 compared to the previous year</p>
+          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since it's release in Jan 2024 compared to the previous year</p>
         </div>
         <br/>
         <p class="mobile-h3"><b>Features</b></p>

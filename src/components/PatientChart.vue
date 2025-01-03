@@ -68,7 +68,7 @@
           <h3 style="text-align: left;">Features</h3>
           <dl>
             <dt>○ Unread Notifications</dt>
-            <dt>○ Case Wrap Upne</dt>
+            <dt>○ Case Wrap Up</dt>
             <dt>○ Player Menu</dt>
             <dt>○ Filters</dt>
           </dl>
