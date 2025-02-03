@@ -7,7 +7,7 @@
         <span class="link"><router-link to="/hobbies">Hobbies</router-link></span>
         <span class="link"><router-link to="/contact">Contact</router-link></span>
         <span id="right-menu">
-            <a href="https://drive.google.com/file/d/1wNWjnM3bY_68hXwKDBUJegOaGYimr-la/view?usp=sharing" target="_blank" id="button">Resume</a>
+            <a href="https://drive.google.com/file/d/1FjIcTFg1dEGLU8m_scX2ksj6yKhZIKMS/view?usp=sharing" target="_blank" id="button">Resume</a>
         </span>
     </div>
  
