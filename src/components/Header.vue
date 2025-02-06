@@ -64,7 +64,6 @@ export default {
 .link a {
     color: rgb(64, 61, 77);
     text-decoration: none;
-    font-size:.9em;
 }
 
 .link a:hover {

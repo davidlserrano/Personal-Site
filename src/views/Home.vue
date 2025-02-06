@@ -1,15 +1,15 @@
 <template>
 	<div class='home'>
 		<div id='display'>
-			<div id='text'>
+			<div id='text' class="inner-line">
 				<div style="height: 100 vh; width: 100vw;  display: flex; flex-direction: row;">
 					<div style=" min-width: 850px; height: 1100px;">
-						<div class='canvas inner-line'>
+						<div class='canvas'>
 							{{bg1}}																																								
 						</div>
 					</div>
 					<div style=" min-width: 850px; height: 1100px;">
-						<div class='canvas inner-line'>
+						<div class='canvas'>
 							{{bg}}																																									
 						</div>
 					</div>
@@ -179,11 +179,11 @@
 	}
 
 	.inner-line {
-	opacity: 1;
-	animation-name: fadeInOpacity;
-	animation-iteration-count: 1;
-	animation-timing-function: ease-in;
-	animation-duration: 3s;
+		opacity: 1;
+		animation-name: fadeInOpacity;
+		animation-iteration-count: 1;
+		animation-timing-function: ease-in;
+		animation-duration: 1.5s;
 	}
 
 	@keyframes fadeInOpacity {
@@ -205,7 +205,7 @@
 	justify-content: center;
 	} */
 	
-	::-webkit-scrollbar {
+	::scrollbar {
 	display: none;
 	}
 	
@@ -228,6 +228,11 @@
 	background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
 	/* background-repeat: none; */
 	overflow:hidden;
+	/* background-clip: text;
+	text-fill-color: transparent; */
+	animation: colored 5s infinite linear(0, 1, 0);
+	background-image: linear-gradient(180deg, rgb(64, 61, 77), rgba(153, 168, 194, 0.761));
+
 	}
 	
 	#canvas2
@@ -289,6 +294,16 @@
 	display: flex;
 	justify-content: center;
 	font-size: 0.7em;
+	}
+
+	@keyframes colored 
+	{
+		from {
+			filter: hue-rotate(300deg);
+		}
+		to {
+			filter: hue-rotate(450deg);
+		}
 	}
 
 
