@@ -16,8 +16,13 @@
         return {
             current: "Work",
             options: [
-                {id: 0 , name: "Salesforce", suboptions: [{id: 0, name :"Checkout Modal"},{id: 1, name :"Patient Chart"}]},
-                {id: 1, name: "Misc Projects", suboptions: [{id: 0, name :"Pokemon: East Bay"}, {id: 1, name :"Portfolio"}]}
+                {id: 0 , name: "Salesforce", 
+                      suboptions: [
+                        {id: 0, name :"Checkout Modal"},
+                    //   {id: 1, name :"Round Robin"}, 
+                      {id: 2, name :"Patient Chart"}]},
+                {id: 1, name: "Misc Projects", class: "disabled-option",
+                    suboptions: [{id: 0, name :"Pokemon: East Bay"}, {id: 1, name :"Portfolio"}]}
             ]
         }
     }

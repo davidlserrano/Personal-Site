@@ -82,7 +82,7 @@
           </dl>
         </div>
       </div>
-      <div style="text-align: center;">
+      <div class="chartgif-container">
         <img src="@/assets/imgs/projects/chart.gif" class="chartgif">
       </div>
     </div>
@@ -324,7 +324,7 @@
     /* opacity: .5; */
   }
 
-  .chartFeed::-webkit-scrollbar{
+  .chartFeed::scrollbar{
     display: none;
   }
 
@@ -501,12 +501,12 @@ h3 {
 
 .slide-in {
   animation: slide-in 0.5s forwards;
-  -webkit-animation: slide-in 0.5s forwards;
+  animation: slide-in 0.5s forwards;
 }
 
 .slide-out {
   animation: slide-out 0.5s forwards;
-  -webkit-animation: slide-out 0.5s forwards;
+  animation: slide-out 0.5s forwards;
 }
 
 @keyframes slide-in {
@@ -515,9 +515,9 @@ h3 {
   }
 }
 
-@-webkit-keyframes slide-in {
+@keyframes slide-in {
   100% {
-    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 
@@ -530,12 +530,12 @@ h3 {
   }
 }
 
-@-webkit-keyframes slide-out {
+@keyframes slide-out {
   0% {
-    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
   }
   100% {
-    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
   }
 }
 
@@ -548,7 +548,7 @@ h3 {
   cursor: pointer;
 }
 
-::-webkit-scrollbar {
+::scrollbar {
   width: 0px;
   background: transparent; /* make scrollbar transparent */
 }
@@ -569,14 +569,14 @@ li {
   padding: 5px;
 }
 
-::-webkit-scrollbar {
-  -webkit-appearance: none;
+::scrollbar {
+  appearance: none;
   width: 7px;
 }
-::-webkit-scrollbar-thumb {
+::scrollbar-thumb {
   border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
 
 .modal
@@ -612,6 +612,11 @@ li {
 {
   border-radius: 5px; 
   max-height: 600px;
+  max-width: 90%;
+}
+.chartgif-container
+{
+  padding: 0 5%;
 }
 
 @media (max-width: 500px) 
@@ -623,6 +628,10 @@ li {
   {
     border-radius: 5px; 
     max-height: 250px;
+  }
+  .chartgif-container
+  {
+    padding: 0;
   }
   #list1{
   width: 40%;

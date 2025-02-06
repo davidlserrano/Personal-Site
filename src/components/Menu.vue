@@ -6,17 +6,18 @@
             v-bind:key="option.id">
             <div style="height: 25px; background: none; width: 100px;"></div>
             <button 
-                @click="optionClicked">
+                @click="optionClicked" :class="option.class">
                 <b>{{option.name}}</b>
             </button>
                 
             <!-- sub-options - 'Salesforce': [obj] -->
             <div v-for="o in option.suboptions" 
                  v-bind:key="o.id">
-                <button 
+                    <button 
                     @click="optionClicked">
                     {{o.name}}
                 </button>
+   
             </div>
       </div>
     </div>
@@ -40,10 +41,14 @@ onMounted(() => {})
             optionClicked: function(e){
                 e.preventDefault();
                 const clicked = {
-                    name: e.currentTarget.innerText
-                };
-                this.$emit('option-clicked', clicked);
-                this.$emit('op-clicked', clicked);
+                        name: e.currentTarget.innerText
+                    };
+
+                if(clicked.name != 'Misc Projects')
+                {
+                    this.$emit('option-clicked', clicked);
+                    this.$emit('op-clicked', clicked);   
+                }
             }
         }
     }
@@ -58,6 +63,11 @@ onMounted(() => {})
         /* border-right: 1px rgb(64, 61, 77) solid; */
     }
     
+    .disabled-option
+    {
+        cursor: default;   
+    }
+
     button{
         background: none;
         border: none;
