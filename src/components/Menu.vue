@@ -1,13 +1,23 @@
 <template>
     <div id="list">
     <!-- bolded options - ['Salesforce', 'Misc Projects'] -->
+
       <div  v-for="option in options" 
             v-bind:options="options"
             v-bind:key="option.id">
-            <div style="height: 25px; background: none; width: 100px;"></div>
+            <div v-if="option.suboptionsEnabled">
+                <div style="height: 25px; background: none; width: 100px;"></div>
+            </div>
+
             <button 
                 @click="optionClicked" :class="option.class">
-                <b>{{option.name}}</b>
+            
+                <div v-if="option.suboptionsEnabled">
+                    <b>{{option.name}}</b>
+                </div>
+                <div v-else>
+                    {{option.name}}
+                </div>
             </button>
                 
             <!-- sub-options - 'Salesforce': [obj] -->
@@ -24,7 +34,7 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted } from 'vue';
 
 onMounted(() => {})
 </script>
@@ -67,6 +77,7 @@ onMounted(() => {})
     {
         cursor: default;   
     }
+    
 
     button{
         background: none;

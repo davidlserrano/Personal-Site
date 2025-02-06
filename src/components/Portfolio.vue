@@ -17,7 +17,7 @@
           <dt>○ <b>Database</b></dt>
           <dd>Salesforce</dd>
         </dl>
-
+       
       </div>
       <div style="flex: 1;">
         <dl>
@@ -41,7 +41,12 @@
     components: {
       // Carousel,
       // Slide
-    }
+    },
+    mounted() {
+      let recaptchaScript = document.createElement('script')
+      recaptchaScript.setAttribute('src', 'https://www.instagram.com/embed.js')
+      document.head.appendChild(recaptchaScript)
+    },
   }
 </script>
 
