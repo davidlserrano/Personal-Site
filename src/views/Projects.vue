@@ -18,8 +18,8 @@
             options: [
                 {id: 0 , name: "Salesforce", suboptionsEnabled: true,
                       suboptions: [
-                        {id: 0, name :"Checkout Modal"},
-                      {id: 1, name :"Round Robin"}, 
+                      {id: 0, name :"Checkout Modal"},
+                      // {id: 1, name :"Round Robin"}, 
                       {id: 2, name :"Patient Chart"}]},
                 {id: 1, name: "Misc Projects", class: "disabled-option", suboptionsEnabled: true, 
                     suboptions: [{id: 0, name :"Pokemon: East Bay"}, {id: 1, name :"Portfolio"}]}

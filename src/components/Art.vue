@@ -15,48 +15,17 @@ export default
 {
   components: {
   },  
-  beforeCreate()
-  {
-    console.log('beforeCreate');
-    // console.log('this.posts:: ', JSON.stringify(this.posts));
-  }, 
-  created()
-  {
-    console.log('created');
-    // console.log('this.posts:: ', JSON.stringify(this.posts));
-    // for(let i in this.posts)
-    //   { 
-    //     this.posts[i].url = this.linkStart + this.posts[i].id + this.linkEnd;
-    //   }
-  },  
+ 
   beforeMount()
   {
-    console.log('beforeMount');
-    // console.log('this.posts:: ', JSON.stringify(this.posts));
     this.fetchData();
-      // for(let i in this.posts)
-      // { 
-      //   this.posts[i].url = this.linkStart + this.posts[i].id + this.linkEnd;
-      // }
-  },
-  mounted() 
-  {
-    console.log('mounted');
-    console.log('this.posts:: ', JSON.stringify(this.posts));
-    // for(let i in this.posts)
-    // { 
-    //   this.posts[i].url = this.linkStart + this.posts[i].id + this.linkEnd;
-    // }
-
-
-    // this.$forceUpdate();
   },
   data()
   {
     return {
       linkStart: 'https://www.instagram.com/p/',
       linkEnd: '/?utm_source=ig_embed&amp;utm_campaign=loading',
-      posts: [{id: 'CkWvs_TM4m1', url: ''}, {id: 'CiJREGBJc-C', url: ''}],
+      posts: [{id: '', url: ''}, {id: '', url: ''},{id: '', url: ''}],
       xyz: ''
     }
   },
@@ -64,7 +33,6 @@ export default
   {
     fetchData() 
     {
-      console.log('fetch');
       if(!this.xyz)
       {
         var encodedUNP = btoa(process.env.client_id + ':' + process.env.client_secret);
@@ -93,7 +61,7 @@ export default
         var JSONResponse = '';
         var JsonBody = '';
         var xhr = new XMLHttpRequest();
-        xhr.open('GET', process.env.baseUrl + process.env.getPosts , true);
+        xhr.open('GET', process.env.baseUrl + process.env.getIgPosts , true);
 
         xhr.setRequestHeader('Authorization','Bearer ' + x );
         xhr.setRequestHeader('Content-type', 'application/json;charset=UTF-8');
@@ -146,43 +114,23 @@ export default
 </script>
 
 <style scoped>
-    .display{
+  .display{
+      min-width: 85vw;
+      max-width: 100vh;
+      overflow: scroll;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
 
-        min-width: 85vw;
-        overflow: visible;
-        overflow: scroll;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
 
-
-    .IGpost{
-      padding: 0px 10px 10px 10px;
-      display:inline-block;
-      vertical-align: top;
-    }
-
-      .display::-webkit-scrollbar{
-        display: none;
-    }
-
-  /* .post
+  .display::-webkit-scrollbar
   {
-    display: flex;
+    display: none;
+  }
 
-  } */
-  .post{
-    /* background:  rgb(64, 61, 77); */
-    /* color: white; */
-    /* border: 1px solid white; */
-    /* border-radius: 5px; */
-    /* padding: 5px; */
-    /* margin: 5px; */
-    /* background: linear-gradient( rgb(64, 61, 77), rgba(153, 168, 194, 0.761)); */
-    /* max-width: 100px; */
-    /* height: 100px; */
-    /* flex: 1 3 20%; */
+  .post
+  {
     margin: 15px;
     flex: 1 0 25%;
   }
