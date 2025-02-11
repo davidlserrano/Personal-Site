@@ -101,7 +101,7 @@
 						this.bg1 = JSON.parse(xhr.responseText).stars[0];
 						this.stars =JSON.parse(xhr.responseText).stars;
 						this.animate(JSON.parse(xhr.responseText).stars);
-						this.animateReverse(JSON.parse(xhr.responseText).stars);
+						// this.animateReverse(JSON.parse(xhr.responseText).stars);
 					}
 				};
 
@@ -133,7 +133,7 @@
 				console.log('finna animate this hoe');
 				this.count = 0;
 				this.count2 = this.stars.length-1;
-				let intervalId = setInterval(() => {
+				setInterval(() => {
 					if(this.count >= this.stars.length)
 					{
 						this.count = 0;
@@ -148,7 +148,6 @@
 					this.bg1 = this.stars[this.count2];
 					this.count2--;
 				}, 500);
-				console.log('intervalId:: ', intervalId);
 			},
 
 		}

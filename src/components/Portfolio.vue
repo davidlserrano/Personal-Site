@@ -27,6 +27,7 @@
       </div>
     </div>
     <div style="height: 1px; background: black; width: 90%; margin: 3% auto;"></div>
+    
     </div>
   </div>
 </template>
@@ -41,12 +42,7 @@
     components: {
       // Carousel,
       // Slide
-    },
-    mounted() {
-      let recaptchaScript = document.createElement('script')
-      recaptchaScript.setAttribute('src', 'https://www.instagram.com/embed.js')
-      document.head.appendChild(recaptchaScript)
-    },
+    }
   }
 </script>
 
