@@ -116,7 +116,7 @@ export default
 <style scoped>
   .display{
       min-width: 85vw;
-      max-width: 100vh;
+      max-height: 100vh;
       overflow: scroll;
       display: flex;
       flex-direction: row;
