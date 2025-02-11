@@ -6,7 +6,7 @@
             <div v-if="option === 'Pokemon: East Bay'" id="Pokemon"><Pokemon/></div>
             <div v-if="option === 'Salesforce'" id="Salesforce"><Salesforce/></div>
             <div v-if="option === 'Round Robin'" id="Round Robin"><RoundRobin/></div>
-            <div v-if="option === '' && current === 'Hobbies'"><Photography/></div>
+            <div v-if="option === '' && current === 'Hobbies'"><Art/></div>
             <div v-if="option === 'Art'"><Art/></div>
             <div v-if="option === 'Graphic Design'"><GraphicDesign/></div>
             <div v-if="option === 'Codepath'"><Android/></div>
@@ -27,7 +27,7 @@
     import PatientChart from '@/components/PatientChart';
     import CheckoutModal from '@/components/CheckoutModal';
     import Portfolio from '@/components/Portfolio';
-import RoundRobin from './RoundRobin.vue';
+    import RoundRobin from './RoundRobin.vue';
 
     export default {
         name: 'Display',

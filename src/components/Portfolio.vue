@@ -17,7 +17,7 @@
           <dt>○ <b>Database</b></dt>
           <dd>Salesforce</dd>
         </dl>
-
+       
       </div>
       <div style="flex: 1;">
         <dl>
@@ -27,6 +27,7 @@
       </div>
     </div>
     <div style="height: 1px; background: black; width: 90%; margin: 3% auto;"></div>
+    
     </div>
   </div>
 </template>

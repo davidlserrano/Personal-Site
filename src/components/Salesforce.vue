@@ -12,7 +12,7 @@
         </div>
       </div>
       <div style="height: 1px; background: black; width: 85%; margin: 3% auto;"></div>
-
+   
       <!-- <div class="orghealth">
         <img src="@/assets/salesforce-lightning-design-system-icons/utility/salesforce1_60.png">
         <div style="display: flex; flex-direction: row; width:80%; margin: auto;"> 

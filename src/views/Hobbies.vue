@@ -16,7 +16,8 @@ export default {
         return{
             current: "Hobbies",
             options: [
-                {id: 1, name: "Photography"}
+                {id: 0, name: "Art"},
+                {id: 1, name: "Photography"},
             ]
         }
     }
