@@ -1,81 +1,64 @@
 <template>
-  <div class="checkoutFeed">
-    <div class="banner">
-      <div id="gradient"></div>
-      <div class="gay"></div>
-    </div>
-
-    <div id="about">
-      <div style="flex: 3; padding: 10px;">
-        <div>
-          <p class="title" style="font-weight: bolder;">Round Robin</p>
-          <p class="mobile-p">The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
-          <p class="mobile-p">Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
-          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since it's release in Jan 2024 compared to the previous year</p>
-        </div>
-        <br/>
-        <p class="mobile-h3"><b>Features</b></p>
-        <dl class="mobile-p">
-          <dt>○ Shopify Link Generation</dt>
-          <dt>○ Single or Multi Payment Type</dt>
-          <dt>○ Auto Split Card Calculation</dt>
-          <dt>○ Temporary Credit Card Caching</dt>
-        </dl>
-      </div>
-      <div style="flex: 1;">
-        <div id="integrationList">
-          <p><b>Integrations</b></p>
-          <div id="container">
-            <div id="moon">
-              <p>Azure</p>
-            </div>
-            <img id="sky" src="@/assets/imgs/icons/Azure.png" height="30vh" width="30vw">
-          </div>
-          <div id="container">
-            <div id="moon">
-              <p>Stripe</p>
-            </div>
-            <img id="sky" src="@/assets/imgs/icons/Stripe.jpeg" height="30vh" width="30vw">
-          </div>
-          <div id="container">
-            <div id="moon">
-              <p>Shopify</p>
-            </div>
-            <img id="sky" src="@/assets/imgs/icons/Shopify.png" height="30vh" width="30vw">
-          </div>
-          <div id="container">
-            <div id="moon">
-              <p>Checkout</p>
-            </div>
-            <img id="sky" src="@/assets/imgs/icons/Checkout.jpeg" height="30vh" width="30vw">
-          </div>
-        </div>
-      </div>
-    
-    
-    
-    
-    </div>
-
-    <div style="padding: 5% 0">
+  <div class="roundRobinFeed">
+    <div style="padding: 1% 1%">
       <carousel>
             <slide>
-              <div style="padding: 0 0 15px 0;">
-                <b>Split Payment Processing</b>
+              <div style="display: flex; flex-direction: column;">
+                <b>Workcenter</b>
+                <img src="@/assets/imgs/projects/roundrobin_workcenter.png" class="carousel-img">
               </div>
-              <img src="@/assets/imgs/projects/split_cards.gif" class="carousel-img" style="border-radius: 5px;">
             </slide>
             <slide>
-              <b>Product Selection</b>
-              <img src="@/assets/imgs/projects/product_selection.png" class="carousel-img">
+              <div style="display: flex; flex-direction: column;">
+                <b>Agents Tab</b>
+                <img src="@/assets/imgs/projects/roundrobin_agents.png" class="carousel-img">
+              </div>
             </slide>
             <slide>
-              <b>Order Summary</b>
-              <img src="@/assets/imgs/projects/order_summary.png" class="carousel-img">
+              <div style="display: flex; flex-direction: column;">
+                <b>Schedule Tab</b>
+                <img src="@/assets/imgs/projects/roundrobin_schedule.png" class="carousel-img">
+              </div>
             </slide>
-            
+            <slide>
+              <div style="display: flex; flex-direction: column;">
+                <b>Queue Tab</b>
+                <img src="@/assets/imgs/projects/roundrobin_queue.png" class="carousel-img">
+              </div>
+            </slide>
+            <slide>
+              <div style="display: flex; flex-direction: column;">
+                <b>Assignments Tab</b>
+                <img src="@/assets/imgs/projects/roundrobin_assignments.png" class="carousel-img">
+              </div>
+            </slide>
+            <slide>
+              <div style="display: flex; flex-direction: column;">
+                <b>Batch Tab</b>
+                <img src="@/assets/imgs/projects/roundrobin_batches.png" class="carousel-img">
+              </div>
+            </slide>
           </carousel>
     </div>
+    <div class="about">
+      <p class="title" style="font-weight: bolder;">Round Robin</p>
+      <div>
+          <p class="mobile-p">The Round Robin tool is designed to distribute both standard and custom object records across multiple agents and teams. The tool aims to optimize this process by considering factors such as agent availability, weighting, and capacity.</p>
+          <div> 
+            <p class="mobile-h3"><b>Features</b></p>
+            <dl class="mobile-p">
+              <dt>○ <b>Agent Management</b>: Manages the list of users who act as agents in a distribution, allowing managers to add/remove users and adjust their weightings.</dt>
+              <dt>○ <b>Record Distribution</b>: Routes records to designated agents based on pre-set rules and constraints.</dt>
+              <dt>○ <b>Frequency Control</b>: Allows managers to set the frequency at which the distribution runs (daily/weekly), along with specific times of day</dt>
+            </dl>
+          </div>
+        </div>
+    </div>
+    <div style="height: 20%">
+    
+    
+    </div>
+
   </div>
 </template>
 <script>
@@ -94,7 +77,12 @@ import { Carousel, Slide } from 'vue-carousel';
 
 <style scoped>
 
-  .checkoutFeed
+  .about{
+    padding: 0px 10px;
+    max-width: 80vw;
+    line-break: normal;
+  }
+  .roundRobinFeed
   {
     overflow: scroll;
     position: absolute;
@@ -102,7 +90,7 @@ import { Carousel, Slide } from 'vue-carousel';
     width: 100vw;
   }
 
-  .checkoutFeed::-webkit-scrollbar
+  .roundRobinFeed::scrollbar
   {
     display: none;
   }
@@ -127,44 +115,6 @@ import { Carousel, Slide } from 'vue-carousel';
     margin: 10% auto;
   }
 
-  #sky {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1; /* Background layer */
-    border-radius: 2.5px;
-  }
-
-  #moon {
-    position: absolute;
-    width: 100%; 
-    height: 100%;
-    background-color: #0a050d00; 
-    border-radius: 100%;
-    z-index: 2; 
-    opacity: 0;
-    text-align: center;
-    transition: all .2s ease-out;
-  }
-  #moon:hover {
-    position: absolute;
-    width: 100%; 
-    height: 100%;
-    background-color: #4242426e; 
-    color: white;
-    border-radius: 5px;
-    z-index: 2;
-    opacity: 1;
-    transition: all .2s ease-out;
-    text-align: center;
-    font-weight: bolder;
-    line-height: 3;
-    font-size: .8em;
-  
-  }
-
   #gradient
   {
     opacity: .9;
@@ -175,18 +125,8 @@ import { Carousel, Slide } from 'vue-carousel';
 
 
   .carousel-img{
-    max-height: 600px;
-  }
+    max-height: 450px;
 
-  .gay
-  {
-    margin-left: -15%;
-    width:110%;
-    height: 110%; 
-    background-image: url('~@/assets/imgs/projects/checkoutmodal.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
   }
   
   .before-enter{
@@ -207,51 +147,12 @@ import { Carousel, Slide } from 'vue-carousel';
     line-height: 0;;
   }
 
-.integration{
-  max-height: 50px;
-}
-
-#integrationList
-{
-  position: relative;
-  float: right;
-  text-align: right;
-}
-
-.integration
-{
-  border-radius: 5px;
-  overflow: hidden;
-  position: absolute;
-}
-dt{
-  line-height: 150%;
-}
-
-#about
-{
-  display: flex; 
-  flex-direction: row; 
-  width: 80%; 
-  /* height: 100%; */
-}
-
-.banner
-{
-  position: relative; 
-  overflow: hidden; 
-  height: 500px; 
-  width:100vw; 
-  border-bottom: 1px solid gray;
-}
+  dt{
+    line-height: 150%;
+  }
 
 @media (max-width: 500px) 
 {
-  #about
-  {
-    width: 90%; 
-  }
-  
   .mobile-p
   {
     font-size: 1.2em;
@@ -271,20 +172,13 @@ dt{
     max-height: 450px;
   }
 
-  .gay
-  {
-    margin-left: -2%;
-    width: 100%;
-
-    background-color: pink;
-    background-position: -3vw -3vh;
-    background-size: 140%;
-    background-repeat: no-repeat;
-  }
-
   #gradient
   {
     opacity: 0;
+  }
+  .about{
+    padding: 0px 10px;
+    max-width: 60vw;
   }
 }
 </style>
