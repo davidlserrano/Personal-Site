@@ -6,7 +6,7 @@
               <div style="display: flex; flex-direction: column; object-fit: contain">
                 <b>Workcenter</b>
                 <!-- <img src="@/assets/imgs/projects/roundrobin_workcenter.png" class="carousel-img"> -->
-                <Imgzoom src="/imgs/roundrobin_workcenter.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_workcenter.png" zoomScale=".4"/>
 
 
               </div>
@@ -14,31 +14,31 @@
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Agents Tab</b>
-                <Imgzoom src="/imgs/roundrobin_agents.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_agents.png" zoomScale=".4"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Schedule Tab</b>
-                <Imgzoom src="/imgs/roundrobin_schedule.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_schedule.png" zoomScale=".4"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Queue Tab</b>
-                <Imgzoom src="/imgs/roundrobin_queue.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_queue.png" zoomScale=".4"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Assignments Tab</b>
-                <Imgzoom src="/imgs/roundrobin_assignments.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_assignments.png" zoomScale=".4"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Batch Tab</b>
-                <Imgzoom src="/imgs/roundrobin_batches.png" zoomScale=".3"/>
+                <Imgzoom src="/imgs/roundrobin_batches.png" zoomScale=".4"/>
               </div>
             </slide>
           </carousel>
