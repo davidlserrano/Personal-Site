@@ -10,16 +10,17 @@
         <div>
           <p class="title" style="font-weight: bolder;">Checkout Modal</p>
           <p class="mobile-p">The Checkout Modal was a project that involved overhauling an outdated Visualforce page implementation and migrating it into a Lightning Web Component</p>
-          <p class="mobile-p">Migrating the component allowed the implementation of plenty new features to help the checkout process be a lot more seamless and efficient</p>
-          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since it's release in Jan 2024 compared to the previous year</p>
+          <p class="mobile-p">Migrating the component provided an innovative solution that simplified the checkout process by providing a seamless and intuitive experience</p>
+          <p class="mobile-p">Saw a <b>~25%</b> increase in revenue coming out of Salesforce since its release in Jan 2024 compared to the previous year</p>
         </div>
         <br/>
-        <p class="mobile-h3"><b>Features</b></p>
+        <p class="mobile-h3"><b>Contributions</b></p>
         <dl class="mobile-p">
-          <dt>○ Shopify Link Generation</dt>
-          <dt>○ Single or Multi Payment Type</dt>
-          <dt>○ Auto Split Card Calculation</dt>
-          <dt>○ Temporary Credit Card Caching</dt>
+          <dt>○ <b>Improved UI/UX</b>: Designed, implemented, and integrated both the front and back-end of the new modal</dt>
+          <dt>○ <b>Multiple Payment types</b>: Enabled split payment processing between multiple cards or credit lenders</dt>
+          <dt>○ <b>Card Payment Caching</b>: Leveraged tokenization to securely cache tokenized card information and saving users time on having to manually re-enter card details </dt>
+          <dt>○ <b>Real-time Validation</b>:  Validates user input in real-time providing automatic calculations on discounts and split card payment amounts</dt>
+          <dt>○ <b>Product Bundles</b>: Helped introduce bundled products that generated an additional <b>$5 million</b> in revenue for the 2024 year</dt>
         </dl>
       </div>
       <div style="flex: 1;">
@@ -226,6 +227,7 @@ import { Carousel, Slide } from 'vue-carousel';
 }
 dt{
   line-height: 150%;
+  padding: 5px;
 }
 
 #about
