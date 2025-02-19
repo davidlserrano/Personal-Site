@@ -3,39 +3,42 @@
     <div style="padding: 1% 1%">
       <carousel>
             <slide>
-              <div style="display: flex; flex-direction: column;">
+              <div style="display: flex; flex-direction: column; object-fit: contain">
                 <b>Workcenter</b>
-                <img src="@/assets/imgs/projects/roundrobin_workcenter.png" class="carousel-img">
+                <!-- <img src="@/assets/imgs/projects/roundrobin_workcenter.png" class="carousel-img"> -->
+                <Imgzoom src="/imgs/roundrobin_workcenter.png" zoomScale=".3"/>
+
+
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Agents Tab</b>
-                <img src="@/assets/imgs/projects/roundrobin_agents.png" class="carousel-img">
+                <Imgzoom src="/imgs/roundrobin_agents.png" zoomScale=".3"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Schedule Tab</b>
-                <img src="@/assets/imgs/projects/roundrobin_schedule.png" class="carousel-img">
+                <Imgzoom src="/imgs/roundrobin_schedule.png" zoomScale=".3"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Queue Tab</b>
-                <img src="@/assets/imgs/projects/roundrobin_queue.png" class="carousel-img">
+                <Imgzoom src="/imgs/roundrobin_queue.png" zoomScale=".3"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Assignments Tab</b>
-                <img src="@/assets/imgs/projects/roundrobin_assignments.png" class="carousel-img">
+                <Imgzoom src="/imgs/roundrobin_assignments.png" zoomScale=".3"/>
               </div>
             </slide>
             <slide>
               <div style="display: flex; flex-direction: column;">
                 <b>Batch Tab</b>
-                <img src="@/assets/imgs/projects/roundrobin_batches.png" class="carousel-img">
+                <Imgzoom src="/imgs/roundrobin_batches.png" zoomScale=".3"/>
               </div>
             </slide>
           </carousel>
@@ -47,10 +50,30 @@
           <div> 
             <p class="mobile-h3"><b>Features</b></p>
             <dl class="mobile-p">
-              <dt>○ <b>Agent Management</b>: Manages the list of users who act as agents in a distribution, allowing managers to add/remove users and adjust their weightings.</dt>
-              <dt>○ <b>Record Distribution</b>: Routes records to designated agents based on pre-set rules and constraints.</dt>
-              <dt>○ <b>Frequency Control</b>: Allows managers to set the frequency at which the distribution runs (daily/weekly), along with specific times of day</dt>
+              <dt class="dt-padding-small">○ <b>Agent Management</b>: Enables managing the list of users who act as agents in a distribution, allowing managers to add/remove users and adjust their weights easily.</dt>
+              <dt class="dt-padding-small">○ <b>Record Distribution</b>: Routes records to designated agents based on pre-set rules and constraints.</dt>
+              <dt class="dt-padding-small">○ <b>Frequency Control</b>: Allows managers to set the frequency at which the distribution runs (daily/weekly), along with specific times of day</dt>
             </dl>
+          </div>
+          <div style="display: flex; flex-direction: row;"> 
+            <div style="flex: 1;">
+              <p class="mobile-h3"><b>Technology Used</b></p>
+              <dl class="mobile-p">
+                <dt>○ Apex</dt>
+                <dt>○ Lightning Web Components</dt>
+                <dt>○ Chart.js</dt>
+              </dl>
+            </div>
+            <div style="flex: 3;">
+              <p class="mobile-h3"><b>Contributions</b></p>
+              <dl class="mobile-p">
+                <dt class="dt-padding-small">○ <b>Flow-to-Code Migration</b>: Architectured the migration of Flow implementation into back-end code, ensuring seamless integration and enhanced compatibility</dt>
+                <dt class="dt-padding-small">○ <b>Scalability</b>: Leveraged Batch Apex to allow millions of records to be processed, a major improvement from the original 2,000 element break point it had</dt>
+                <dt class="dt-padding-small">○ <b>Dynamic Back-end Logic</b>: Developed adaptable logic that supports new objects without disrupting existing processes, offering flexibility and future scalability </dt>
+                <dt class="dt-padding-small">○ <b>Maintenance & Optimizations</b>: Collaborated with stakeholders to identify areas of improvement, including record entry criteria refactoring, scheduled job failure prevention measures, and user experience improvements.
+                </dt>
+              </dl>
+            </div>
           </div>
         </div>
     </div>
@@ -64,13 +87,20 @@
 <script>
 import Vue from 'vue';
 import VueCarousel from 'vue-carousel';
-Vue.use(VueCarousel);
 import { Carousel, Slide } from 'vue-carousel';
+// import VueImageZoomer from 'vue-image-zoomer'
+// import 'vue-image-zoomer/dist/style.css';
+import Imgzoom from './imgzoom.vue';
+
+Vue.use(VueCarousel);
+
+
   export default {
-    name: 'Round Robin',
+    name: 'RoundRobin',
     components: {
       Carousel,
-      Slide
+      Slide,
+      Imgzoom
     }
   }
 </script>
@@ -149,6 +179,11 @@ import { Carousel, Slide } from 'vue-carousel';
 
   dt{
     line-height: 150%;
+  }
+
+  .dt-padding-small
+  {
+    padding: 5px;
   }
 
 @media (max-width: 500px) 

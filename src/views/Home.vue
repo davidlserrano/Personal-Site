@@ -129,8 +129,7 @@
 			},
 			animate()
 			{
-				
-				console.log('finna animate this hoe');
+			
 				this.count = 0;
 				this.count2 = this.stars.length-1;
 				setInterval(() => {

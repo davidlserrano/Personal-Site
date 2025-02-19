@@ -23,7 +23,7 @@
     "vue": "^2.6.11",
     "vue-carousel": "^0.11.0",
     "vue-horizontal-scroll": "^0.2.4",
-    "vue-image-zoomer": "^1.7.3",
+    "vue-image-zoomer": "^1.7.4",
     "vue-instagram-embed": "^1.0.0",
     "vue-js-modal": "^2.0.1",
     "vue-router": "^3.2.0"
